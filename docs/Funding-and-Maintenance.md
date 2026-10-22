@@ -59,7 +59,7 @@ GitHub Sponsors is one potential collection route, subject to account/region eli
 
 ## Licensing and reuse
 
-The recommended choices remain **GPLv3 for software** and **CC BY-SA 4.0 for original documentation**, pending a separate maintainer-approved licensing change. This proposal does not grant those licences or resolve INV-08. Third-party recordings, manuals, lists, images and code need their own rights assessment; a project licence cannot grant rights in material we do not own.
+The software/docs licensing change selects **GPLv3 only for software** and **CC BY-SA 4.0 for original documentation**; see [LICENSING.md](../LICENSING.md). Those choices take effect when that pull request is approved and merged. Third-party recordings, manuals, lists, images and code need their own rights assessment; a project licence cannot grant rights in material we do not own.
 
 GPLv3 permits commercial activity, including paid distribution and services. Its source-sharing obligations do not require people to submit changes upstream, sponsor AppStack, publish private modifications or maintain their fork. Funding maintenance and encouraging upstream contributions are therefore governance tasks as well as licensing decisions. If a server component is later proposed, assess AGPLv3's network-source obligations before selecting its licence.
 

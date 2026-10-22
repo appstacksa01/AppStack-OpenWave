@@ -18,7 +18,7 @@ As of 22 October 2026, a private audio file has been analysed digitally. No hard
 | U01 | What are the machine's revision, accepted file/input formats, and electrical specifications? | Model identified; remaining details unknown, INV-01/03 | Reproduction/compatibility claims remain unsupported. |
 | U02 | What did the Jones electrical report measure? | Located, not reviewed; S05, INV-02 | No measurements adopted. |
 | U03 | Which signal and external hardware requirements apply? | Unknown, INV-03–06 | Architecture stays provisional. |
-| U04 | Which licenses and contribution model apply? | Undecided, INV-08 | Resolve before implementation contributions. |
+| U04 | Which licenses and contribution model apply? | GPL-3.0-only software and CC-BY-SA-4.0 original docs selected in licensing PR; effective upon review/merge, INV-08 | Use reviewed pull requests; assess dependency and third-party rights separately. Hardware designs remain separately scoped. |
 | U05 | Can lists/software be redistributed, and are units/settings sufficient for execution? | INV-09; one list inspected, rights/settings incomplete; Spooky2 download not inspected | Retain provenance and flag ambiguities; use synthetic public fixtures until rights are established. |
 
 ## Corrections to the earlier concept

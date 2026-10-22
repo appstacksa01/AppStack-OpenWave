@@ -1,6 +1,8 @@
 # Contributing
 
-We are gathering evidence and requirements before building an application. Contributions can include source analysis, device documentation, reproducible bench measurements, platform research, and corrections.
+We are gathering evidence and specifying the first browser-based WAV prototype. Contributions can include source analysis, device documentation, reproducible bench measurements, software and corrections, within the applicable readiness decision.
+
+Read [LICENSING.md](LICENSING.md) before contributing. Original software contributions use GPL-3.0-only; original documentation uses CC-BY-SA-4.0. Contributors retain copyright and must have the rights to submit their work. Disclose third-party sources and licences; do not assume public availability permits copying.
 
 ## Workflow
 
@@ -44,4 +46,4 @@ This document defines the contribution policy. GitHub branch protection or rules
 
 Bench work needs device identity, instruments and calibration status, test loads, output path, settings, methods, uncertainty, and an appropriate safety review. Historical mains-connected circuits are research material, not construction instructions. No body-connected experiments are included in this phase.
 
-Application implementation starts after the readiness review. The maintainer must choose and publish appropriate licenses before implementation contributions are accepted.
+The [file-only readiness decision](docs/wiki/Development-Readiness.md#file-only-prototype-decision) permits implementation of the defined browser/WAV scope after its licensing/specification pull request is approved and merged. This does not authorize hardware testing or imply that the prototype passes verification. Keep implementation on separate reviewed branches, starting with the independently testable generator, then the editor. Run the applicable [verification checks](docs/wiki/Signal-Verification-Plan.md) and report actual outcomes.

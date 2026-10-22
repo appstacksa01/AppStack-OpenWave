@@ -8,7 +8,7 @@ An AppStack open-source research and development initiative exploring mobile sig
 
 We want to understand what these devices actually output, which functions a mobile phone can reproduce, and what external hardware would be required. We invite developers, electronics engineers, researchers, and technical writers to contribute reproducible evidence.
 
-Our proposed first milestone is a bench-tested signal generator with documented settings and measured output. Its frequency range, waveforms, platform, and output interface remain undecided.
+Our first software milestone is a browser-based sequence editor that exports sine-wave WAV files for independent digital verification and later bench testing. The [prototype specification](docs/wiki/Signal-Specification.md) defines the settings, limits and acceptance contract. Electro-Med compatibility and physical output measurements remain separate investigations; no output has been validated yet.
 
 ## Research scope
 
@@ -34,7 +34,7 @@ Start at the [GitHub research wiki](https://github.com/appstacksa01/AppStack-Ope
 
 ## Proposed technology
 
-The original proposal was the MEVN stack: MongoDB, Express, Vue, and Node.js. This remains provisional. Research will determine whether a web app, native mobile app, hybrid approach, or hardware controller fits the requirements. A backend and database will only be introduced if the agreed scope needs them.
+The first prototype is a static TypeScript browser application with a framework-independent WAV generator and a responsive editor. It needs no backend, database or account. The original MEVN proposal is superseded for this milestone; native mobile apps and hardware control may be assessed separately later.
 
 ## Contributing
 
@@ -55,11 +55,11 @@ The reviewed files in `docs/wiki/` are the source for the public wiki. Propose r
 
 ## Licensing
 
-The project is intended to be open source. An explicit software, documentation, and hardware licensing decision is still required before implementation contributions are accepted. Public visibility alone does not grant an open-source license. See INV-08.
+Original software is licensed under [GPLv3 only](LICENSE); original documentation is licensed under [CC BY-SA 4.0](LICENSE-DOCS). Read [LICENSING.md](LICENSING.md) for scope, attribution, contribution terms and third-party/branding exclusions. Hardware licensing remains a future decision if designs are introduced. These choices take effect in `main` when the licensing pull request is approved and merged.
 
 ## Funding and maintenance
 
-We are seeking research sponsorship and grants to support engineering research, independent verification and ongoing maintenance. No funding has been confirmed in the [funding and maintenance proposal](docs/Funding-and-Maintenance.md). It outlines a browser-based WAV-generator milestone, an initial budget worksheet, sponsor expectations and public reporting. Scope, licences, costs and a funding collection route still require approval before a funding request is launched.
+We are seeking research sponsorship and grants to support engineering research, independent verification and ongoing maintenance. No funding has been confirmed in the [funding and maintenance proposal](docs/Funding-and-Maintenance.md). It outlines a browser-based WAV-generator milestone, an initial budget worksheet, sponsor expectations and public reporting. The licensing and prototype specification changes require review and merge; costs and a funding collection route also need agreement before a funding request is launched.
 
 ## Contact
 

@@ -15,9 +15,9 @@ Updated: 22 October 2026. This page distinguishes answered research questions fr
 
 See [audio analysis](Audio-Sample-Analysis.md), [frequency-list review](Frequency-List-Review.md), and [audio-format research](Audio-Format-Research.md).
 
-## Proposed, not verified
+## Specified, not verified
 
-The [draft signal specification](Signal-Specification.md) proposes PCM16 WAV at 44.1/48 kHz, mono or duplicate stereo, sine signals at 20 Hz–10 kHz, and a narrower initial square-wave range. Its [verification plan](Signal-Verification-Plan.md) contains repeatable acceptance methods. These are draft design targets. No application has passed them.
+The v0.2 [signal specification](Signal-Specification.md) defines a browser-based sine-only PCM16 WAV editor/exporter at 44.1/48 kHz, mono or duplicate stereo, with a 20 Hz–10 kHz range, 100-step/five-minute limits, exact timing/fades and a JSON sequence format. Square waves are deferred. Its [verification plan](Signal-Verification-Plan.md) defines independent acceptance methods. These requirements and the software/docs licences take effect when their pull request is approved and merged. No application has passed the checks.
 
 We have not established the existing player's accepted WAV bit depths/rates/channel combinations or the actual waveform at its outputs.
 
@@ -28,20 +28,20 @@ We have not established the existing player's accepted WAV bit depths/rates/chan
 | INV-01: Reference documentation | Partial: model, labels and owner workflow recorded | Manual/revision, file formats and input specifications |
 | INV-02: Historical research | Partial: primary claims and critical account located | Jones report and underlying investigation review |
 | INV-03: Hardware characterization | Not measured | Qualified protocol, equipment, load-defined results |
-| INV-04: Mobile platform | Partial: official Android guidance and candidate approaches | Platform choice, device matrix, route verification |
+| INV-04: Mobile platform | Browser selected for first file-only milestone in specification PR | Actual browser/device checks; physical route verification separate |
 | INV-05: Hardware boundary | Partial: candidate instruments/interfaces documented | Decide what external hardware is required |
 | INV-06: Safety review | Pending | Qualified bench setup and hazard review |
-| INV-07: Prototype specification | Draft ready | Square-wave definition, envelope details, resource limits and acceptance review |
-| INV-08: Licensing | Undecided | Maintainer selects and publishes appropriate licenses |
+| INV-07: Prototype specification | v0.2 contract and file-only decision ready for review/merge | Implement, independently verify and record release results; square waves deferred |
+| INV-08: Licensing | GPL-3.0-only software / CC-BY-SA-4.0 original docs selected in licensing PR | Effective on merge; dependency review during implementation; hardware/third-party rights separate |
 | INV-09: Lists/software | Partial: actual list structure and provenance inspected | Rights, normalization rules, neutral import schema, software/export checks |
 
-No investigation is marked complete while its original completion criteria remain unmet. See the [backlog](Development-Readiness.md).
+Remaining investigation requirements are tracked separately from authorization for the reduced software scope. See the [file-only decision](Development-Readiness.md#file-only-prototype-decision).
 
 ## Next practical work
 
-1. Review and settle the generic WAV-generator scope under INV-07; list any hardware-reproduction claims explicitly excluded.
-2. Specify the neutral import schema and ambiguity handling using the list review; use synthetic data for public importer tests.
-3. Decide licensing before implementation contributions.
-4. Establish player compatibility and a qualified bench measurement plan separately.
+1. Review and merge the software/documentation licences, v0.2 specification and file-only implementation decision.
+2. Build the generator and independent verification checks on a new branch, using synthetic inputs and the defined JSON format.
+3. Add the browser editor; record actual browser/device results and obtain a second verification review before release.
+4. Pursue funding and maintenance planning alongside development. Establish player compatibility and a qualified bench measurement plan separately.
 
 Historical reconstruction and an exhaustive player-format matrix need not prevent a generic export prototype if the maintainer records that reduced scope and the applicable readiness criteria are met.
