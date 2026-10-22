@@ -49,6 +49,7 @@ Research contributions are welcome before code. Read [CONTRIBUTING.md](CONTRIBUT
 3. Commit your changes to that branch and open a pull request targeting `main`.
 4. Explain what changed, why, and how it was checked. Include source references for research contributions.
 5. Address review feedback. A maintainer approves and merges accepted changes into `main`.
+6. After merging, delete the source branch. GitHub automatically deletes eligible merged branches in this repository; contributors should also clean up their local branches and branches in their own forks. Keep `main`.
 
 The reviewed files in `docs/wiki/` are the source for the public wiki. Propose research updates there through the same pull request process; maintainers publish the accepted version to the wiki after merging. A branch or an open pull request is proposed work, not an accepted project decision.
 

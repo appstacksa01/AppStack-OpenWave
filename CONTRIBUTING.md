@@ -14,6 +14,7 @@ The `main` branch is the source of truth for accepted project work. Do not push 
 6. Address feedback with further commits on the same branch. If `main` changes, update your branch and resolve conflicts there; do not overwrite accepted work to bypass a conflict.
 7. A maintainer reviews the scope, evidence, applicable checks, and project readiness requirements, requests changes where necessary, and approves accepted work before merging it into `main`.
 8. After merging, maintainers publish any accepted wiki changes. Update findings and backlog statuses when the merged evidence changes a requirement.
+9. Delete the source branch after its pull request is merged. GitHub automatically deletes eligible merged branches in this repository. Contributors should remove merged branches from their own forks and local checkouts when no longer needed; preserve any unmerged work and keep `main`.
 
 Opening a pull request does not make its contents accepted. Maintainers may request changes, defer a proposal, or close it with an explanation. Research approval records the project's assessed evidence and limitations; it does not establish medical effectiveness.
 
