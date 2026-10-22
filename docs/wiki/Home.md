@@ -17,4 +17,4 @@ Updated: 22 October 2026. Stage: research and requirements gathering. No project
 
 Use the [research entry template](Research-Entry-Template.md). Reference sources by ID, preserve disagreements, and update requirements when evidence changes.
 
-The files in `docs/wiki/` are the version-controlled source for the wiki. Submit changes through repository pull requests, then synchronize approved pages. Until synchronization is available, this notebook remains usable in the main repository.
+The files in `docs/wiki/` are the version-controlled source for the [published wiki](https://github.com/appstacksa01/Rife-Frequency-Generator-Mobile-Application/wiki). Submit changes through repository pull requests, then synchronize approved pages. The repository copy remains available for review and offline reading.
