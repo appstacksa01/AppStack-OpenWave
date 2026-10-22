@@ -1,0 +1,40 @@
+{
+  "name": "appstack-openwave",
+  "version": "0.0.0",
+  "private": true,
+  "license": "GPL-3.0-only",
+  "type": "module",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "engines": {
+    "node": ">=22.20.0 <23 || >=24.0.0 <25"
+  },
+  "packageManager": "npm@11.4.2",
+  "scripts": {
+    "dev": "npm run dev --workspace @openwave/frontend",
+    "format": "prettier --write apps packages tooling *.json *.mjs .github/workflows/*.yml",
+    "format:check": "prettier --check apps packages tooling *.json *.mjs .github/workflows/*.yml",
+    "lint": "eslint apps packages tooling *.mjs",
+    "typecheck": "tsc --noEmit",
+    "test:frontend": "vitest run --config tooling/vitest.frontend.ts --coverage",
+    "test:backend": "vitest run --config tooling/vitest.backend.ts --coverage",
+    "test": "npm run test:frontend && npm run test:backend",
+    "build": "npm run build --workspace @openwave/frontend && npm run build --workspace @openwave/backend",
+    "check:boundaries": "node tooling/check-boundaries.mjs",
+    "check": "npm run format:check && npm run lint && npm run typecheck && npm test && npm run build && npm run check:boundaries"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "@types/node": "22.20.0",
+    "@vitest/coverage-v8": "5.0.5",
+    "eslint": "10.13.0",
+    "jsdom": "26.1.0",
+    "prettier": "3.9.10",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.72.0",
+    "vite": "8.3.5",
+    "vitest": "5.0.5"
+  }
+}

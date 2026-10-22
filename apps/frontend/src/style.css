@@ -1,0 +1,19 @@
+/* SPDX-License-Identifier: GPL-3.0-only */
+:root {
+  color-scheme: light dark;
+  font:
+    1rem/1.6 system-ui,
+    sans-serif;
+}
+body {
+  margin: 0;
+}
+main {
+  max-width: 48rem;
+  padding: 3rem 1.5rem;
+  margin: auto;
+}
+button {
+  font: inherit;
+  padding: 0.5rem 1rem;
+}

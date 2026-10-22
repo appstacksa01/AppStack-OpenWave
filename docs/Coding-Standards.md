@@ -1,6 +1,6 @@
 # Mandatory coding and testing standards
 
-Status: proposed for review on 22 October 2026, following the maintainer's requirement for SOLID, compulsory frontend/backend unit tests and server-side heavy processing. These rules apply to all implementation work once merged. No application, test suites or CI gates have been implemented yet.
+Adopted through PR #5 on 22 October 2026, following the maintainer's requirement for SOLID, compulsory frontend/backend unit tests and server-side heavy processing. The scaffolding PR introduces runnable suites, tooling and CI configuration; see [development setup](Development.md). Remote check outcomes and repository enforcement must be verified separately from local execution.
 
 ## SOLID in practice
 

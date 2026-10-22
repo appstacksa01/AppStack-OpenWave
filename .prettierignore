@@ -1,0 +1,8 @@
+node_modules/
+dist/
+coverage/
+package-lock.json
+LICENSE
+LICENSE-DOCS
+assets/
+openwave-logo.png

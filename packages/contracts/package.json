@@ -1,0 +1,10 @@
+{
+  "name": "@openwave/contracts",
+  "version": "0.0.0",
+  "private": true,
+  "license": "GPL-3.0-only",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  }
+}

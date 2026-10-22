@@ -1,6 +1,6 @@
 # First prototype verification plan
 
-Version 0.3 — 22 October 2026. Applies to the [first prototype specification](Signal-Specification.md), with backend generation and compulsory frontend/backend unit tests. **All application checks below are planned, not run: no application exists yet.** The private MP3 analysis is separate research, not an OpenWave test result.
+Version 0.3 — 22 October 2026. Applies to the [first prototype specification](Signal-Specification.md), with backend generation and compulsory frontend/backend unit tests. **The numerical, service and browser acceptance checks below remain planned: no renderer/export service exists yet.** Scaffolding tests cover only presentation/lifecycle behaviour. The private MP3 analysis is separate research, not an OpenWave test result.
 
 ## Records and independent checks
 
@@ -8,7 +8,7 @@ Record application commit, backend/worker version and runtime/configuration, OS/
 
 ## Mandatory test layers
 
-Follow the [coding standards](https://github.com/appstacksa01/AppStack-OpenWave/blob/main/docs/Coding-Standards.md): meaningful frontend and backend unit tests are compulsory for every new/changed behaviour, with regression tests for fixes. Frontend tests cover editing, validation, job/network states and downloads; backend tests cover numerical/domain logic and job services. Both suites must run for implementation PRs. Add actual API/queue/worker/storage contract and integration tests, browser end-to-end tests and independent numerical verification. No one layer substitutes for another. Introduce CI and strict type/lint/format/build checks alongside the first runnable scaffolding; no checks are claimed implemented yet.
+Follow the [coding standards](https://github.com/appstacksa01/AppStack-OpenWave/blob/main/docs/Coding-Standards.md): meaningful frontend and backend unit tests are compulsory for every new/changed behaviour, with regression tests for fixes. Frontend tests must cover editing, validation, job/network states and downloads as implemented; backend tests must cover numerical/domain logic and job services. Both suites must run for implementation PRs. The scaffolding PR introduces initial presentation/lifecycle suites, coverage, CI configuration and strict type/lint/format/build checks. Actual API/queue/worker/storage integration, browser end-to-end and independent numerical verification follow with those components. No one layer substitutes for another.
 
 ## Synthetic cases
 

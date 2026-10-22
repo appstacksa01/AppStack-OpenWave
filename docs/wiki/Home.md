@@ -2,7 +2,7 @@
 
 AppStack is investigating an open-source mobile frequency generator. This notebook records what sources claim, what we know, what remains unknown, and what must be resolved before implementation.
 
-Updated: 22 October 2026. Stage: licences and initial file contract merged; backend-processing architecture and compulsory coding/testing standards prepared for review. The reference model has been identified from owner photographs and an audio sample has been analysed locally. No application or hardware output has been verified. Start with the [file-only implementation decision](Development-Readiness.md#file-only-prototype-decision).
+Updated: 22 October 2026. Stage: licences, backend architecture and mandatory standards merged; initial application scaffolding prepared for review. Local tests cover frontend presentation and backend lifecycle policy, not generated signals. The reference model has been identified from owner photographs and an audio sample has been analysed locally. No renderer, export service or hardware output has been verified. Start with the [file-only implementation decision](Development-Readiness.md#file-only-prototype-decision) and [development setup](https://github.com/appstacksa01/AppStack-OpenWave/blob/main/docs/Development.md).
 
 ## Contents
 
