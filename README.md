@@ -43,4 +43,4 @@ The project is intended to be open source. An explicit software, documentation, 
 
 ## Contact
 
-Development is facilitated by Stephen at AppStack. Contact: shakings@hotmail.co.za.
+Development is facilitated by Stephen at AppStack. Contact: stephen@appstacksa.co.za
