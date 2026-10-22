@@ -1,6 +1,8 @@
 # First prototype verification plan
 
-Version 0.3 — 22 October 2026. Applies to the [first prototype specification](Signal-Specification.md), with backend generation and compulsory frontend/backend unit tests. Initial backend checks now include 129 backend unit tests and 36 independent synthetic WAV cases; [results and reproduction](https://github.com/appstacksa01/AppStack-OpenWave/blob/main/docs/Backend-Renderer.md) are proposed for review. **Service/browser acceptance, qualified physical measurements and a second human verification review remain outstanding.** The private MP3 analysis is separate research, not an OpenWave test result.
+Version 0.3 — 22 October 2026. Applies to the [first prototype specification](Signal-Specification.md), backend generation and compulsory frontend/backend tests. The original renderer snapshot recorded 16 frontend/129 backend tests and 36 independent WAV cases; a later uncommitted local preview recorded 74 frontend/169 backend tests and one manual browser download. See [renderer results](../Backend-Renderer.md) and the [audit](../Mobile-Research-Audit.md) for provenance. **Complete service/browser acceptance, physical measurements and second human release review remain outstanding.** No new runtime results are claimed by documentation alignment; the private MP3 analysis is separate research.
+
+**v0.4 desktop supplement:** The later desktop implementation passed 121 frontend/186 backend tests and 64 independent WAV fixtures, preserving all 36 original sine hashes. Add square/triangle low/high/fundamental, harmonic-ratio, normalized headroom, 300-second bounds and exact waveform-reference checks. `verify:desktop` exercises actual HTTP/separate-process streaming/cancellation/deadline and three independent stream-file checks; `tooling/desktop-browser-check.mjs` is a connector-driven browser workflow check, not cloud CI. See the [desktop evidence and manual physical plan](../Desktop-Player.md). Earlier counts above are historical snapshots; release/mobile/physical checks remain open.
 
 ## Records and independent checks
 
@@ -8,7 +10,9 @@ Record application commit, backend/worker version and runtime/configuration, OS/
 
 ## Mandatory test layers
 
-Follow the [coding standards](https://github.com/appstacksa01/AppStack-OpenWave/blob/main/docs/Coding-Standards.md): meaningful frontend and backend unit tests are compulsory for every new/changed behaviour, with regression tests for fixes. Frontend tests must cover editing, validation, job/network states and downloads as implemented; backend tests must cover numerical/domain logic and job services. Both suites must run for implementation PRs. The scaffolding PR introduces initial presentation/lifecycle suites, coverage, CI configuration and strict type/lint/format/build checks. Actual API/queue/worker/storage integration, browser end-to-end and independent numerical verification follow with those components. No one layer substitutes for another.
+Follow the [coding standards](https://github.com/appstacksa01/AppStack-OpenWave/blob/main/docs/Coding-Standards.md): frontend/backend unit tests are compulsory for changed behaviour, with regression tests for fixes. Frontend tests cover editing, validation, job/network states and downloads; backend tests cover numerical/domain logic and jobs. Both suites run for implementation PRs. Scaffolding supplies coverage/CI/type/lint/format/build tooling; local HTTP/storage integration and independent numerical checks now exist. Complete automated browser/multiprocess failure coverage and independent release reproduction remain open. No layer substitutes for another.
+
+For the shared-engine/UI direction, use one numerical conformance dataset and require every implemented playback adapter to satisfy the common playback contract, plus platform-specific tests. Physical/device acceptance stays in the [Mobile POC](Mobile-POC.md). That plan is not implemented or passed, and defining its capability matrix precedes framework/native-development decisions. Common contracts do not turn a web result into Android/iOS compatibility evidence.
 
 ## Synthetic cases
 
@@ -42,5 +46,8 @@ Use an independent reader to decode the largest backend exports. Record worker e
 Publish actual commands, results and outstanding limitations, not just this plan. Both unit suites and applicable CI checks must pass. Before a first release, all applicable acceptance checks and the second review must pass, or maintainers must approve a documented scope revision; scope revision does not waive compulsory unit tests. Confirm dependency licences, service access/retention/resource settings, installation/build instructions and source licence notices. No investigation becomes complete solely because this specification is merged.
 
 ## Playback and hardware remain separate
+
+The proposed [OpenWave Analog Output Characterisation](Hardware-and-Electrical-Safety.md#openwave-analog-output-characterisation) is the next physical milestone under INV-03/05/06: laptop baseline, commercial USB-C DAC, optional later-authorized ESP32/external DAC, and independently safety-reviewed Electro-Med. It records load-defined voltage/current, frequency/shape, distortion/clipping/response/noise and uncertainty. It does not replace this digital acceptance plan or establish human-contact safety or effectiveness. See [five independent evidence questions](Frequency-and-Amplitude.md#five-independent-evidence-questions).
+
 
 A valid WAV does not verify a phone, adapter, USB player or electrode output. Actual playback measurements require a named output path, settings, load, instruments, calibration and uncertainty. Electro-Med format compatibility needs observed results for a defined player/revision. The supplied MP3 establishes its own encoding, not player compatibility. Unknown outputs require qualified setup review under INV-06; people are never part of the test circuit.

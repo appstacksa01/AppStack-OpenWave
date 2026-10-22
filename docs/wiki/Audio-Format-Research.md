@@ -22,7 +22,7 @@ The R&S UPV/UPL documents supplied earlier describe laboratory analysers, not th
 - A sine and a square with the same fundamental have different spectral requirements. Square-wave harmonics must be handled by a defined band-limited method.
 - Device playback can introduce resampling, filtering, clipping, routing changes and gain differences even when the exported file is correct.
 
-The [draft specification](Signal-Specification.md) is a deliberate project proposal, not a claim that existing products accept every listed setting. No playback matrix has been verified.
+The adopted v0.3 [specification](Signal-Specification.md) is the project's file contract, not evidence that existing products accept every setting. Backend digital results are recorded separately; no physical playback matrix has been verified. Platform audio adapters must preserve this distinction and consume output from the same authoritative engine.
 
 ## Other soundscape reference
 
@@ -31,5 +31,7 @@ The [12D Foundation golden-ratio page](https://12dfoundation.org/golden-ratio) w
 Classify this as a soundscape/interface and claims reference. It does not change the signal specification or establish device compatibility. Do not adopt its interpretation of listener discomfort as proof of a beneficial mechanism.
 
 ## What remains to verify
+
+The [mobile review](Mobile-Capabilities.md) now records USB-C audio feasibility and the [POC](Mobile-POC.md) separates file format from actual route format and loaded analog measurements. Android/iPhone audio APIs do not establish the reference player's supported sample rates, bit depths or channel formats. Offline local-file playback does not imply offline waveform generation. These distinctions leave INV-01/03 open.
 
 For the reference player's USB path: WAV encoding, accepted rates/bit depths/channel counts, MP3 variants, storage constraints, track handling, and output behaviour. For external computer input: accepted levels, loading and bandwidth. Obtain a manual or use a qualified bench protocol; do not infer this matrix from generic audio articles.

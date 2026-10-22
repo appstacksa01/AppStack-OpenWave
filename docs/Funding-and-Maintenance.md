@@ -10,7 +10,9 @@ Fund a small browser-based frequency-sequence editor that exports WAV files for 
 
 Users would add and reorder steps, choose frequency, duration and digital amplitude, save and reload sequences, and request backend exports as 16-bit PCM WAV at 44.1 or 48 kHz. Start with synthetic test sequences. The [architecture revision](Architecture.md) requires backend worker processes for heavy work, SOLID and compulsory frontend/backend unit tests. Keep the specified numeric WAV limits; agree concrete service limits and contracts with implementation.
 
-The deliverable does not establish Electro-Med compatibility, calibrated electrical output, or medical effectiveness. Square waves, condition presets, hardware control and body-connected experiments are excluded from this first funding objective. The existing [signal specification](wiki/Signal-Specification.md) remains a draft; its broader scope must be reconciled through review rather than treated as already approved.
+The deliverable does not establish Electro-Med compatibility, calibrated electrical output or medical effectiveness. Square waves, condition presets, hardware control and body-connected experiments are excluded. The adopted v0.3 [signal specification](wiki/Signal-Specification.md) defines the first file-only implementation; adoption is not release acceptance. Existing renderer/local-preview evidence and remaining workflow checks are recorded in the [audit](Mobile-Research-Audit.md).
+
+The maintainer's direction is one shared engine, one principal TypeScript UI and web/Android/iOS audio adapters. Budget reusable engine/UI maintenance plus justified platform-adapter/testing work, not two independent application builds. Framework/native implementation selection follows [capability validation](wiki/Mobile-POC.md#phases). Portable testing, native integration if needed, distribution and hardware review require separate estimates; no budget or spending is approved by the architecture direction.
 
 ## Milestones and evidence
 
@@ -59,14 +61,14 @@ GitHub Sponsors is one potential collection route, subject to account/region eli
 
 ## Licensing and reuse
 
-The software/docs licensing change selects **GPLv3 only for software** and **CC BY-SA 4.0 for original documentation**; see [LICENSING.md](../LICENSING.md). Those choices take effect when that pull request is approved and merged. Third-party recordings, manuals, lists, images and code need their own rights assessment; a project licence cannot grant rights in material we do not own.
+Merged PR #4 adopted **GPLv3 only for software** and **CC BY-SA 4.0 for original documentation**; see [LICENSING.md](../LICENSING.md). Third-party recordings, manuals, lists, images and code need their own rights assessment; a project licence cannot grant rights in material we do not own.
 
-GPLv3 permits commercial activity, including paid distribution and services. Its source-sharing obligations do not require people to submit changes upstream, sponsor AppStack, publish private modifications or maintain their fork. Funding maintenance and encouraging upstream contributions are therefore governance tasks as well as licensing decisions. If a server component is later proposed, assess AGPLv3's network-source obligations before selecting its licence.
+GPLv3 permits commercial activity, including paid distribution and services. Its source-sharing obligations do not require upstream submissions, sponsorship, publication of private modifications or fork maintenance. Funding maintenance and encouraging contributions therefore also require governance. Original backend code remains under the existing software policy; server architecture did not adopt AGPLv3. A future licence change requires separate review.
 
 ## Before launching a funding request
 
 - [ ] Approve the first milestone's scope and acceptance criteria.
-- [ ] Select and publish software/documentation licences and contribution terms.
+- [x] Select and publish original software/documentation licences and contribution terms (PR #4); review new dependency/third-party rights when introduced.
 - [ ] Obtain effort/rate estimates and agree how independent review will be funded.
 - [ ] Set the initial ZAR target and recurring maintenance target from the worksheet.
 - [ ] Confirm the funding recipient and collection route; agree sponsor/grant terms.

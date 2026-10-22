@@ -1,8 +1,14 @@
 # Architecture decision: backend export processing
 
-ADR-001 — 22 October 2026. Adopted through PR #5 following the maintainer's explicit requirement that heavy processing run in backend processes. Supersedes v0.2's browser/Web Worker rendering design. The mathematical WAV contract remains unchanged. Scaffolding now introduces presentation/lifecycle policy and tests; no export service has been implemented or deployed. The [initial service contract](Service-Contract.md) specifies proposed endpoints, local adapters and resource defaults for the next increments.
+**Related direction:** [ADR-002](ADR-002-Mobile-Playback.md) records one shared engine, one principal TypeScript UI and separate web/Android/iOS playback adapters. Framework choice remains open; native development is not authorized by that direction. ADR-001 controls execution: synthesis/encoding stays in backend worker processes. Offline file playback is distinct from offline generation; changing engine execution location requires an explicit amendment.
+
+ADR-001 — 22 October 2026. Adopted through PR #5 following the maintainer's requirement that heavy processing run in backend processes. Supersedes v0.2's browser/Web Worker rendering design; the mathematical WAV contract is unchanged. A local editor/API/storage/worker preview now exists in the uncommitted working tree, with no production/mobile deployment. See the [audit](Mobile-Research-Audit.md) for implementation evidence and the [service contract](Service-Contract.md) for acceptance targets and gaps.
+
+The maintainer's later desktop-player request authorizes the [ADR-003](ADR-003-Desktop-Player.md) extension: browser playback, bounded native time-domain monitoring and square/triangle in the same backend engine. The [v0.4 working-tree contract](wiki/Signal-Specification.md) preserves sine samples/timing and backend execution while defining the added waveforms. The original responsibility table below remains the export boundary; the browser now additionally implements playback through `AudioOutput`, never synthesis. This is not an Electron/Tauri/native mobile decision.
 
 ## Responsibilities
+
+The [Portable hardware research](wiki/ESP32-S3-Investigation.md) treats ESP32 USB audio and command-based local generation as candidates, not implemented execution paths. USB audio can transport existing samples. Local MCU synthesis would require a reviewed amendment to this ADR and one-engine portability/conformance evidence; it is not a browser or embedded fallback to backend generation.
 
 | Component | Responsibility |
 | --- | --- |
@@ -36,5 +42,7 @@ Follow the [mandatory coding standards](Coding-Standards.md). Frontend and backe
 2. Implement and independently verify the backend domain renderer; keep it outside the frontend build.
 3. Implement the asynchronous export service and worker lifecycle with unit and integration tests.
 4. Connect the editor and complete frontend unit, browser end-to-end and independent release verification.
+
+This is the original file-milestone dependency order, not a statement that all four steps remain unstarted. Scaffolding and renderer evidence exist; the uncommitted service/editor preview still needs review and complete acceptance. Portable work follows [POC phase 0](wiki/Mobile-POC.md#phases): establish one playback contract and evidence matrix before framework/native implementation decisions. Platform adapters must not duplicate the engine or principal UI.
 
 A deployment provider, paid infrastructure and production operations are not selected by this ADR. Backend operation adds hosting, queue/storage, access-control and maintenance costs; re-estimate the [funding worksheet](Funding-and-Maintenance.md) before publishing a target. Original backend code remains covered by GPL-3.0-only under [LICENSING.md](../LICENSING.md); this decision does not silently adopt AGPL or change contribution terms.

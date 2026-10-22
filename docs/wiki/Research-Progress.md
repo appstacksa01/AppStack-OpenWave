@@ -1,6 +1,14 @@
 # Research progress
 
-Updated: 22 October 2026. This page distinguishes research, implementation increments and outstanding verification. PR #6 merged the scaffolding. The renderer PR introduces backend generation with local unit and independent digital-file results; the export service/editor and physical output measurements remain outstanding.
+Updated: 22 October 2026. The later [desktop-player request](Desktop-Player.md) now has an uncommitted implementation: one shared backend engine supports sine/band-limited square/triangle, with local WAV and live streaming through the browser audio adapter. Local checks passed 121 frontend/186 backend tests, 64 independent WAV cases and real HTTP/process streaming checks. Desktop browser smoke checks cover playing, mute, local load and completion. These are software results, not merged release, phone support or physical output. The [earlier audit](../Mobile-Research-Audit.md) retains its original 74/169 and sine-only planning snapshot.
+
+## Portable research update
+
+The [question register](Mobile-Question-Register.md) now tracks 27 subquestions across INV-01–09, retaining its six core classifications and refining physical gates as **BLOCKED — MEASUREMENT REQUIRED** within the earlier hardware/testing category. Android/iPhone USB audio is **ANSWERED — DOCUMENTED** at platform-capability level; actual phone/DAC compatibility is **BLOCKED — HARDWARE OR TESTING**. Native file playback/background handling is **FEASIBLE — NOT YET VERIFIED** in OpenWave. Reference electrical output and list reuse rights remain unresolved. No historical, hardware or medical question was closed by mobile API availability.
+
+The latest [signal/amplification explanation](Frequency-and-Amplitude.md) answers the conceptual question: amplification is not required to calculate a frequency. Load-compatible analog output remains unknown. The [ESP32-S3 review](ESP32-S3-Investigation.md) documents UAC/external-DAC feasibility and separates it from command-based generation, unresolved iPhone command access and the required engine-execution decision. [Status transitions](Mobile-Question-Register.md#status-and-evidence-change-log--22-october-2026) retain previous statuses, evidence limits and next actions. No code, firmware, board selection or new physical test accompanies this review.
+
+The shared engine/principal TypeScript UI direction is unchanged. [ADR-003](../ADR-003-Desktop-Player.md) selects the browser for this desktop increment and adds its playback adapter; Electron/Tauri/PWA packaging and mobile frameworks remain unselected. The [mobile POC](Mobile-POC.md) must reuse the implemented audio contract and validate platform gaps. Local-file playback needs no generator; live custom synthesis still runs in backend processes. On-phone synthesis requires an ADR-001 amendment. Mobile acceptance rows remain unpassed.
 
 ## Questions answered so far
 
@@ -17,7 +25,7 @@ See [audio analysis](Audio-Sample-Analysis.md), [frequency-list review](Frequenc
 
 ## Specified, not verified
 
-The v0.3 [signal specification](Signal-Specification.md) keeps sine-only PCM16 WAV at 44.1/48 kHz, mono/duplicate stereo, 20 Hz–10 kHz, 100 steps/five minutes and exact timing/fades/JSON, with backend worker generation and an editor-only frontend. SOLID and frontend/backend unit tests are compulsory. Square waves remain deferred. Initial [renderer results](https://github.com/appstacksa01/AppStack-OpenWave/blob/main/docs/Backend-Renderer.md) cover 36 synthetic WAV cases, not the complete [service/browser verification plan](Signal-Verification-Plan.md). The renderer PR awaits review; its results do not validate electrical output or clinical claims.
+The [v0.4 working-tree contract](Signal-Specification.md) extends the adopted v0.3 sine baseline with explicitly normalized/truncated square/triangle. All original timing/rate/channel/resource limits remain. Sine fixture hashes are unchanged; 64 digital cases pass, with 0 PCM16 LSB maximum error for fully compared fixtures. The [desktop guide](../Desktop-Player.md) distinguishes unit, real-process, independent and manual browser evidence from unresolved release/hardware checks. SOLID/frontend/backend tests remain compulsory. Remote merge/CI outcomes are not inferred from local results.
 
 We have not established the existing player's accepted WAV bit depths/rates/channel combinations or the actual waveform at its outputs.
 
@@ -27,11 +35,11 @@ We have not established the existing player's accepted WAV bit depths/rates/chan
 | --- | --- | --- |
 | INV-01: Reference documentation | Partial: model, labels and owner workflow recorded | Manual/revision, file formats and input specifications |
 | INV-02: Historical research | Partial: primary claims and critical account located | Jones report and underlying investigation review |
-| INV-03: Hardware characterization | Not measured | Qualified protocol, equipment, load-defined results |
-| INV-04: Mobile platform | Browser selected for first file-only milestone in specification PR | Actual browser/device checks; physical route verification separate |
-| INV-05: Hardware boundary | Partial: candidate instruments/interfaces documented | Decide what external hardware is required |
+| INV-03: Hardware characterization | BLOCKED — MEASUREMENT REQUIRED; laptop observation recorded without electrical inference | Analog Output Characterisation protocol, qualified reviewer/equipment and load-defined results |
+| INV-04: Mobile platform | PARTIALLY ANSWERED: file milestone and shared-engine/UI/adapter direction confirmed; official platform capability documented | Framework/capability decisions, identified phone/DAC tests and POC evidence |
+| INV-05: Hardware boundary | PARTIALLY ANSWERED: frequency/amplitude distinction and commercial DAC/ESP32/external-DAC options documented | Measure load/output needs; no amplifier or custom hardware requirement established |
 | INV-06: Safety review | Pending | Qualified bench setup and hazard review |
-| INV-07: Prototype implementation | Backend renderer prepared; local digital checks passed for 36 fixtures and both maximum exports | Maintainer review, human reproduction, job-service integration, editor and release verification remain |
+| INV-07: Prototype implementation | PARTIALLY ANSWERED: renderer evidence plus uncommitted local connected preview; see audit | Review/acceptance, human reproduction, complete release workflow and target-device verification remain |
 | INV-08: Licensing | GPL-3.0-only software / CC-BY-SA-4.0 original docs merged in PR #4 | Dependency review during implementation; hardware/third-party rights separate; no AGPL change adopted |
 | INV-09: Lists/software | Partial: actual list structure and provenance inspected | Rights, normalization rules, neutral import schema, software/export checks |
 
@@ -39,9 +47,13 @@ Remaining investigation requirements are tracked separately from authorization f
 
 ## Next practical work
 
-1. Review the backend renderer, unit tests and independent WAV results; merge accepted work through its PR.
-2. Implement queue/storage/HTTP adapters and the worker against the [service contract](https://github.com/appstacksa01/AppStack-OpenWave/blob/main/docs/Service-Contract.md), with unit and integration tests.
-3. Connect the editor and obtain browser/device results and a second verification review before release. Cloud CI remains deferred without enabling paid services; local checks remain compulsory.
-4. Re-estimate funding and maintenance for backend operation. Establish player compatibility and a qualified bench measurement plan separately.
+For the desktop track, the next evidence milestone is laptop sound-card output followed by a compatible USB-C DAC, using identical fixtures and reviewed electronic loads. Follow the [desktop measurement plan](../Desktop-Player.md#short-manual-lab-verification-plan); record physical results separately from passing software tests. Generation, playback and future external hardware interfaces remain independent, so hardware design does not block software work. Use measured results to decide whether additional hardware or a different desktop audio layer is necessary.
+
+This is now formalized as [OpenWave Analog Output Characterisation](Hardware-and-Electrical-Safety.md#openwave-analog-output-characterisation), the single next Portable hardware research milestone. Optional ESP32 and independently safety-reviewed Electro-Med comparisons follow their own entry gates; they do not block the laptop/DAC baseline.
+
+1. Review the renderer and existing uncommitted connection work against the [service contract](https://github.com/appstacksa01/AppStack-OpenWave/blob/main/docs/Service-Contract.md), preserving branch/PR policy and independent release verification. No commits or publication are part of this documentation task.
+2. Reuse/review the implemented desktop `AudioOutput` contract for mobile capability validation; assign Android/USB-C iPhone/DAC/instrument identities before choosing native/mobile integration. See POC phase 0.
+3. Obtain browser/mobile/device results and independent review before any relevant release. Cloud CI remains deferred; local checks are compulsory and remote checks must not be labelled passed while blocked.
+4. Re-estimate funding/maintenance separately for backend operation, native adapters, physical testing and eventual distribution. No new budget or hardware purchase is approved here.
 
 Historical reconstruction and an exhaustive player-format matrix need not prevent a generic export prototype if the maintainer records that reduced scope and the applicable readiness criteria are met.
