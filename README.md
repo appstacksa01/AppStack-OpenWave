@@ -57,6 +57,10 @@ The reviewed files in `docs/wiki/` are the source for the public wiki. Propose r
 
 The project is intended to be open source. An explicit software, documentation, and hardware licensing decision is still required before implementation contributions are accepted. Public visibility alone does not grant an open-source license. See INV-08.
 
+## Funding and maintenance
+
+We are seeking research sponsorship and grants to support engineering research, independent verification and ongoing maintenance. No funding has been confirmed in the [funding and maintenance proposal](docs/Funding-and-Maintenance.md). It outlines a browser-based WAV-generator milestone, an initial budget worksheet, sponsor expectations and public reporting. Scope, licences, costs and a funding collection route still require approval before a funding request is launched.
+
 ## Contact
 
 Development is facilitated by Stephen at AppStack. Contact: stephen@appstacksa.co.za
