@@ -30,6 +30,16 @@ Access/review date: 22 October 2026. Review status applies only to the stated po
 
 Review/access date for S11–S18: 22 October 2026. References to supplier claims do not endorse them. No vendor files, audio recording, or proprietary frequency database are redistributed here.
 
+## Additional software review
+
+| ID | Source | Type, relevance, and limitations |
+| --- | --- | --- |
+| S19 | Appsage / Guru Chants, [Rife Frequency Generator on Google Play](https://play.google.com/store/apps/details?hl=en_US&id=com.appsage.rifegenerator), listing updated 28 July 2026 | Developer-authored description reviewed 22 October 2026. Feature statements only; app not installed or measured. No explicit rate/bit-depth, export, accuracy or machine-compatibility specification found in the inspected description. |
+| S20 | Rohde & Schwarz, [UPV audio analyser specifications](https://www.atecorp.com/getmedia/d143927b-2d3b-42d6-ab68-0fa8236365c3/rohde-schwarz-upv_datasheet_1.pdf), version 03.00, August 2011 | Manufacturer-authored datasheet, reseller-hosted. Identity/scope inspected 22 October 2026. Describes an audio analyser, not the Appsage app or Electro-Med format support. |
+| S21 | Rohde & Schwarz, [UPL audio analyser datasheet](https://www.testequipmenthq.com/datasheets/Rohde-Schwarz-UPL06-Datasheet.pdf), publication date not established | Manufacturer-authored document with reseller cover. Identity/scope inspected 22 October 2026. Not evidence of app/player compatibility. |
+
+The [draft signal targets](Signal-Specification.md) are project proposals, not specifications inferred from these products.
+
 ## Adding sources
 
 Assign a source ID. Record author, title, publication date/version, stable URL/DOI, access date, exact pages or sections, inspected portions, source type, claims, and limitations. Record web update dates where available. Link rather than copying third-party publications. An inaccessible document remains “located” until inspected.

@@ -10,7 +10,7 @@ All investigations remain open. INV-01 is partially answered by exterior photogr
 | INV-04 | Assess mobile platforms | Requirements-based web/native/hybrid/controller comparison, target devices, output limits, verification proposal | INV-01/03 or generic-generator scope |
 | INV-05 | Define hardware boundary | Hardware necessity, interface/output requirements, disconnect/fault behaviour, phone limitations | INV-03/04; coordinate with INV-06 |
 | INV-06 | Review safety and boundaries | Bench review before testing; hazards, expertise, future review requirements; bench-only initial scope | Starts before INV-03 testing; revisit after INV-05 |
-| INV-07 | Specify first prototype | Numeric signal requirements, routes/devices, tolerances, interruptions, acceptance measurements; maintainer review recorded | INV-02–06 with documented scope exceptions |
+| INV-07 | Specify first prototype — draft prepared | Review [proposed file specification](Signal-Specification.md) and [verification plan](Signal-Verification-Plan.md); settle square-wave definition, resource limits, platform and readiness decision. No app tests run. | INV-02–06 with documented scope exceptions |
 | INV-08 | Decide licensing | Maintainer chooses software/docs/hardware licenses as appropriate; license texts and contribution rules published; third-party rights checked | Maintainer decision |
 | INV-09 | Review existing software and online lists | Inspect lawful downloads/licenses; establish units, fields, provenance and redistribution rights; confirm any export formats; propose neutral import schema | S13–S15; no installer execution required |
 

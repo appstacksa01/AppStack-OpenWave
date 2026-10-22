@@ -2,6 +2,8 @@
 
 Status: platform investigation pending; INV-04.
 
+A [draft file-export specification](Signal-Specification.md) now proposes PCM16 WAV at 44.1/48 kHz, mono or duplicate stereo, with defined signal and timing targets. Its [verification plan](Signal-Verification-Plan.md) separates exported-file checks from actual playback and electrical measurement. Targets are not implemented or accepted compatibility claims.
+
 The [audio sample analysis](Audio-Sample-Analysis.md) supplies an observed example of a timed sequence, approximately 20 Hz–10 kHz. This range is a sample finding, not an adopted device requirement. Candidate software functions now include frequency-list import, per-step durations, waveform controls, and lossless WAV export. File format and output-path validation remain open.
 
 The [equipment research](Test-Equipment-Research.md) also identifies an external-instrument control path for investigation. No phone compatibility or hardware protocol integration has been demonstrated.

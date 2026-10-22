@@ -17,6 +17,8 @@ Updated: 22 October 2026. Stage: research and requirements gathering. The refere
 9. [Audio sample analysis](Audio-Sample-Analysis.md)
 10. [Software and supplier research](Software-and-Supplier-Research.md)
 11. [Test equipment research](Test-Equipment-Research.md)
+12. [Proposed signal specification](Signal-Specification.md)
+13. [Repeatable signal verification plan](Signal-Verification-Plan.md)
 
 Use the [research entry template](Research-Entry-Template.md). Reference sources by ID, preserve disagreements, and update requirements when evidence changes.
 

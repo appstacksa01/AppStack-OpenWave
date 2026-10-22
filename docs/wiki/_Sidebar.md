@@ -10,6 +10,8 @@
 - [Software and suppliers](Software-and-Supplier-Research.md)
 - [Test equipment](Test-Equipment-Research.md)
 - [Mobile capabilities](Mobile-Capabilities.md)
+- [Signal specification (draft)](Signal-Specification.md)
+- [Signal verification plan](Signal-Verification-Plan.md)
 - [Hardware and safety](Hardware-and-Electrical-Safety.md)
 - [Development readiness](Development-Readiness.md)
 - [Research entry template](Research-Entry-Template.md)

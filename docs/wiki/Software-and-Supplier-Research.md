@@ -16,6 +16,14 @@ The [product description](https://www.cellnutrition.co.za/product/fit-rife-i-han
 
 This is a separate device family, not an identified replacement or equivalent for the Electro-Med 235p. No performance measurements or compatibility tests have been performed.
 
+## Appsage / Guru Chants: Rife Frequency Generator
+
+The [Google Play description](https://play.google.com/store/apps/details?hl=en_US&id=com.appsage.rifegenerator) was accessible through the English-US listing during the 22 October 2026 review [S19]. It advertises sine tones, a searchable catalogue, preset groups, visualisation and playback controls; it treats condition labels as historical references without verified effects.
+
+The inspected description does not document sample rate, bit depth, output accuracy, WAV export, timed-sequence editing, or Electro-Med compatibility. The app was not installed or measured. A displayed waveform does not establish the analog output. Its listed sine generation differs from the square-like private sample; this is a feature comparison, not an assessment of source code or actual output.
+
+The supplied R&S UPV/UPL datasheets describe laboratory audio analysers, not this app or the Electro-Med player. They cannot establish those products' format support [S20–S21].
+
 ## Online frequency lists
 
 The owner recalls that the missing app accepted frequency values obtained online and generated an audio file. Treat this as an owner account, not verified behaviour of the RifeMedic software.

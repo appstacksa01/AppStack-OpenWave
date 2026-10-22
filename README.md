@@ -28,6 +28,8 @@ Start at the [GitHub research wiki](https://github.com/appstacksa01/AppStack-Ope
 - [Mobile capabilities](docs/wiki/Mobile-Capabilities.md)
 - [Hardware and electrical safety](docs/wiki/Hardware-and-Electrical-Safety.md)
 - [Investigation backlog and development readiness](docs/wiki/Development-Readiness.md)
+- [Proposed signal specification](docs/wiki/Signal-Specification.md)
+- [Repeatable verification plan](docs/wiki/Signal-Verification-Plan.md)
 
 ## Proposed technology
 
