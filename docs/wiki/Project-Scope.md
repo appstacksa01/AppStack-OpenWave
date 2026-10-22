@@ -20,8 +20,8 @@ Abrams' apparatus, Rife-associated apparatus, and modern commercial machines mus
 
 ## First software decisions
 
-The licensing/specification pull request selects a static TypeScript browser prototype, sine-only 20 Hz–10 kHz WAV generation, digital peak amplitude, JSON sequence files, 100 steps and five-minute exports. Software uses GPL-3.0-only; original documentation uses CC-BY-SA-4.0 with third-party exclusions. Decisions become accepted when reviewed and merged into `main`. This supersedes MEVN and square-wave support for the first milestone.
+PR #4 established the software/docs licences and first numeric WAV contract. The v0.3 revision selects a TypeScript browser editor with backend API and worker processes for all generation/encoding; SOLID and frontend/backend unit tests are compulsory. Sine-only 20 Hz–10 kHz generation, digital amplitude, JSON sequences, 100 steps and five-minute exports are unchanged. Software uses GPL-3.0-only; original documentation uses CC-BY-SA-4.0 with third-party exclusions. The architecture revision takes effect when reviewed and merged into `main`; browser rendering is superseded.
 
 ## Decisions still open
 
-Physical output interfaces, electrical calibration, external hardware, Electro-Med format compatibility and verification equipment remain open. Implementation dependencies, actual supported browser/device versions and verification results must be recorded during development; native apps and long programmes need a later scope decision.
+Physical output interfaces, electrical calibration, external hardware, Electro-Med format compatibility and verification equipment remain open. Backend frameworks, queue/storage/access contracts and concrete operational limits must be documented with the first service implementation; hosting and public-deployment data handling need review. Record actual supported browser/device versions and verification results during development; native apps and long programmes need a later scope decision.

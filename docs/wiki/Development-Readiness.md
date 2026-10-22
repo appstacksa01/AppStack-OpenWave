@@ -2,7 +2,7 @@
 
 The first implementation decision now narrows the software milestone to browser-based WAV export; see the file-only decision below. These are investigation records, not created GitHub Issues. Exterior photographs inform INV-01; local audio analysis informs INV-07. No hardware measurements have been performed, and they still require INV-06 review first.
 
-See [research progress](Research-Progress.md) for evidence by investigation. The reviewed third-party frequency list advances INV-09 without resolving reuse rights or complete signal settings. The v0.2 specification settles the first file-export contract; its tests remain planned, not passed.
+See [research progress](Research-Progress.md) for evidence by investigation. The reviewed third-party frequency list advances INV-09 without resolving reuse rights or complete signal settings. The v0.3 specification keeps the numeric file contract and moves rendering to backend worker processes, with mandatory SOLID and frontend/backend unit tests. All application tests remain planned, not passed.
 
 | ID | Investigation | Deliverable and completion criteria | Dependencies |
 | --- | --- | --- | --- |
@@ -12,7 +12,7 @@ See [research progress](Research-Progress.md) for evidence by investigation. The
 | INV-04 | Browser selected for first software milestone | Target browser/device checks required before release; native/mobile audio route investigation remains separate | File-only scope; record actual versions and results |
 | INV-05 | Define hardware boundary | Hardware necessity, interface/output requirements, disconnect/fault behaviour, phone limitations | INV-03/04; coordinate with INV-06 |
 | INV-06 | Review safety and boundaries | Bench review before testing; hazards, expertise, future review requirements; bench-only initial scope | Starts before INV-03 testing; revisit after INV-05 |
-| INV-07 | First file-only specification prepared for approval | v0.2 defines sine generation, timing/fades, limits, JSON and [verification](Signal-Verification-Plan.md); implementation checks and independent release review remain outstanding | Review/merge specification; no hardware dependency for file generation |
+| INV-07 | Backend file-export architecture revision prepared | v0.3 keeps sine/timing/JSON limits, requires backend jobs and [mandatory verification](Signal-Verification-Plan.md); service contracts/limits and implementation checks remain outstanding | Review/merge architecture revision; no hardware dependency for file generation |
 | INV-08 | Software/docs licences selected in licensing PR | GPL-3.0-only and CC-BY-SA-4.0 texts and [scope](https://github.com/appstacksa01/AppStack-OpenWave/blob/main/LICENSING.md) published in that change; effective on merge; review dependencies when introduced | Hardware and third-party assets remain separately scoped |
 | INV-09 | Review existing software and online lists — partial findings | [List structure/provenance reviewed](Frequency-List-Review.md); finish rights, units, ambiguity handling, neutral schema, and software/export verification | S13–S15/S19/S26–S28; no installer execution required |
 
@@ -36,14 +36,15 @@ Checked documentation milestones record work actually done; they do not mean the
 
 ## File-only prototype decision
 
-Decision date: 22 October 2026. Status: proposed through the licensing/specification pull request; effective upon maintainer approval and merge. **Proceed with the defined file-only implementation after merge**, beginning with the generator and its independent automated verification, then the editor. This is an implementation decision, not a release approval or a claim of passed tests.
+Decision date: 22 October 2026. PR #4 established the licences and original file-only scope. This revision replaces browser rendering with backend jobs; effective upon approval and merge of the architecture/standards PR. **Proceed with testable frontend/backend scaffolding and CI, the backend renderer, job service and editor in reviewed increments.** This is an implementation decision, not a release approval or a claim of passed tests.
 
-- Scope: the v0.2 [specification](Signal-Specification.md) and [verification plan](Signal-Verification-Plan.md), using synthetic inputs only.
-- Platform: static TypeScript browser application, with a generator independent of the UI; exact target versions/device results to be recorded before release.
+- Scope: the v0.3 [specification](Signal-Specification.md) and [verification plan](Signal-Verification-Plan.md), using synthetic inputs only.
+- Platform: TypeScript browser editor, backend API and separate worker processes; synthesis/encoding never runs in the browser or API request handler. Concrete service contracts, resource defaults and adapters must accompany the service implementation; exact browser/device results are required before release.
+- Quality: [SOLID and compulsory frontend/backend unit tests](https://github.com/appstacksa01/AppStack-OpenWave/blob/main/docs/Coding-Standards.md); introduce runnable suites/CI with scaffolding, and actual API/worker integration and independent numerical checks as those components are introduced.
 - Rights: GPL-3.0-only software and CC-BY-SA-4.0 original documentation; dependency rights reviewed before addition; no imported catalogues/recordings or hardware design contributions.
 - Scope exceptions: reconstructing Abrams/Rife circuitry, completing the Jones review, Electro-Med input/file specifications and electrical characterization do not block generic mathematical WAV generation. They remain open and must not be represented as established by this app.
 - Safety boundary: this phase creates/downloads digital files, with no live playback, hardware connection or human experiments. Qualified bench review is still required before any later physical testing.
-- Remaining release risks: browser allocation/download behaviour, actual generation accuracy, dependency compatibility and independent reviewer/device availability. Complete the verification plan or approve a documented scope revision before release.
+- Remaining release risks: backend job/storage capacity, caller isolation, failure/recovery/cancellation, generation accuracy, browser/network/download behaviour, dependency compatibility and independent reviewer/device availability. Complete verification before release; scope revisions cannot waive compulsory unit tests.
 - Funding estimates remain provisional. Implementation authorization does not authorize spending or promise a delivery date.
 
 Missing evidence leads to further investigation or an explicit scope reduction. A generic bench generator may proceed without historical reconstruction if applicable criteria are met; it must not claim device equivalence.

@@ -8,7 +8,7 @@ AppStack OpenWave seeks research sponsorship and grants to support reproducible 
 
 Fund a small browser-based frequency-sequence editor that exports WAV files for bench testing, together with independent review of its verification results. This is the recommended first deliverable, subject to the project's [development readiness review](wiki/Development-Readiness.md).
 
-Users would add and reorder steps, choose frequency, duration and digital amplitude, save and reload sequences, and export sine-wave sequences as 16-bit PCM WAV at 44.1 or 48 kHz. Start with synthetic test sequences. Final limits, timing and envelope rules, supported browsers, and acceptance criteria must be agreed before implementation.
+Users would add and reorder steps, choose frequency, duration and digital amplitude, save and reload sequences, and request backend exports as 16-bit PCM WAV at 44.1 or 48 kHz. Start with synthetic test sequences. The [architecture revision](Architecture.md) requires backend worker processes for heavy work, SOLID and compulsory frontend/backend unit tests. Keep the specified numeric WAV limits; agree concrete service limits and contracts with implementation.
 
 The deliverable does not establish Electro-Med compatibility, calibrated electrical output, or medical effectiveness. Square waves, condition presets, hardware control and body-connected experiments are excluded from this first funding objective. The existing [signal specification](wiki/Signal-Specification.md) remains a draft; its broader scope must be reconciled through review rather than treated as already approved.
 
@@ -30,15 +30,15 @@ These are rough planning allowances for discussion, not quotations or a delivery
 | Work item | Initial planning allowance | Cost basis |
 | --- | --- | --- |
 | Requirements, licence setup and acceptance review | 12–20 hours | Agreed contributor rate × approved hours |
-| Browser prototype and automated verification | 40–80 hours | Agreed contributor rate × approved hours |
+| Browser editor, backend API/worker service and automated verification | Re-estimate; previous 40–80-hour allowance assumed browser-only rendering | Separate estimates for frontend, backend, unit/integration tests and operations |
 | Independent verification and release documentation | 16–32 hours | Separate reviewer/developer quotes; avoid counting the same work twice |
-| Hosting and release infrastructure | To be quoted; assess a static site first | Actual service cost; no backend assumed |
+| Hosting, job queue/storage and release infrastructure | To be quoted for the backend architecture | API/worker compute, temporary artifact storage, transfer, monitoring and CI; include retention limits |
 | Equipment or specialist bench review | Separate, deferred budget | Written scope and supplier/specialist quotes before purchasing |
 | Contingency | Proposed 15% of approved initial costs | Maintainer approval; disclose use in spending reports |
 
-Initial software effort allowance: **68–132 hours**, before contingency and recurring maintenance. Convert this to a rand target only after rates, donated time, cash costs and applicable fees are confirmed. Record donated equipment/time separately from cash received; do not count it twice toward the cash target.
+The earlier **68–132-hour total is superseded** because it assumed browser-only generation. Obtain revised estimates for the backend architecture and required testing before setting an effort total or rand target. Confirm rates, donated time, infrastructure costs and applicable fees. Record donated equipment/time separately from cash received; do not count it twice toward the cash target.
 
-For maintenance, initially reserve **4–8 funded hours per month**, reviewed after the first three months. This is a capacity estimate, not a response-time guarantee. Include review, release work, hosting costs and any specialist needs when setting the monthly target. Define paid deliverables separately from volunteer participation; student involvement does not guarantee payment, employment or supervision capacity.
+Re-estimate recurring maintenance as well: the earlier **4–8 hours/month** was a provisional allowance, not validated capacity for operating a backend. Include service monitoring, updates, access controls, retention/cleanup, review, releases and hosting. Publish the revised monthly target only after operational scope is agreed, then review it after three months. No response-time guarantee is made. Define paid deliverables separately from volunteer participation; student involvement does not guarantee payment, employment or supervision capacity.
 
 ## Funding routes and sponsor expectations
 
