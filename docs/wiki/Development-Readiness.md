@@ -1,10 +1,10 @@
 # Development readiness and investigation backlog
 
-All items are open and unassigned. These are issue-ready tasks; they have not yet been created as GitHub Issues. Begin with INV-01, INV-02, and INV-08.
+All investigations remain open. INV-01 is partially answered by exterior photographs; local audio analysis informs INV-07. These are issue-ready tasks, not created GitHub Issues. Next priorities: obtain the reference manual/file specifications (INV-01), assess software/data sources (INV-09), and define the bench prototype and licensing (INV-07/08). Hardware measurements require INV-06 review first.
 
 | ID | Investigation | Deliverable and completion criteria | Dependencies |
 | --- | --- | --- | --- |
-| INV-01 | Identify the reference machine | Reviewed model/revision, external photos and manual references; or explicit generic-generator scope without reproduction claim | Maintainer provides identity information |
+| INV-01 | Document the reference machine — in progress | Electro-Med 235p identified from photos; obtain manufacturer/revision, manual, accepted formats/levels and operating modes; or explicitly adopt generic-generator scope | Model observed; documentation still required |
 | INV-02 | Review historical evidence | Annotated Abrams/Rife/later-device records; Jones scan and underlying investigation reviewed; claims distinguished from measurements | Lawful source access |
 | INV-03 | Characterize output | Engineer-reviewed bench protocol; load-defined measurements with raw data and uncertainty, or recorded limitation and reduced scope | INV-01; equipment/expertise; INV-06 review before testing |
 | INV-04 | Assess mobile platforms | Requirements-based web/native/hybrid/controller comparison, target devices, output limits, verification proposal | INV-01/03 or generic-generator scope |
@@ -12,11 +12,13 @@ All items are open and unassigned. These are issue-ready tasks; they have not ye
 | INV-06 | Review safety and boundaries | Bench review before testing; hazards, expertise, future review requirements; bench-only initial scope | Starts before INV-03 testing; revisit after INV-05 |
 | INV-07 | Specify first prototype | Numeric signal requirements, routes/devices, tolerances, interruptions, acceptance measurements; maintainer review recorded | INV-02–06 with documented scope exceptions |
 | INV-08 | Decide licensing | Maintainer chooses software/docs/hardware licenses as appropriate; license texts and contribution rules published; third-party rights checked | Maintainer decision |
+| INV-09 | Review existing software and online lists | Inspect lawful downloads/licenses; establish units, fields, provenance and redistribution rights; confirm any export formats; propose neutral import schema | S13–S15; no installer execution required |
 
 ## Before application implementation starts
 
 - [ ] First release purpose and exclusions agreed.
-- [ ] Reference identified, or generic-generator scope chosen explicitly.
+- [x] Reference model identified from owner photographs: Electro-Med 235p.
+- [ ] Revision, file/input specifications and applicable operating mode documented, or generic-generator scope chosen explicitly.
 - [ ] Historical evidence reviewed sufficiently to avoid unsupported specifications.
 - [ ] Signal range, waveforms, amplitude representation, timing, tolerances, and interface specified.
 - [ ] Platform and target devices selected with reasons.

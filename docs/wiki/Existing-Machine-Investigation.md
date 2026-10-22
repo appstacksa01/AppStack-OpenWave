@@ -1,6 +1,22 @@
 # Existing machine investigation
 
-Status: unidentified; no testing performed. Investigations: INV-01 and INV-03.
+Status: model identified from owner-supplied exterior photographs; manufacturer manual, revision, and electrical behaviour remain unverified. No hardware testing performed. Investigations: INV-01 and INV-03. Source: S11 (private owner photographs).
+
+## Observed identification and controls
+
+| Exterior observation | Interpretation limit |
+| --- | --- |
+| Model label: Electro-Med 235p; Natural Health branding | Branding does not establish the legal manufacturer or revision |
+| Product description: dual programmable frequency resonator | Label terminology, not independent performance evidence |
+| Channel 1/2 electrode terminals and handheld metal electrodes | Independence, isolation, and electrical characteristics unmeasured |
+| RCA input labelled Computer / Freq. Generator, CH1/CH2 | External input is labelled; accepted levels and bandwidth unknown |
+| Source selector labelled computer/frequency generator and USB flash | File formats and actual USB playback behaviour unverified |
+| RCA outputs labelled frequency counter/oscilloscope | Measurement connections are labelled; loading and scaling unknown |
+| Intensity control, indicators, pause/resume, and mains/high-voltage labels | No calibration, isolation, compliance, or safety certification verified |
+
+The owner recalls software generating an audio file from frequency lists; the application is no longer available. The supplied example is MP3, not WAV. The [local audio analysis](Audio-Sample-Analysis.md) documents its digital contents, not the machine's output. Do not infer compatibility or a circuit design from these observations.
+
+Personal names, the device serial number, and original photographs are not included in the public notebook.
 
 ## Collect first
 

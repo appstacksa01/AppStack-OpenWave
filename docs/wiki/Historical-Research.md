@@ -16,7 +16,7 @@ We have not yet established a primary-source reconstruction of Rife's apparatus,
 
 ## Modern commercial machines
 
-The machine motivating this project has not yet been identified. Its output cannot be inferred from appearance or the Rife label. INV-01 and INV-03 track identification and characterization.
+Owner photographs identify an Electro-Med 235p with Natural Health branding [S11]. Its manufacturer/revision and electrical specifications remain unverified. Its output cannot be inferred from appearance or the Rife label. See the [machine investigation](Existing-Machine-Investigation.md); INV-01 and INV-03 remain open for documentation and characterization.
 
 ## Awaiting review
 

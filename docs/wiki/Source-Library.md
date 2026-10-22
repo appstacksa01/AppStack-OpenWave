@@ -15,6 +15,21 @@ Access/review date: 22 October 2026. Review status applies only to the stated po
 | S09 | Apple, [AVAudioSourceNode](https://developer.apple.com/documentation/avfaudio/avaudiosourcenode), current documentation | Official API reference located; detailed review pending. Candidate for iOS investigation, not an implementation decision. |
 | S10 | Austin C. Lescarboura, [Our Abrams Investigation — XI](https://www.scientificamerican.com/article/our-abrams-investigation-xi/), August 1924, p. 96 | Original investigation installment. Public bibliographic description reviewed; full article pending. Do not attribute detailed findings without lawful access to the full text. |
 
+## Research added on 22 October 2026
+
+| ID | Source | Type, relevance, and limitations |
+| --- | --- | --- |
+| S11 | Owner-supplied exterior photographs of an Electro-Med 235p; private, inspected 22 October 2026 | Primary visual evidence for model/branding and connection labels. No manual, internal circuit, performance, isolation, or compliance verified. Original photos and serial number are not published. |
+| S12 | Owner-supplied MP3 sample and local analysis; private, analysed 22 October 2026 | Primary digital-file observations. Full-file FFT timeline and selected longer-window checks; no hardware output measured. See [public method and aggregate findings](Audio-Sample-Analysis.md). Source and detailed local artifacts are not publicly available; independent reproduction is pending a shareable dataset. |
+| S13 | RifeMedic SA, [Documents](https://www.rifemedicsa.co.za/Documents/), undated page | Supplier listing reviewed. Lists software, manuals, and program lists. Selected linked files failed retrieval; content and licensing remain unverified. |
+| S14 | RifeMedic SA, [About](https://rifemedicsa.co.za/About/), undated page | Supplier descriptions reviewed, including RifeMedic 5 Windows software. No executable run; WAV export and compatibility not established. |
+| S15 | Cell Nutrition, [FIT Rife I product page](https://www.cellnutrition.co.za/product/fit-rife-i-handheld-electrode-frequency-device), undated page | Seller's device description reviewed. Not a quantitative output characterization or independent efficacy/safety assessment. |
+| S16 | FeelElec, [FY8300/FY8300S manufacturer page](https://feelelec.cn/html/product/signalgenerator/108.html), undated page | Manufacturer's published features reviewed. No instrument tested; exact revision and control protocol require verification. |
+| S17 | FeelElec, [FY8300S user manual, Rev. 1.0](https://supereyes.ru/img/instructions/FY8300S_manual.pdf), May 2019, distributor-hosted copy | Manufacturer-authored primary document; selected interface/specification sections inspected, printed pp. 10, 46–49. Published specifications are not verified calibration or proof of suitability. |
+| S18 | FNIRSI, [DSO-510 official product page](https://www.fnirsi.com/products/dso-510), undated page | Manufacturer specification tables inspected. Instrument accuracy, isolation, seller package, and current price not independently verified. |
+
+Review/access date for S11–S18: 22 October 2026. References to supplier claims do not endorse them. No vendor files, audio recording, or proprietary frequency database are redistributed here.
+
 ## Adding sources
 
 Assign a source ID. Record author, title, publication date/version, stable URL/DOI, access date, exact pages or sections, inspected portions, source type, claims, and limitations. Record web update dates where available. Link rather than copying third-party publications. An inaccessible document remains “located” until inspected.
