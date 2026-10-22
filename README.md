@@ -1,4 +1,4 @@
-# Open Frequency Generator Mobile Application
+# AppStack OpenWave
 
 An AppStack open-source research and development initiative exploring mobile signal generation and the engineering behind historical and commercial devices described as Rife frequency generators.
 
