@@ -40,6 +40,20 @@ Review/access date for S11–S18: 22 October 2026. References to supplier claims
 
 The [draft signal targets](Signal-Specification.md) are project proposals, not specifications inferred from these products.
 
+## Audio background and frequency-list review
+
+| ID | Source | Type, relevance, and limitations |
+| --- | --- | --- |
+| S22 | Android Developers, [Sampling audio](https://developer.android.com/ndk/guides/audio/sampling-audio), current official documentation | Rate/resampling and floating-point guidance inspected 22 October 2026. Platform guidance, not a guarantee for every device or the Electro-Med player. |
+| S23 | Sophia / Retekess, [Understanding Sample Rates in Digital Audio](https://www.retekess.com/blog/understanding-sample-rates-in-digital-audio), 13 August 2025 | Vendor educational article reviewed. Useful terminology; broad quality claims are not acceptance specifications. No reference-player compatibility evidence. |
+| S24 | Soundrolling, [Sample rate and bit depth for picture](https://www.soundrolling.com/learn/sample-rate-and-bit-depth-for-picture), date not established | URL located; article body inaccessible during review. No content-based conclusions adopted. |
+| S25 | 12D Foundation, [Golden-ratio soundscapes](https://12dfoundation.org/golden-ratio), undated page | Rendered page inspected: listening interface and subjective wellness claims. Exact synthesis algorithm and sufficiently detailed causal study evidence not established from that page. |
+| S26 | Spooky2, [Download Rife Frequency List](https://www.spooky2-mall.com/download-rife-frequency-list/), undated landing page | Promotional listing inspected. Download and terms links returned access errors; actual dataset, fields and reuse rights not inspected. |
+| S27 | Owner-supplied presentation, Rife frequency list for Rife frequency generator, 18 slides; original file retained privately | Slide text/links inspected read-only. Footer displays 3 January 2016 and Dragonfly75 URL; footer is not proven publication date. No explicit redistribution license found in slide text. Source/selected text matches S28. |
+| S28 | Dragonfly75, [Rife Frequency List](https://www.dragonfly75.com/eng/freq-list.html), date/compiler not established | Original linked webpage inspected, including introduction and selected entries. Describes user reports; includes parsing ambiguities and incomplete signal settings. Reuse rights and clinical validity not established. |
+
+Review/access date for S22–S28: 22 October 2026. The original presentation, complete database, personal audio and source photographs are not uploaded. Public reviews summarize methods, provenance and limitations.
+
 ## Adding sources
 
 Assign a source ID. Record author, title, publication date/version, stable URL/DOI, access date, exact pages or sections, inspected portions, source type, claims, and limitations. Record web update dates where available. Link rather than copying third-party publications. An inaccessible document remains “located” until inspected.

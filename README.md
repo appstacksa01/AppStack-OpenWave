@@ -30,6 +30,7 @@ Start at the [GitHub research wiki](https://github.com/appstacksa01/AppStack-Ope
 - [Investigation backlog and development readiness](docs/wiki/Development-Readiness.md)
 - [Proposed signal specification](docs/wiki/Signal-Specification.md)
 - [Repeatable verification plan](docs/wiki/Signal-Verification-Plan.md)
+- [Research progress and answered questions](docs/wiki/Research-Progress.md)
 
 ## Proposed technology
 

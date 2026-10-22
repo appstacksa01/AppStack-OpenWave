@@ -6,6 +6,8 @@ Updated: 22 October 2026. Stage: research and requirements gathering. The refere
 
 ## Contents
 
+Start with [research progress and answered questions](Research-Progress.md) for the current status and next steps.
+
 1. [Project scope](Project-Scope.md)
 2. [Historical research](Historical-Research.md)
 3. [Source library](Source-Library.md)
@@ -19,6 +21,8 @@ Updated: 22 October 2026. Stage: research and requirements gathering. The refere
 11. [Test equipment research](Test-Equipment-Research.md)
 12. [Proposed signal specification](Signal-Specification.md)
 13. [Repeatable signal verification plan](Signal-Verification-Plan.md)
+14. [Frequency-list review](Frequency-List-Review.md)
+15. [Audio-format research](Audio-Format-Research.md)
 
 Use the [research entry template](Research-Entry-Template.md). Reference sources by ID, preserve disagreements, and update requirements when evidence changes.
 

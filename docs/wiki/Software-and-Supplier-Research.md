@@ -26,6 +26,8 @@ The supplied R&S UPV/UPL datasheets describe laboratory audio analysers, not thi
 
 ## Online frequency lists
 
+The [frequency-list review](Frequency-List-Review.md) now documents the supplied presentation, its matching source webpage, and the separately inspected Spooky2 landing page. This answers questions about available data and parsing challenges, while rights and execution settings remain unresolved.
+
 The owner recalls that the missing app accepted frequency values obtained online and generated an audio file. Treat this as an owner account, not verified behaviour of the RifeMedic software.
 
 Before importing a list, establish:
@@ -41,4 +43,4 @@ A frequency alone does not specify an electrical signal. An audio waveform, elec
 
 Recover documentation and license terms lawfully; compare sequence/file formats; determine whether any data can be reused; define a neutral import schema. Health labels must not become validated treatment claims in the app.
 
-See [source library](Source-Library.md), entries S13–S15, and INV-07–INV-09.
+See [source library](Source-Library.md), entries S13–S15/S19/S26–S28, and INV-07–INV-09.

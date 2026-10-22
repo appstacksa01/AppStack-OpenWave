@@ -1,6 +1,9 @@
 ## Research notebook
 
 - [Home](Home.md)
+- [Progress and answered questions](Research-Progress.md)
+- [Frequency-list review](Frequency-List-Review.md)
+- [Audio-format research](Audio-Format-Research.md)
 - [Project scope](Project-Scope.md)
 - [Historical research](Historical-Research.md)
 - [Source library](Source-Library.md)
