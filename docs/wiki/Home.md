@@ -2,7 +2,7 @@
 
 AppStack is investigating an open-source mobile frequency generator. This notebook records what sources claim, what we know, what remains unknown, and what must be resolved before implementation.
 
-Updated: 22 October 2026. Stage: research and requirements gathering. The reference model has been identified from owner photographs and an audio sample has been analysed locally. No hardware output measurements have been performed.
+Updated: 22 October 2026. Stage: first file-export specification and licensing prepared for review/merge. The reference model has been identified from owner photographs and an audio sample has been analysed locally. No application or hardware output has been verified. Start with the [file-only implementation decision](Development-Readiness.md#file-only-prototype-decision).
 
 ## Contents
 
@@ -19,7 +19,7 @@ Start with [research progress and answered questions](Research-Progress.md) for 
 9. [Audio sample analysis](Audio-Sample-Analysis.md)
 10. [Software and supplier research](Software-and-Supplier-Research.md)
 11. [Test equipment research](Test-Equipment-Research.md)
-12. [Proposed signal specification](Signal-Specification.md)
+12. [First prototype signal specification](Signal-Specification.md)
 13. [Repeatable signal verification plan](Signal-Verification-Plan.md)
 14. [Frequency-list review](Frequency-List-Review.md)
 15. [Audio-format research](Audio-Format-Research.md)
