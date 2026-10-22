@@ -14,6 +14,8 @@
 - [Test equipment](Test-Equipment-Research.md)
 - [Mobile capabilities](Mobile-Capabilities.md)
 - [First prototype specification](Signal-Specification.md)
+- [Coding and testing standards](https://github.com/appstacksa01/AppStack-OpenWave/blob/main/docs/Coding-Standards.md)
+- [Backend architecture](https://github.com/appstacksa01/AppStack-OpenWave/blob/main/docs/Architecture.md)
 - [Signal verification plan](Signal-Verification-Plan.md)
 - [Hardware and safety](Hardware-and-Electrical-Safety.md)
 - [Development readiness](Development-Readiness.md)

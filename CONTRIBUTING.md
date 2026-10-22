@@ -26,7 +26,9 @@ Edit the Markdown files in `docs/wiki/` in your branch and include them in a rep
 
 ## Review checks
 
-Keep changes within the agreed scope and check links, source references, and personal information before submitting. For documentation-only changes, describe the review performed; application tests are not expected when no application code changes. For later code contributions, run the applicable checks defined by the project and report the results. Do not describe a planned or skipped check as passed.
+Implementation must follow the [mandatory coding/testing standards](docs/Coding-Standards.md) and [backend architecture](docs/Architecture.md). SOLID principles and meaningful unit tests for frontend and backend are compulsory. Include tests for new/changed behaviour and regressions, run both unit suites and applicable lint/type/build/integration checks, and record commands/results. Heavy processing belongs in backend worker processes, never the browser or API request handler. The first scaffolding PR must introduce the tooling, non-empty suites and CI alongside its code; these checks do not exist yet.
+
+Keep changes within the agreed scope and check links, source references, and personal information before submitting. Documentation-only changes require documentation checks; runtime unit tests are not expected when no implementation code changes. Do not describe a planned or skipped check as passed.
 
 ## Repository enforcement
 
@@ -46,4 +48,4 @@ This document defines the contribution policy. GitHub branch protection or rules
 
 Bench work needs device identity, instruments and calibration status, test loads, output path, settings, methods, uncertainty, and an appropriate safety review. Historical mains-connected circuits are research material, not construction instructions. No body-connected experiments are included in this phase.
 
-The [file-only readiness decision](docs/wiki/Development-Readiness.md#file-only-prototype-decision) permits implementation of the defined browser/WAV scope after its licensing/specification pull request is approved and merged. This does not authorize hardware testing or imply that the prototype passes verification. Keep implementation on separate reviewed branches, starting with the independently testable generator, then the editor. Run the applicable [verification checks](docs/wiki/Signal-Verification-Plan.md) and report actual outcomes.
+The [file-only readiness decision](docs/wiki/Development-Readiness.md#file-only-prototype-decision) permits implementation of the defined editor/backend WAV scope after the applicable specification changes are approved and merged. This does not authorize hardware testing or imply that the prototype passes verification. Start with testable scaffolding/CI and the backend renderer, then the export service and editor, on separate reviewed branches. Run the applicable [verification checks](docs/wiki/Signal-Verification-Plan.md) and report actual outcomes.

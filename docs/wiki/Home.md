@@ -2,7 +2,7 @@
 
 AppStack is investigating an open-source mobile frequency generator. This notebook records what sources claim, what we know, what remains unknown, and what must be resolved before implementation.
 
-Updated: 22 October 2026. Stage: first file-export specification and licensing prepared for review/merge. The reference model has been identified from owner photographs and an audio sample has been analysed locally. No application or hardware output has been verified. Start with the [file-only implementation decision](Development-Readiness.md#file-only-prototype-decision).
+Updated: 22 October 2026. Stage: licences and initial file contract merged; backend-processing architecture and compulsory coding/testing standards prepared for review. The reference model has been identified from owner photographs and an audio sample has been analysed locally. No application or hardware output has been verified. Start with the [file-only implementation decision](Development-Readiness.md#file-only-prototype-decision).
 
 ## Contents
 
@@ -23,6 +23,8 @@ Start with [research progress and answered questions](Research-Progress.md) for 
 13. [Repeatable signal verification plan](Signal-Verification-Plan.md)
 14. [Frequency-list review](Frequency-List-Review.md)
 15. [Audio-format research](Audio-Format-Research.md)
+
+Implementation references: [coding and testing standards](https://github.com/appstacksa01/AppStack-OpenWave/blob/main/docs/Coding-Standards.md) and [backend architecture](https://github.com/appstacksa01/AppStack-OpenWave/blob/main/docs/Architecture.md).
 
 Use the [research entry template](Research-Entry-Template.md). Reference sources by ID, preserve disagreements, and update requirements when evidence changes.
 

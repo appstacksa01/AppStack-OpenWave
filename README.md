@@ -34,7 +34,11 @@ Start at the [GitHub research wiki](https://github.com/appstacksa01/AppStack-Ope
 
 ## Proposed technology
 
-The first prototype is a static TypeScript browser application with a framework-independent WAV generator and a responsive editor. It needs no backend, database or account. The original MEVN proposal is superseded for this milestone; native mobile apps and hardware control may be assessed separately later.
+The first prototype uses a TypeScript browser editor, a backend API and separate backend worker processes for waveform generation and WAV encoding. The browser handles editing, lightweight validation, progress and downloads; all heavy processing runs on the backend. See the [architecture decision](docs/Architecture.md). Frameworks, queue/storage adapters and hosting must be specified with the implementation; the original MEVN stack is not automatically adopted.
+
+## Engineering standards
+
+**SOLID principles and meaningful frontend/backend unit tests are compulsory.** Follow the [coding and testing standards](docs/Coding-Standards.md). Implementation pull requests must include tests for changed behaviour and pass both unit suites plus applicable formatting, lint, strict type, build and integration checks. Scaffolding must introduce runnable suites and CI; no application checks or branch-rule enforcement are claimed to exist yet.
 
 ## Contributing
 
