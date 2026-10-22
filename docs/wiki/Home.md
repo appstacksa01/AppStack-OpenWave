@@ -1,0 +1,20 @@
+# Research home
+
+AppStack is investigating an open-source mobile frequency generator. This notebook records what sources claim, what we know, what remains unknown, and what must be resolved before implementation.
+
+Updated: 22 October 2026. Stage: research and requirements gathering. No project measurements have been performed.
+
+## Contents
+
+1. [Project scope](Project-Scope.md)
+2. [Historical research](Historical-Research.md)
+3. [Source library](Source-Library.md)
+4. [Findings and uncertainties](Findings-and-Uncertainties.md)
+5. [Existing machine investigation](Existing-Machine-Investigation.md)
+6. [Mobile capabilities](Mobile-Capabilities.md)
+7. [Hardware and electrical safety](Hardware-and-Electrical-Safety.md)
+8. [Development readiness and backlog](Development-Readiness.md)
+
+Use the [research entry template](Research-Entry-Template.md). Reference sources by ID, preserve disagreements, and update requirements when evidence changes.
+
+The files in `docs/wiki/` are the version-controlled source for the wiki. Submit changes through repository pull requests, then synchronize approved pages. Until synchronization is available, this notebook remains usable in the main repository.
