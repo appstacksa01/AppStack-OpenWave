@@ -26,7 +26,7 @@ Edit the Markdown files in `docs/wiki/` in your branch and include them in a rep
 
 ## Review checks
 
-Implementation must follow the [mandatory coding/testing standards](docs/Coding-Standards.md) and [backend architecture](docs/Architecture.md). SOLID principles and meaningful unit tests for frontend and backend are compulsory. Include tests for new/changed behaviour and regressions, run both unit suites and applicable lint/type/build/integration checks, and record commands/results. Heavy processing belongs in backend worker processes, never the browser or API request handler. The first scaffolding PR must introduce the tooling, non-empty suites and CI alongside its code; these checks do not exist yet.
+Implementation must follow the [mandatory coding/testing standards](docs/Coding-Standards.md) and [backend architecture](docs/Architecture.md). SOLID principles and meaningful unit tests for frontend and backend are compulsory. Include tests for new/changed behaviour and regressions, run both unit suites and applicable lint/type/build/integration checks, and record commands/results. Heavy processing belongs in backend worker processes, never the browser or API request handler. The [scaffolding](docs/Development.md) introduces tooling, non-empty suites and CI alongside its code; remote CI and required repository checks need separate verification.
 
 Keep changes within the agreed scope and check links, source references, and personal information before submitting. Documentation-only changes require documentation checks; runtime unit tests are not expected when no implementation code changes. Do not describe a planned or skipped check as passed.
 

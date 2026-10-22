@@ -2,7 +2,7 @@
 
 An AppStack open-source research and development initiative exploring mobile signal generation and the engineering behind historical and commercial devices described as Rife frequency generators.
 
-**Status: research and requirements gathering. No application or hardware has been implemented or validated.**
+**Status: early application scaffolding and ongoing research. No waveform generator, export service or hardware output has been implemented or validated.**
 
 ## What we want to explore
 
@@ -38,9 +38,11 @@ The first prototype uses a TypeScript browser editor, a backend API and separate
 
 ## Engineering standards
 
-**SOLID principles and meaningful frontend/backend unit tests are compulsory.** Follow the [coding and testing standards](docs/Coding-Standards.md). Implementation pull requests must include tests for changed behaviour and pass both unit suites plus applicable formatting, lint, strict type, build and integration checks. Scaffolding must introduce runnable suites and CI; no application checks or branch-rule enforcement are claimed to exist yet.
+**SOLID principles and meaningful frontend/backend unit tests are compulsory.** Follow the [coding and testing standards](docs/Coding-Standards.md). Implementation pull requests must include tests for changed behaviour and pass both unit suites plus applicable formatting, lint, strict type, build and integration checks. Scaffolding introduces runnable suites and CI configuration; repository branch rules and remote CI results must be verified separately.
 
 ## Contributing
+
+Start with [development setup and checks](docs/Development.md). The scaffolding provides separate frontend/backend unit suites, strict typing, lint/format checks, builds and CI configuration. Run `npm run check` before submitting implementation changes. The preview is not a working generator; the [initial service contract](docs/Service-Contract.md) records the next backend targets.
 
 Research contributions are welcome before code. Read [CONTRIBUTING.md](CONTRIBUTING.md), choose an investigation from the [backlog](docs/wiki/Development-Readiness.md), and open an issue or pull request with sources, methods, uncertainties, and completion criteria. Document negative results and contradictory evidence as carefully as positive results.
 

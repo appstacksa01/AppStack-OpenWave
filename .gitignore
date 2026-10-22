@@ -1,0 +1,8 @@
+node_modules/
+dist/
+coverage/
+.openwave/
+*.tsbuildinfo
+.env
+.env.*
+!.env.example

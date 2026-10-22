@@ -1,0 +1,14 @@
+{
+  "name": "@openwave/frontend",
+  "version": "0.0.0",
+  "private": true,
+  "license": "GPL-3.0-only",
+  "type": "module",
+  "dependencies": {
+    "@openwave/contracts": "0.0.0"
+  },
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "vite build --sourcemap"
+  }
+}

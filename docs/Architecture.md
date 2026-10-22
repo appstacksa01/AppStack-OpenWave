@@ -1,6 +1,6 @@
 # Architecture decision: backend export processing
 
-ADR-001 — 22 October 2026. Proposed for review following the maintainer's explicit requirement that heavy processing run in backend processes. On merge, supersedes v0.2's browser/Web Worker rendering design. The mathematical WAV contract remains unchanged. No service has been implemented or deployed.
+ADR-001 — 22 October 2026. Adopted through PR #5 following the maintainer's explicit requirement that heavy processing run in backend processes. Supersedes v0.2's browser/Web Worker rendering design. The mathematical WAV contract remains unchanged. Scaffolding now introduces presentation/lifecycle policy and tests; no export service has been implemented or deployed. The [initial service contract](Service-Contract.md) specifies proposed endpoints, local adapters and resource defaults for the next increments.
 
 ## Responsibilities
 
