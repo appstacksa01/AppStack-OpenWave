@@ -2,13 +2,13 @@
 
 An AppStack open-source research and development initiative exploring mobile signal generation and the engineering behind historical and commercial devices described as Rife frequency generators.
 
-**Status: early backend renderer and ongoing research. Synthetic WAV files have passed local digital checks; the export service, editor and hardware-output verification remain outstanding.**
+**Status: local desktop waveform-player prototype; uncommitted and not a release.** The existing UI now loads WAVs, plays live backend-generated sine/band-limited square/triangle sequences and provides software mute, route feedback and a digital monitor. See the [desktop guide, results and lab plan](docs/Desktop-Player.md) and [desktop architecture decision](docs/ADR-003-Desktop-Player.md). No physical sound-card/DAC/phone output has been measured or validated.
 
 ## What we want to explore
 
 We want to understand what these devices actually output, which functions a mobile phone can reproduce, and what external hardware would be required. We invite developers, electronics engineers, researchers, and technical writers to contribute reproducible evidence.
 
-Our first software milestone is a browser-based sequence editor that exports sine-wave WAV files for independent digital verification and later bench testing. The [prototype specification](docs/wiki/Signal-Specification.md) defines the settings, limits and acceptance contract. Electro-Med compatibility and physical output measurements remain separate investigations; no output has been validated yet.
+The original milestone was a browser sine-sequence WAV exporter. The maintainer's desktop-player request now extends that shared engine with band-limited square/triangle and explicit live/file playback, without adopting a desktop framework. The [signal contract](docs/wiki/Signal-Specification.md) defines the working-tree extension and unchanged limits. Electro-Med compatibility and physical measurements remain separate investigations.
 
 ## Research scope
 
@@ -34,7 +34,9 @@ Start at the [GitHub research wiki](https://github.com/appstacksa01/AppStack-Ope
 
 ## Proposed technology
 
-The first prototype uses a TypeScript browser editor, a backend API and separate backend worker processes for waveform generation and WAV encoding. The browser handles editing, lightweight validation, progress and downloads; all heavy processing runs on the backend. See the [architecture decision](docs/Architecture.md). Frameworks, queue/storage adapters and hosting must be specified with the implementation; the original MEVN stack is not automatically adopted.
+The [Portable concept](docs/wiki/Portable-Concept.md) targets future Android/USB-C iPhone operation. [ADR-002](docs/ADR-002-Mobile-Playback.md) keeps one shared engine, one principal TypeScript UI and platform audio adapters. [ADR-003](docs/ADR-003-Desktop-Player.md) implements the browser adapter for desktop; Electron/Tauri/Capacitor and native mobile UI are not introduced. Mobile capability validation remains separate. Synthesis stays in backend processes; local WAV playback is separate from offline custom generation.
+
+The local file-export preview uses a plain TypeScript/Vite editor, Node HTTP API, SQLite job storage, private file artifacts and a separate backend worker for synthesis/encoding. The browser handles editing, lightweight validation, progress and downloads. See the [architecture](docs/Architecture.md) and [service contract](docs/Service-Contract.md) for boundaries and remaining acceptance/configuration work. These local implementation choices are not a production hosting or mobile-framework decision; MEVN has not been adopted.
 
 ## Engineering standards
 
@@ -42,7 +44,7 @@ The first prototype uses a TypeScript browser editor, a backend API and separate
 
 ## Contributing
 
-Start with [development setup and checks](docs/Development.md). The project provides separate frontend/backend unit suites, strict typing, lint/format checks, builds and CI configuration. Run `npm run check` before submitting implementation changes. The [backend renderer and independent WAV checks](docs/Backend-Renderer.md) are the first signal-generation increment. The browser preview is still incomplete; the [initial service contract](docs/Service-Contract.md) records the next backend targets.
+Start with [development setup and checks](docs/Development.md). The project provides separate frontend/backend unit suites, strict typing, lint/format checks, builds and CI configuration. Run `npm run check` before submitting implementation changes. The [backend renderer and independent WAV checks](docs/Backend-Renderer.md) cover the numerical increment. The [initial service contract](docs/Service-Contract.md) remains the acceptance target; a local connected preview does not complete its release/deployment gates. See the [audit](docs/Mobile-Research-Audit.md) for current working-tree status.
 
 Research contributions are welcome before code. Read [CONTRIBUTING.md](CONTRIBUTING.md), choose an investigation from the [backlog](docs/wiki/Development-Readiness.md), and open an issue or pull request with sources, methods, uncertainties, and completion criteria. Document negative results and contradictory evidence as carefully as positive results.
 
@@ -61,11 +63,11 @@ The reviewed files in `docs/wiki/` are the source for the public wiki. Propose r
 
 ## Licensing
 
-Original software is licensed under [GPLv3 only](LICENSE); original documentation is licensed under [CC BY-SA 4.0](LICENSE-DOCS). Read [LICENSING.md](LICENSING.md) for scope, attribution, contribution terms and third-party/branding exclusions. Hardware licensing remains a future decision if designs are introduced. These choices take effect in `main` when the licensing pull request is approved and merged.
+Original software is licensed under [GPLv3 only](LICENSE); original documentation is licensed under [CC BY-SA 4.0](LICENSE-DOCS), adopted in merged PR #4. Read [LICENSING.md](LICENSING.md) for scope, attribution, contribution terms and third-party/branding exclusions. Hardware licensing remains a future decision if designs are introduced.
 
 ## Funding and maintenance
 
-We are seeking research sponsorship and grants to support engineering research, independent verification and ongoing maintenance. No funding has been confirmed in the [funding and maintenance proposal](docs/Funding-and-Maintenance.md). It outlines a browser-based WAV-generator milestone, an initial budget worksheet, sponsor expectations and public reporting. The licensing and prototype specification changes require review and merge; costs and a funding collection route also need agreement before a funding request is launched.
+We are seeking research sponsorship and grants to support engineering research, independent verification and ongoing maintenance. No funding has been confirmed in the [funding and maintenance proposal](docs/Funding-and-Maintenance.md). It outlines a browser-based WAV-generator milestone, an initial budget worksheet, sponsor expectations and public reporting. Costs and a funding collection route need agreement before a funding request is launched; portable/native and hardware work require separate estimates and review.
 
 ## Contact
 

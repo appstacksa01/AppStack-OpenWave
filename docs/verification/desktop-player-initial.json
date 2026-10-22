@@ -1,0 +1,2224 @@
+{
+  "python": "3.12.14",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "node": "v22.20.0",
+  "source_sha256": {
+    "apps/backend/src/domain/sequence.ts": "ee1a83ec8c2be610a657fc92dd7c9cd7dc485f19a6a4f4b4f4e2f4780fe28a1e",
+    "apps/backend/src/domain/wav-encoder.ts": "82bc273bff7b6835792d455c74ee1177f663d5db8cb7b04d51690f074efb4d65",
+    "apps/backend/src/domain/waveform.ts": "716d4633c2cdc375d4b375eb640bb1b8d490f77eabe575bab7a90a8f51675927",
+    "apps/backend/src/application/render-export.ts": "8138ddd4b9a1251d567f71df39f883478b4df78b94c5518358258f2573b47a1b",
+    "tooling/verify-signals.mjs": "c86d67979d680490bc84b200b2a9fd203147d961540fdf072c65de5f79c28468",
+    "tooling/verify-wav.py": "627008d7dbd420811cb719a7d28c361022f0e5cfb3c550e9d19f883b20e18714"
+  },
+  "working_tree_base_commit": "9852bf688f65602ced6c1a4e43133c8b9c6b1132",
+  "working_tree_dirty": true,
+  "elapsed_seconds": 41.84299999999348,
+  "cases": [
+    {
+      "name": "tone-44100-1-20",
+      "frames": 441000,
+      "bytes": 882044,
+      "maximum_reference_error_lsb": 0,
+      "render_milliseconds": 67.9684,
+      "frequency": {
+        "requested_hz": 20,
+        "measured_hz": 20.0,
+        "endpoint_bound_hz": 0.00011409240914517227,
+        "tolerance_hz": 0.02
+      },
+      "sha256": "c8899f594c7b58c01f04e5986b3a419e01514a5b8503b13d1f282b57f7001754",
+      "input": {
+        "schema_version": 1,
+        "sample_rate_hz": 44100,
+        "channels": 1,
+        "steps": [
+          {
+            "frequency_hz": 20,
+            "duration_seconds": 10,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          }
+        ]
+      }
+    },
+    {
+      "name": "tone-44100-1-125.5",
+      "frames": 441000,
+      "bytes": 882044,
+      "maximum_reference_error_lsb": 0,
+      "render_milliseconds": 67.07760000000002,
+      "frequency": {
+        "requested_hz": 125.5,
+        "measured_hz": 125.50000101054275,
+        "endpoint_bound_hz": 0.0007121646231524892,
+        "tolerance_hz": 0.02
+      },
+      "sha256": "ede8d551a716bfbe19717ccc5ba0315bbcaa1905c8e041fd592af38cd20f1960",
+      "input": {
+        "schema_version": 1,
+        "sample_rate_hz": 44100,
+        "channels": 1,
+        "steps": [
+          {
+            "frequency_hz": 125.5,
+            "duration_seconds": 10,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          }
+        ]
+      }
+    },
+    {
+      "name": "tone-44100-1-500",
+      "frames": 441000,
+      "bytes": 882044,
+      "maximum_reference_error_lsb": 0,
+      "render_milliseconds": 59.13799999999998,
+      "frequency": {
+        "requested_hz": 500,
+        "measured_hz": 500.0000004854753,
+        "endpoint_bound_hz": 0.002835191996211961,
+        "tolerance_hz": 0.025
+      },
+      "sha256": "6abb9faaf77806618af28b74230b173fdc1d85b458a1f74a446d8d8264ae6b48",
+      "input": {
+        "schema_version": 1,
+        "sample_rate_hz": 44100,
+        "channels": 1,
+        "steps": [
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 10,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          }
+        ]
+      }
+    },
+    {
+      "name": "tone-44100-1-1000",
+      "frames": 441000,
+      "bytes": 882044,
+      "maximum_reference_error_lsb": 0,
+      "render_milliseconds": 59.03890000000001,
+      "frequency": {
+        "requested_hz": 1000,
+        "measured_hz": 1000.0000012166615,
+        "endpoint_bound_hz": 0.0056696751046274585,
+        "tolerance_hz": 0.05
+      },
+      "sha256": "b2b5888e7a377cdb8f866a7a04b9351d17013778b07a29e593d55486b66f2420",
+      "input": {
+        "schema_version": 1,
+        "sample_rate_hz": 44100,
+        "channels": 1,
+        "steps": [
+          {
+            "frequency_hz": 1000,
+            "duration_seconds": 10,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          }
+        ]
+      }
+    },
+    {
+      "name": "tone-44100-1-10000",
+      "frames": 441000,
+      "bytes": 882044,
+      "maximum_reference_error_lsb": 0,
+      "render_milliseconds": 59.4778,
+      "frequency": {
+        "requested_hz": 10000,
+        "measured_hz": 10000.000436050646,
+        "endpoint_bound_hz": 0.05669037735242455,
+        "tolerance_hz": 0.5
+      },
+      "sha256": "01e1b62919054f10307a62c80c173769940f19c2bfbb4a3cf987f969911232d4",
+      "input": {
+        "schema_version": 1,
+        "sample_rate_hz": 44100,
+        "channels": 1,
+        "steps": [
+          {
+            "frequency_hz": 10000,
+            "duration_seconds": 10,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          }
+        ]
+      }
+    },
+    {
+      "name": "sequence-44100-1",
+      "frames": 242550,
+      "bytes": 485144,
+      "maximum_reference_error_lsb": 0,
+      "render_milliseconds": 32.11250000000001,
+      "sha256": "8bf61d0a1aae36046aa84e6abd6bb0c5052d79f1d69e27a8d145aa5e94c26227",
+      "input": {
+        "schema_version": 1,
+        "sample_rate_hz": 44100,
+        "channels": 1,
+        "steps": [
+          {
+            "frequency_hz": 125.5,
+            "duration_seconds": 1.25,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 2.5,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 1000,
+            "duration_seconds": 1.75,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          }
+        ]
+      }
+    },
+    {
+      "name": "fractional-44100-1",
+      "frames": 13231,
+      "bytes": 26506,
+      "maximum_reference_error_lsb": 0,
+      "render_milliseconds": 3.6562999999999874,
+      "sha256": "c106622da65e8ec88b188e127d985e014c511be032cc02784115492afff553ee",
+      "input": {
+        "schema_version": 1,
+        "sample_rate_hz": 44100,
+        "channels": 1,
+        "steps": [
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 0.10001,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 0.10001,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 0.10001,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          }
+        ]
+      }
+    },
+    {
+      "name": "tone-44100-2-20",
+      "frames": 441000,
+      "bytes": 1764044,
+      "maximum_reference_error_lsb": 0,
+      "render_milliseconds": 57.888499999999965,
+      "frequency": {
+        "requested_hz": 20,
+        "measured_hz": 20.0,
+        "endpoint_bound_hz": 0.00011409240914517227,
+        "tolerance_hz": 0.02
+      },
+      "sha256": "cf77434e4787b3af7309835429f0ff854c3e0afacc0cb5735b9b5f201e583a94",
+      "input": {
+        "schema_version": 1,
+        "sample_rate_hz": 44100,
+        "channels": 2,
+        "steps": [
+          {
+            "frequency_hz": 20,
+            "duration_seconds": 10,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          }
+        ]
+      }
+    },
+    {
+      "name": "tone-44100-2-125.5",
+      "frames": 441000,
+      "bytes": 1764044,
+      "maximum_reference_error_lsb": 0,
+      "render_milliseconds": 54.323300000000074,
+      "frequency": {
+        "requested_hz": 125.5,
+        "measured_hz": 125.50000101054275,
+        "endpoint_bound_hz": 0.0007121646231524892,
+        "tolerance_hz": 0.02
+      },
+      "sha256": "ec34e307afe6c8cd4036e2b4a96ea4a9b939ab4db3c293d91dd2f249dffa0f9e",
+      "input": {
+        "schema_version": 1,
+        "sample_rate_hz": 44100,
+        "channels": 2,
+        "steps": [
+          {
+            "frequency_hz": 125.5,
+            "duration_seconds": 10,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          }
+        ]
+      }
+    },
+    {
+      "name": "tone-44100-2-500",
+      "frames": 441000,
+      "bytes": 1764044,
+      "maximum_reference_error_lsb": 0,
+      "render_milliseconds": 58.49070000000006,
+      "frequency": {
+        "requested_hz": 500,
+        "measured_hz": 500.0000004854753,
+        "endpoint_bound_hz": 0.002835191996211961,
+        "tolerance_hz": 0.025
+      },
+      "sha256": "19e18362ff3aadb8d0a975fc963ca7fc43732442f5c0629b6a235af578eec463",
+      "input": {
+        "schema_version": 1,
+        "sample_rate_hz": 44100,
+        "channels": 2,
+        "steps": [
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 10,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          }
+        ]
+      }
+    },
+    {
+      "name": "tone-44100-2-1000",
+      "frames": 441000,
+      "bytes": 1764044,
+      "maximum_reference_error_lsb": 0,
+      "render_milliseconds": 55.20749999999998,
+      "frequency": {
+        "requested_hz": 1000,
+        "measured_hz": 1000.0000012166615,
+        "endpoint_bound_hz": 0.0056696751046274585,
+        "tolerance_hz": 0.05
+      },
+      "sha256": "da1fe7ed6a07466bfd26da4e61ecfb2ca6dc718c36324f54067c5c83b0e4fde9",
+      "input": {
+        "schema_version": 1,
+        "sample_rate_hz": 44100,
+        "channels": 2,
+        "steps": [
+          {
+            "frequency_hz": 1000,
+            "duration_seconds": 10,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          }
+        ]
+      }
+    },
+    {
+      "name": "tone-44100-2-10000",
+      "frames": 441000,
+      "bytes": 1764044,
+      "maximum_reference_error_lsb": 0,
+      "render_milliseconds": 60.2251,
+      "frequency": {
+        "requested_hz": 10000,
+        "measured_hz": 10000.000436050646,
+        "endpoint_bound_hz": 0.05669037735242455,
+        "tolerance_hz": 0.5
+      },
+      "sha256": "79ef7742fb9f30185351e7ee9da842021a459f69c68df70fb74f1c43aa7c3f08",
+      "input": {
+        "schema_version": 1,
+        "sample_rate_hz": 44100,
+        "channels": 2,
+        "steps": [
+          {
+            "frequency_hz": 10000,
+            "duration_seconds": 10,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          }
+        ]
+      }
+    },
+    {
+      "name": "sequence-44100-2",
+      "frames": 242550,
+      "bytes": 970244,
+      "maximum_reference_error_lsb": 0,
+      "render_milliseconds": 34.30290000000002,
+      "sha256": "c104e0fb8d717ea1c1b49c5f62fd6661176a9dfd0bc70141e9bd8c4f0226d402",
+      "input": {
+        "schema_version": 1,
+        "sample_rate_hz": 44100,
+        "channels": 2,
+        "steps": [
+          {
+            "frequency_hz": 125.5,
+            "duration_seconds": 1.25,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 2.5,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 1000,
+            "duration_seconds": 1.75,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          }
+        ]
+      }
+    },
+    {
+      "name": "fractional-44100-2",
+      "frames": 13231,
+      "bytes": 52968,
+      "maximum_reference_error_lsb": 0,
+      "render_milliseconds": 3.5610000000000355,
+      "sha256": "33c0096458ec5e4077e330e9d1ff9d5430c664b0649ce4c3283554bc52f1fec4",
+      "input": {
+        "schema_version": 1,
+        "sample_rate_hz": 44100,
+        "channels": 2,
+        "steps": [
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 0.10001,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 0.10001,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 0.10001,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          }
+        ]
+      }
+    },
+    {
+      "name": "half-frame-44100",
+      "frames": 13478,
+      "bytes": 27000,
+      "maximum_reference_error_lsb": 0,
+      "render_milliseconds": 3.0013000000000147,
+      "sha256": "5db85959b2f4065a5d73e89501d12a2575ffc857b2d39d17cae8db5b5961461d",
+      "input": {
+        "schema_version": 1,
+        "sample_rate_hz": 44100,
+        "channels": 1,
+        "steps": [
+          {
+            "frequency_hz": 1000,
+            "duration_seconds": 0.105,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 0.100625,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 125.5,
+            "duration_seconds": 0.100001,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          }
+        ]
+      }
+    },
+    {
+      "name": "tone-48000-1-20",
+      "frames": 480000,
+      "bytes": 960044,
+      "maximum_reference_error_lsb": 0,
+      "render_milliseconds": 65.3447000000001,
+      "frequency": {
+        "requested_hz": 20,
+        "measured_hz": 20.0,
+        "endpoint_bound_hz": 0.00010482235231634718,
+        "tolerance_hz": 0.02
+      },
+      "sha256": "40f39f266b09e31372871701c780f65c68f892398e548a7f30d06beeeb28482a",
+      "input": {
+        "schema_version": 1,
+        "sample_rate_hz": 48000,
+        "channels": 1,
+        "steps": [
+          {
+            "frequency_hz": 20,
+            "duration_seconds": 10,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          }
+        ]
+      }
+    },
+    {
+      "name": "tone-48000-1-125.5",
+      "frames": 480000,
+      "bytes": 960044,
+      "maximum_reference_error_lsb": 0,
+      "render_milliseconds": 71.3478,
+      "frequency": {
+        "requested_hz": 125.5,
+        "measured_hz": 125.50000129372685,
+        "endpoint_bound_hz": 0.0006543009487955942,
+        "tolerance_hz": 0.02
+      },
+      "sha256": "89ccd7a231c4218da49b8a575fa9aa77b40992362e645e843c6604e1975c63da",
+      "input": {
+        "schema_version": 1,
+        "sample_rate_hz": 48000,
+        "channels": 1,
+        "steps": [
+          {
+            "frequency_hz": 125.5,
+            "duration_seconds": 10,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          }
+        ]
+      }
+    },
+    {
+      "name": "tone-48000-1-500",
+      "frames": 480000,
+      "bytes": 960044,
+      "maximum_reference_error_lsb": 0,
+      "render_milliseconds": 65.10019999999997,
+      "frequency": {
+        "requested_hz": 500,
+        "measured_hz": 500.0,
+        "endpoint_bound_hz": 0.002604831441317401,
+        "tolerance_hz": 0.025
+      },
+      "sha256": "861a248e4992c28b713a8d94608fd3f897d963d689935c2053fe1d39f8722ca5",
+      "input": {
+        "schema_version": 1,
+        "sample_rate_hz": 48000,
+        "channels": 1,
+        "steps": [
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 10,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          }
+        ]
+      }
+    },
+    {
+      "name": "tone-48000-1-1000",
+      "frames": 480000,
+      "bytes": 960044,
+      "maximum_reference_error_lsb": 0,
+      "render_milliseconds": 74.77710000000002,
+      "frequency": {
+        "requested_hz": 1000,
+        "measured_hz": 1000.0,
+        "endpoint_bound_hz": 0.005209011590068258,
+        "tolerance_hz": 0.05
+      },
+      "sha256": "5b117e31d78d10d7b73e864715db602b0e67e5fc037d25041961129a9ee2773c",
+      "input": {
+        "schema_version": 1,
+        "sample_rate_hz": 48000,
+        "channels": 1,
+        "steps": [
+          {
+            "frequency_hz": 1000,
+            "duration_seconds": 10,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          }
+        ]
+      }
+    },
+    {
+      "name": "tone-48000-1-10000",
+      "frames": 480000,
+      "bytes": 960044,
+      "maximum_reference_error_lsb": 0,
+      "render_milliseconds": 66.10350000000017,
+      "frequency": {
+        "requested_hz": 10000,
+        "measured_hz": 9999.999216535743,
+        "endpoint_bound_hz": 0.052084247496168246,
+        "tolerance_hz": 0.5
+      },
+      "sha256": "08fee8b9e39d56dcf8320058befe96f4d8f9733664fbed9fbf8b49c4903271f0",
+      "input": {
+        "schema_version": 1,
+        "sample_rate_hz": 48000,
+        "channels": 1,
+        "steps": [
+          {
+            "frequency_hz": 10000,
+            "duration_seconds": 10,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          }
+        ]
+      }
+    },
+    {
+      "name": "sequence-48000-1",
+      "frames": 264000,
+      "bytes": 528044,
+      "maximum_reference_error_lsb": 0,
+      "render_milliseconds": 36.42910000000006,
+      "sha256": "a5e1c74367b73382644bfdb3a970c08bb115953a388e56319fab71f6226b8772",
+      "input": {
+        "schema_version": 1,
+        "sample_rate_hz": 48000,
+        "channels": 1,
+        "steps": [
+          {
+            "frequency_hz": 125.5,
+            "duration_seconds": 1.25,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 2.5,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 1000,
+            "duration_seconds": 1.75,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          }
+        ]
+      }
+    },
+    {
+      "name": "fractional-48000-1",
+      "frames": 14401,
+      "bytes": 28846,
+      "maximum_reference_error_lsb": 0,
+      "render_milliseconds": 3.768199999999979,
+      "sha256": "8a91688b6051b459ee83a61f22815e739af831b78ebdd375080d0ae52bb9184c",
+      "input": {
+        "schema_version": 1,
+        "sample_rate_hz": 48000,
+        "channels": 1,
+        "steps": [
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 0.10001,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 0.10001,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 0.10001,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          }
+        ]
+      }
+    },
+    {
+      "name": "tone-48000-2-20",
+      "frames": 480000,
+      "bytes": 1920044,
+      "maximum_reference_error_lsb": 0,
+      "render_milliseconds": 63.1418000000001,
+      "frequency": {
+        "requested_hz": 20,
+        "measured_hz": 20.0,
+        "endpoint_bound_hz": 0.00010482235231634718,
+        "tolerance_hz": 0.02
+      },
+      "sha256": "99c3fdba399cc3ba78497a50dfb383d73a914fc33a7b1a7acc8fc26b4c854b2d",
+      "input": {
+        "schema_version": 1,
+        "sample_rate_hz": 48000,
+        "channels": 2,
+        "steps": [
+          {
+            "frequency_hz": 20,
+            "duration_seconds": 10,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          }
+        ]
+      }
+    },
+    {
+      "name": "tone-48000-2-125.5",
+      "frames": 480000,
+      "bytes": 1920044,
+      "maximum_reference_error_lsb": 0,
+      "render_milliseconds": 63.34159999999997,
+      "frequency": {
+        "requested_hz": 125.5,
+        "measured_hz": 125.50000129372685,
+        "endpoint_bound_hz": 0.0006543009487955942,
+        "tolerance_hz": 0.02
+      },
+      "sha256": "769704bbde6519cc53eff5074cb7f18148e947fd7d95f2eb7a0be071de680d2d",
+      "input": {
+        "schema_version": 1,
+        "sample_rate_hz": 48000,
+        "channels": 2,
+        "steps": [
+          {
+            "frequency_hz": 125.5,
+            "duration_seconds": 10,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          }
+        ]
+      }
+    },
+    {
+      "name": "tone-48000-2-500",
+      "frames": 480000,
+      "bytes": 1920044,
+      "maximum_reference_error_lsb": 0,
+      "render_milliseconds": 66.0268000000001,
+      "frequency": {
+        "requested_hz": 500,
+        "measured_hz": 500.0,
+        "endpoint_bound_hz": 0.002604831441317401,
+        "tolerance_hz": 0.025
+      },
+      "sha256": "9e1cad5aeab0f09c35cd549acd7cd0b93f49dce3bc208e46e096519628898e3c",
+      "input": {
+        "schema_version": 1,
+        "sample_rate_hz": 48000,
+        "channels": 2,
+        "steps": [
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 10,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          }
+        ]
+      }
+    },
+    {
+      "name": "tone-48000-2-1000",
+      "frames": 480000,
+      "bytes": 1920044,
+      "maximum_reference_error_lsb": 0,
+      "render_milliseconds": 68.3161,
+      "frequency": {
+        "requested_hz": 1000,
+        "measured_hz": 1000.0,
+        "endpoint_bound_hz": 0.005209011590068258,
+        "tolerance_hz": 0.05
+      },
+      "sha256": "a613be8df557de76d76d3c6eb2928c9af27e467f57761c00de9cca065d140744",
+      "input": {
+        "schema_version": 1,
+        "sample_rate_hz": 48000,
+        "channels": 2,
+        "steps": [
+          {
+            "frequency_hz": 1000,
+            "duration_seconds": 10,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          }
+        ]
+      }
+    },
+    {
+      "name": "tone-48000-2-10000",
+      "frames": 480000,
+      "bytes": 1920044,
+      "maximum_reference_error_lsb": 0,
+      "render_milliseconds": 64.20700000000011,
+      "frequency": {
+        "requested_hz": 10000,
+        "measured_hz": 9999.999216535743,
+        "endpoint_bound_hz": 0.052084247496168246,
+        "tolerance_hz": 0.5
+      },
+      "sha256": "10957a8f4df5a303965d9bbb04550a4967fec68d0bc29f35ef431395d0b18dce",
+      "input": {
+        "schema_version": 1,
+        "sample_rate_hz": 48000,
+        "channels": 2,
+        "steps": [
+          {
+            "frequency_hz": 10000,
+            "duration_seconds": 10,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          }
+        ]
+      }
+    },
+    {
+      "name": "sequence-48000-2",
+      "frames": 264000,
+      "bytes": 1056044,
+      "maximum_reference_error_lsb": 0,
+      "render_milliseconds": 35.32489999999984,
+      "sha256": "7c2ba6f85cf6906f96f708c80f1ab74ccdd091f63fd36f884413f9f84be23eaa",
+      "input": {
+        "schema_version": 1,
+        "sample_rate_hz": 48000,
+        "channels": 2,
+        "steps": [
+          {
+            "frequency_hz": 125.5,
+            "duration_seconds": 1.25,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 2.5,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 1000,
+            "duration_seconds": 1.75,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          }
+        ]
+      }
+    },
+    {
+      "name": "fractional-48000-2",
+      "frames": 14401,
+      "bytes": 57648,
+      "maximum_reference_error_lsb": 0,
+      "render_milliseconds": 4.2043999999998505,
+      "sha256": "6525d0348418d536e2547681d3251a109780c5516f7441552175ed751606fd53",
+      "input": {
+        "schema_version": 1,
+        "sample_rate_hz": 48000,
+        "channels": 2,
+        "steps": [
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 0.10001,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 0.10001,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 0.10001,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          }
+        ]
+      }
+    },
+    {
+      "name": "half-frame-48000",
+      "frames": 14670,
+      "bytes": 29384,
+      "maximum_reference_error_lsb": 0,
+      "render_milliseconds": 3.3682000000001153,
+      "sha256": "e2bbdb7f1a922fb9171c9480cbd50f4f59ca98450b58cd048d9392bf6b094582",
+      "input": {
+        "schema_version": 1,
+        "sample_rate_hz": 48000,
+        "channels": 1,
+        "steps": [
+          {
+            "frequency_hz": 1000,
+            "duration_seconds": 0.105,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 0.100625,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 125.5,
+            "duration_seconds": 0.100001,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          }
+        ]
+      }
+    },
+    {
+      "name": "square-44100-1",
+      "frames": 44100,
+      "bytes": 88244,
+      "maximum_reference_error_lsb": 0,
+      "render_milliseconds": 38.41599999999994,
+      "sha256": "97554b291e40d7745cb0ee6207e3d5c759c73e5189daed9fddd106b784ae95b2",
+      "input": {
+        "schema_version": 1,
+        "sample_rate_hz": 44100,
+        "channels": 1,
+        "steps": [
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 1,
+            "amplitude": 0.25,
+            "waveform": "square"
+          }
+        ]
+      }
+    },
+    {
+      "name": "square-low-44100-1",
+      "frames": 4410,
+      "bytes": 8864,
+      "maximum_reference_error_lsb": 0,
+      "render_milliseconds": 6.30359999999996,
+      "sha256": "15313d2b5dc7b161cc0bdf89598862664cfc53e8eaa09cd1245ae5e94d5e403e",
+      "input": {
+        "schema_version": 1,
+        "sample_rate_hz": 44100,
+        "channels": 1,
+        "steps": [
+          {
+            "frequency_hz": 20,
+            "duration_seconds": 0.1,
+            "amplitude": 0.25,
+            "waveform": "square"
+          }
+        ]
+      }
+    },
+    {
+      "name": "square-nyquist-44100-1",
+      "frames": 4410,
+      "bytes": 8864,
+      "maximum_reference_error_lsb": 0,
+      "render_milliseconds": 1.6298000000001593,
+      "sha256": "ed40e25210d94a1ba3e1f510c012bd55f6efa414f9dc52cd3f217632a7b9b4ba",
+      "input": {
+        "schema_version": 1,
+        "sample_rate_hz": 44100,
+        "channels": 1,
+        "steps": [
+          {
+            "frequency_hz": 10000,
+            "duration_seconds": 0.1,
+            "amplitude": 0.25,
+            "waveform": "square"
+          }
+        ]
+      }
+    },
+    {
+      "name": "square-44100-2",
+      "frames": 44100,
+      "bytes": 176444,
+      "maximum_reference_error_lsb": 0,
+      "render_milliseconds": 38.61510000000021,
+      "sha256": "e8e5f415a4653b0a79306098487ae8c92524acbff85b7d0c64e47bf56a181512",
+      "input": {
+        "schema_version": 1,
+        "sample_rate_hz": 44100,
+        "channels": 2,
+        "steps": [
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 1,
+            "amplitude": 0.25,
+            "waveform": "square"
+          }
+        ]
+      }
+    },
+    {
+      "name": "square-low-44100-2",
+      "frames": 4410,
+      "bytes": 17684,
+      "maximum_reference_error_lsb": 0,
+      "render_milliseconds": 4.585299999999961,
+      "sha256": "c771bf1b6cf9ce850656c48012334ddc460422c55824f4986eafd09f0b2099d0",
+      "input": {
+        "schema_version": 1,
+        "sample_rate_hz": 44100,
+        "channels": 2,
+        "steps": [
+          {
+            "frequency_hz": 20,
+            "duration_seconds": 0.1,
+            "amplitude": 0.25,
+            "waveform": "square"
+          }
+        ]
+      }
+    },
+    {
+      "name": "square-nyquist-44100-2",
+      "frames": 4410,
+      "bytes": 17684,
+      "maximum_reference_error_lsb": 0,
+      "render_milliseconds": 1.7022999999999229,
+      "sha256": "594355c88cf8a6a7caecb66d94fa90ee458856f80211802ff42d97d2e0262fee",
+      "input": {
+        "schema_version": 1,
+        "sample_rate_hz": 44100,
+        "channels": 2,
+        "steps": [
+          {
+            "frequency_hz": 10000,
+            "duration_seconds": 0.1,
+            "amplitude": 0.25,
+            "waveform": "square"
+          }
+        ]
+      }
+    },
+    {
+      "name": "square-48000-1",
+      "frames": 48000,
+      "bytes": 96044,
+      "maximum_reference_error_lsb": 0,
+      "render_milliseconds": 32.18589999999995,
+      "sha256": "353fd96a1e14f74d43946b52c6d6c840277d41c2f8678ca6885e016d79713453",
+      "input": {
+        "schema_version": 1,
+        "sample_rate_hz": 48000,
+        "channels": 1,
+        "steps": [
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 1,
+            "amplitude": 0.25,
+            "waveform": "square"
+          }
+        ]
+      }
+    },
+    {
+      "name": "square-low-48000-1",
+      "frames": 4800,
+      "bytes": 9644,
+      "maximum_reference_error_lsb": 0,
+      "render_milliseconds": 5.341599999999971,
+      "sha256": "62b16ebfdc78d2c7d7c39ba6cb625c9a9a0d4bf95c31b6950585792f0331f0cb",
+      "input": {
+        "schema_version": 1,
+        "sample_rate_hz": 48000,
+        "channels": 1,
+        "steps": [
+          {
+            "frequency_hz": 20,
+            "duration_seconds": 0.1,
+            "amplitude": 0.25,
+            "waveform": "square"
+          }
+        ]
+      }
+    },
+    {
+      "name": "square-nyquist-48000-1",
+      "frames": 4800,
+      "bytes": 9644,
+      "maximum_reference_error_lsb": 0,
+      "render_milliseconds": 2.0448999999998705,
+      "sha256": "c69a54f6aebe1ddcf9a63020c76cfdcbc988fb7818b6038c3c30e9ff7fad81e9",
+      "input": {
+        "schema_version": 1,
+        "sample_rate_hz": 48000,
+        "channels": 1,
+        "steps": [
+          {
+            "frequency_hz": 10000,
+            "duration_seconds": 0.1,
+            "amplitude": 0.25,
+            "waveform": "square"
+          }
+        ]
+      }
+    },
+    {
+      "name": "square-48000-2",
+      "frames": 48000,
+      "bytes": 192044,
+      "maximum_reference_error_lsb": 0,
+      "render_milliseconds": 34.50350000000003,
+      "sha256": "7f81f5a61382d28605352548fda3d9bdd8892fb71fe2137b161258877e9dda40",
+      "input": {
+        "schema_version": 1,
+        "sample_rate_hz": 48000,
+        "channels": 2,
+        "steps": [
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 1,
+            "amplitude": 0.25,
+            "waveform": "square"
+          }
+        ]
+      }
+    },
+    {
+      "name": "square-low-48000-2",
+      "frames": 4800,
+      "bytes": 19244,
+      "maximum_reference_error_lsb": 0,
+      "render_milliseconds": 6.239399999999932,
+      "sha256": "6f126090050a547c3b236a6c616f7a33407fcbc31448fa548787e0d193d157ce",
+      "input": {
+        "schema_version": 1,
+        "sample_rate_hz": 48000,
+        "channels": 2,
+        "steps": [
+          {
+            "frequency_hz": 20,
+            "duration_seconds": 0.1,
+            "amplitude": 0.25,
+            "waveform": "square"
+          }
+        ]
+      }
+    },
+    {
+      "name": "square-nyquist-48000-2",
+      "frames": 4800,
+      "bytes": 19244,
+      "maximum_reference_error_lsb": 0,
+      "render_milliseconds": 1.7727000000002135,
+      "sha256": "672b6255edecfec633493dd9c73eff585b69d7b983d7b4c8a38863b5f0d6b712",
+      "input": {
+        "schema_version": 1,
+        "sample_rate_hz": 48000,
+        "channels": 2,
+        "steps": [
+          {
+            "frequency_hz": 10000,
+            "duration_seconds": 0.1,
+            "amplitude": 0.25,
+            "waveform": "square"
+          }
+        ]
+      }
+    },
+    {
+      "name": "square-frequency",
+      "frames": 480000,
+      "bytes": 960044,
+      "maximum_reference_error_lsb": null,
+      "render_milliseconds": 334.80050000000006,
+      "frequency": {
+        "requested_hz": 500,
+        "measured_hz": 500.0,
+        "endpoint_bound_hz": 0.002604831441317401,
+        "tolerance_hz": 0.025
+      },
+      "sha256": "7d0e8a0b76546fc09176181ba5d06b5064efb0abd0a46ffe0f1b1ac7a518ddda",
+      "input": {
+        "schema_version": 1,
+        "sample_rate_hz": 48000,
+        "channels": 1,
+        "steps": [
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 10,
+            "amplitude": 0.25,
+            "waveform": "square"
+          }
+        ]
+      }
+    },
+    {
+      "name": "square-maximum",
+      "frames": 14400000,
+      "bytes": 57600044,
+      "maximum_reference_error_lsb": null,
+      "render_milliseconds": 14755.584299999999,
+      "sha256": "42a51cfbe46a546ed37d66bf58327c5e56f46ea339a2adf0425a93aecb93d945",
+      "input": {
+        "schema_version": 1,
+        "sample_rate_hz": 48000,
+        "channels": 2,
+        "steps": [
+          {
+            "frequency_hz": 20,
+            "duration_seconds": 300,
+            "amplitude": 0.25,
+            "waveform": "square"
+          }
+        ]
+      }
+    },
+    {
+      "name": "triangle-44100-1",
+      "frames": 44100,
+      "bytes": 88244,
+      "maximum_reference_error_lsb": 0,
+      "render_milliseconds": 29.71650000000227,
+      "sha256": "b76bdeec0923591aa7fa0fdcdfae6c301ce2018250e2e9f3dd5c2311ec5edbfb",
+      "input": {
+        "schema_version": 1,
+        "sample_rate_hz": 44100,
+        "channels": 1,
+        "steps": [
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 1,
+            "amplitude": 0.25,
+            "waveform": "triangle"
+          }
+        ]
+      }
+    },
+    {
+      "name": "triangle-low-44100-1",
+      "frames": 4410,
+      "bytes": 8864,
+      "maximum_reference_error_lsb": 0,
+      "render_milliseconds": 3.8250999999982014,
+      "sha256": "2eff7389b539a372c42d44c00334d5b41b999c778cd14a4737b249e24951c527",
+      "input": {
+        "schema_version": 1,
+        "sample_rate_hz": 44100,
+        "channels": 1,
+        "steps": [
+          {
+            "frequency_hz": 20,
+            "duration_seconds": 0.1,
+            "amplitude": 0.25,
+            "waveform": "triangle"
+          }
+        ]
+      }
+    },
+    {
+      "name": "triangle-nyquist-44100-1",
+      "frames": 4410,
+      "bytes": 8864,
+      "maximum_reference_error_lsb": 0,
+      "render_milliseconds": 1.9127000000007683,
+      "sha256": "ed40e25210d94a1ba3e1f510c012bd55f6efa414f9dc52cd3f217632a7b9b4ba",
+      "input": {
+        "schema_version": 1,
+        "sample_rate_hz": 44100,
+        "channels": 1,
+        "steps": [
+          {
+            "frequency_hz": 10000,
+            "duration_seconds": 0.1,
+            "amplitude": 0.25,
+            "waveform": "triangle"
+          }
+        ]
+      }
+    },
+    {
+      "name": "triangle-44100-2",
+      "frames": 44100,
+      "bytes": 176444,
+      "maximum_reference_error_lsb": 0,
+      "render_milliseconds": 30.288100000001577,
+      "sha256": "2574f43e07560a4ba3a831b749839365880506f06ad3ce6fc24bd8ebcf768172",
+      "input": {
+        "schema_version": 1,
+        "sample_rate_hz": 44100,
+        "channels": 2,
+        "steps": [
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 1,
+            "amplitude": 0.25,
+            "waveform": "triangle"
+          }
+        ]
+      }
+    },
+    {
+      "name": "triangle-low-44100-2",
+      "frames": 4410,
+      "bytes": 17684,
+      "maximum_reference_error_lsb": 0,
+      "render_milliseconds": 4.865799999999581,
+      "sha256": "636442dbdf6cdc8f356450c6c583ee0f795402fe6ebd7bf2eaaa9613105fd37e",
+      "input": {
+        "schema_version": 1,
+        "sample_rate_hz": 44100,
+        "channels": 2,
+        "steps": [
+          {
+            "frequency_hz": 20,
+            "duration_seconds": 0.1,
+            "amplitude": 0.25,
+            "waveform": "triangle"
+          }
+        ]
+      }
+    },
+    {
+      "name": "triangle-nyquist-44100-2",
+      "frames": 4410,
+      "bytes": 17684,
+      "maximum_reference_error_lsb": 0,
+      "render_milliseconds": 1.4276000000027125,
+      "sha256": "594355c88cf8a6a7caecb66d94fa90ee458856f80211802ff42d97d2e0262fee",
+      "input": {
+        "schema_version": 1,
+        "sample_rate_hz": 44100,
+        "channels": 2,
+        "steps": [
+          {
+            "frequency_hz": 10000,
+            "duration_seconds": 0.1,
+            "amplitude": 0.25,
+            "waveform": "triangle"
+          }
+        ]
+      }
+    },
+    {
+      "name": "triangle-48000-1",
+      "frames": 48000,
+      "bytes": 96044,
+      "maximum_reference_error_lsb": 0,
+      "render_milliseconds": 29.897100000001956,
+      "sha256": "142b9059969ad7b0f467b5cf3dca052e5988fb0d97bd85ef3be6513e63b7d749",
+      "input": {
+        "schema_version": 1,
+        "sample_rate_hz": 48000,
+        "channels": 1,
+        "steps": [
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 1,
+            "amplitude": 0.25,
+            "waveform": "triangle"
+          }
+        ]
+      }
+    },
+    {
+      "name": "triangle-low-48000-1",
+      "frames": 4800,
+      "bytes": 9644,
+      "maximum_reference_error_lsb": 0,
+      "render_milliseconds": 4.504299999996874,
+      "sha256": "1d5c473d77dd88d6fe9f305d855e8e55ba3ad0e91184f639553852c486f92c0e",
+      "input": {
+        "schema_version": 1,
+        "sample_rate_hz": 48000,
+        "channels": 1,
+        "steps": [
+          {
+            "frequency_hz": 20,
+            "duration_seconds": 0.1,
+            "amplitude": 0.25,
+            "waveform": "triangle"
+          }
+        ]
+      }
+    },
+    {
+      "name": "triangle-nyquist-48000-1",
+      "frames": 4800,
+      "bytes": 9644,
+      "maximum_reference_error_lsb": 0,
+      "render_milliseconds": 2.042199999999866,
+      "sha256": "c69a54f6aebe1ddcf9a63020c76cfdcbc988fb7818b6038c3c30e9ff7fad81e9",
+      "input": {
+        "schema_version": 1,
+        "sample_rate_hz": 48000,
+        "channels": 1,
+        "steps": [
+          {
+            "frequency_hz": 10000,
+            "duration_seconds": 0.1,
+            "amplitude": 0.25,
+            "waveform": "triangle"
+          }
+        ]
+      }
+    },
+    {
+      "name": "triangle-48000-2",
+      "frames": 48000,
+      "bytes": 192044,
+      "maximum_reference_error_lsb": 0,
+      "render_milliseconds": 29.294200000000274,
+      "sha256": "d21b6af2d18c4385a1618c29d3d6829c2165d01986ecbccdc0ce1e3ac5b32360",
+      "input": {
+        "schema_version": 1,
+        "sample_rate_hz": 48000,
+        "channels": 2,
+        "steps": [
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 1,
+            "amplitude": 0.25,
+            "waveform": "triangle"
+          }
+        ]
+      }
+    },
+    {
+      "name": "triangle-low-48000-2",
+      "frames": 4800,
+      "bytes": 19244,
+      "maximum_reference_error_lsb": 0,
+      "render_milliseconds": 4.631900000000314,
+      "sha256": "5ab5ccf98a9628750f8ea5c0db0fbe56bde596a0a15a8f3c5880bf7f6966aaae",
+      "input": {
+        "schema_version": 1,
+        "sample_rate_hz": 48000,
+        "channels": 2,
+        "steps": [
+          {
+            "frequency_hz": 20,
+            "duration_seconds": 0.1,
+            "amplitude": 0.25,
+            "waveform": "triangle"
+          }
+        ]
+      }
+    },
+    {
+      "name": "triangle-nyquist-48000-2",
+      "frames": 4800,
+      "bytes": 19244,
+      "maximum_reference_error_lsb": 0,
+      "render_milliseconds": 1.594199999999546,
+      "sha256": "672b6255edecfec633493dd9c73eff585b69d7b983d7b4c8a38863b5f0d6b712",
+      "input": {
+        "schema_version": 1,
+        "sample_rate_hz": 48000,
+        "channels": 2,
+        "steps": [
+          {
+            "frequency_hz": 10000,
+            "duration_seconds": 0.1,
+            "amplitude": 0.25,
+            "waveform": "triangle"
+          }
+        ]
+      }
+    },
+    {
+      "name": "triangle-frequency",
+      "frames": 480000,
+      "bytes": 960044,
+      "maximum_reference_error_lsb": null,
+      "render_milliseconds": 274.92219999999725,
+      "frequency": {
+        "requested_hz": 500,
+        "measured_hz": 500.0,
+        "endpoint_bound_hz": 0.002604831441317401,
+        "tolerance_hz": 0.025
+      },
+      "sha256": "d607ff6dd7e30d0b75978a206cba4ece3ebcb1ab259b15126028ceffb7101a77",
+      "input": {
+        "schema_version": 1,
+        "sample_rate_hz": 48000,
+        "channels": 1,
+        "steps": [
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 10,
+            "amplitude": 0.25,
+            "waveform": "triangle"
+          }
+        ]
+      }
+    },
+    {
+      "name": "triangle-maximum",
+      "frames": 14400000,
+      "bytes": 57600044,
+      "maximum_reference_error_lsb": null,
+      "render_milliseconds": 17434.325,
+      "sha256": "2c4e57dc1593b29d44452a924580e95d4bcfe2c8f8f5c26e3eb287a1b0a001f2",
+      "input": {
+        "schema_version": 1,
+        "sample_rate_hz": 48000,
+        "channels": 2,
+        "steps": [
+          {
+            "frequency_hz": 20,
+            "duration_seconds": 300,
+            "amplitude": 0.25,
+            "waveform": "triangle"
+          }
+        ]
+      }
+    },
+    {
+      "name": "maximum-single",
+      "frames": 14400000,
+      "bytes": 57600044,
+      "maximum_reference_error_lsb": null,
+      "render_milliseconds": 3180.7843000000066,
+      "sha256": "46992c4ef45863d255c40c93aa84226df2d9e90b9f00e52dcae1dd6425e960e5",
+      "input": {
+        "schema_version": 1,
+        "sample_rate_hz": 48000,
+        "channels": 2,
+        "steps": [
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 300,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          }
+        ]
+      }
+    },
+    {
+      "name": "maximum-100-steps",
+      "frames": 14400000,
+      "bytes": 57600044,
+      "maximum_reference_error_lsb": null,
+      "render_milliseconds": 3851.3380000000034,
+      "sha256": "8c2907e0282dcc799a407b8993e1b90e0c4b80be488c93e65c044c612556cacf",
+      "input": {
+        "schema_version": 1,
+        "sample_rate_hz": 48000,
+        "channels": 2,
+        "steps": [
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 3,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          }
+        ]
+      }
+    },
+    {
+      "name": "amplitude-maximum",
+      "frames": 4800,
+      "bytes": 9644,
+      "maximum_reference_error_lsb": 0,
+      "render_milliseconds": 2.8335000000006403,
+      "sha256": "c6d46299e2187c019075ec6517d42cb63e6a7f25207a4a57d756c019306ed791",
+      "input": {
+        "schema_version": 1,
+        "sample_rate_hz": 48000,
+        "channels": 1,
+        "steps": [
+          {
+            "frequency_hz": 1000,
+            "duration_seconds": 0.1,
+            "amplitude": 0.8,
+            "waveform": "sine"
+          }
+        ]
+      }
+    },
+    {
+      "name": "amplitude-silence",
+      "frames": 4410,
+      "bytes": 17684,
+      "maximum_reference_error_lsb": 0,
+      "render_milliseconds": 4.582600000001548,
+      "sha256": "961014b96a1b8d275e1431e592f08447541aca38278b2a4cd6dba5b298fcf37b",
+      "input": {
+        "schema_version": 1,
+        "sample_rate_hz": 44100,
+        "channels": 2,
+        "steps": [
+          {
+            "frequency_hz": 20,
+            "duration_seconds": 0.1,
+            "amplitude": 5e-324,
+            "waveform": "sine"
+          }
+        ]
+      }
+    },
+    {
+      "name": "repeatability-a",
+      "frames": 64800,
+      "bytes": 259244,
+      "maximum_reference_error_lsb": 0,
+      "render_milliseconds": 15.634799999999814,
+      "sha256": "1e1c76322feaf5a52bad0c013d2a89dbd3bb4e527f22e243d6163337c712e570",
+      "input": {
+        "schema_version": 1,
+        "sample_rate_hz": 48000,
+        "channels": 2,
+        "steps": [
+          {
+            "frequency_hz": 125.5,
+            "duration_seconds": 1.25,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 0.1,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          }
+        ]
+      }
+    },
+    {
+      "name": "repeatability-b",
+      "frames": 64800,
+      "bytes": 259244,
+      "maximum_reference_error_lsb": 0,
+      "render_milliseconds": 16.391799999997602,
+      "sha256": "1e1c76322feaf5a52bad0c013d2a89dbd3bb4e527f22e243d6163337c712e570",
+      "input": {
+        "schema_version": 1,
+        "sample_rate_hz": 48000,
+        "channels": 2,
+        "steps": [
+          {
+            "frequency_hz": 125.5,
+            "duration_seconds": 1.25,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          },
+          {
+            "frequency_hz": 500,
+            "duration_seconds": 0.1,
+            "amplitude": 0.25,
+            "waveform": "sine"
+          }
+        ]
+      }
+    }
+  ],
+  "repeatability": "PASS",
+  "previous_sine_fixtures_byte_identical": true,
+  "previous_sine_fixture_count": 36,
+  "physical_output_measured": false
+}

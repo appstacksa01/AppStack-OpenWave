@@ -16,7 +16,7 @@ The introduction describes user-reported experiences and limited scientific inve
 | Lists mixed with numeric ranges and sweep notes | Distinguish fixed steps from ranges; endpoints alone do not define sweep duration or curve |
 | Occasional timing prose, but no uniform per-entry duration | Require explicit duration or an acknowledged user-selected default |
 | No consistent waveform/amplitude/duty-cycle fields found | A numeric list alone cannot reconstruct a signal |
-| Values below 20 and above 10,000 | Flag values outside the draft generator scope; never silently divide or shift them |
+| Values below 20 and above 10,000 | Flag values outside the adopted file-generator contract; never silently divide or shift them |
 | Ambiguous characters, including 7l7 on slide 14 | Require manual review; do not auto-correct to a guessed number |
 | Fragmented slide text and line wrapping | Extraction can merge separate numeric tokens; validate against layout/original source |
 

@@ -26,6 +26,6 @@ The licence texts themselves retain their publishers' notices. This policy descr
 
 By submitting an original contribution for inclusion, contributors agree to license it under the applicable terms above and confirm they have the necessary rights. Disclose third-party material and its terms in the pull request. Submit any proposed exception for review before inclusion; do not assume that a different licence will be accepted.
 
-Commercial activity, sponsorship and paid development are compatible with these licences. GPL obligations do not require an upstream pull request or a donation. Follow the full licence when conveying covered software. Server components, if proposed later, require a separate licensing assessment; AGPLv3 has not been adopted here.
+Commercial activity, sponsorship and paid development are compatible with these licences. GPL obligations do not require an upstream pull request or a donation. Follow the full licence when conveying covered software. Original backend code is covered by the software policy above; adopting server processing did not change the project to AGPLv3. Any future licence change requires separate review.
 
-This licensing policy takes effect in the accepted repository version when its pull request is merged. A proposal branch is not an accepted licensing decision for `main`.
+This policy was adopted in merged PR #4. Proposed changes on other branches do not alter the accepted licensing decision for `main` until reviewed and merged.

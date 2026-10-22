@@ -14,6 +14,12 @@ Adopted through PR #5 on 22 October 2026, following the maintainer's requirement
 
 SOLID applies to frontend and backend. Small pure functions and composition are welcome; inheritance and a class for every function are not requirements. Reviewers must assess actual responsibilities, dependencies and substitutability, not accept a claim that code is SOLID without examining it.
 
+## Shared engine, UI and audio adapters
+
+Follow the direction in [ADR-002](ADR-002-Mobile-Playback.md): one authoritative OpenWave engine, one principal TypeScript UI and separate web/Android/iOS audio adapters. Keep waveform mathematics and sequence semantics out of platform-specific copies. The engine currently executes in backend workers; shared contracts and bounded validation may be reused by clients without importing synthesis. Do not create a second UI or adopt a mobile framework without an evidence-based decision.
+
+Define common playback behaviour and explicit platform capabilities; adapters own route/lifecycle integration and report unsupported operations. Test every implemented adapter against the common contract, plus platform-specific interruption/disconnect/error cases. New native code requires meaningful tests in its platform toolchain as well as the compulsory frontend/backend suites. Matching contracts do not prove USB-C or physical-output compatibility; those require named-device measurements. Browser playback must not introduce a synthesis fallback or rely on UI timers for sample timing.
+
 ## Code quality
 
 - Use TypeScript strict mode for application code. Treat external data as `unknown` and validate/narrow it at boundaries. Avoid `any`, unchecked assertions and suppressed type/lint errors; any unavoidable interoperability escape needs a local explanation and tests.

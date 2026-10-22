@@ -1,6 +1,6 @@
 # Contributing
 
-We are gathering evidence and specifying the first browser-based WAV prototype. Contributions can include source analysis, device documentation, reproducible bench measurements, software and corrections, within the applicable readiness decision.
+We are gathering evidence and developing the first file-only WAV prototype. Current implementation and release gaps are recorded in the [audit](docs/Mobile-Research-Audit.md). Contributions can include source analysis, device documentation, qualified bench measurements, software and corrections within the applicable readiness decision.
 
 Read [LICENSING.md](LICENSING.md) before contributing. Original software contributions use GPL-3.0-only; original documentation uses CC-BY-SA-4.0. Contributors retain copyright and must have the rights to submit their work. Disclose third-party sources and licences; do not assume public availability permits copying.
 
@@ -26,6 +26,8 @@ Edit the Markdown files in `docs/wiki/` in your branch and include them in a rep
 
 ## Review checks
 
+Respect the [shared architecture direction](docs/ADR-002-Mobile-Playback.md): one authoritative engine, one principal TypeScript UI and separate web/Android/iOS audio adapters. Do not duplicate waveform logic or introduce a second UI/mobile framework without an evidence-based decision. Engine synthesis remains backend-only. The next portable task is the shared playback contract and capability-validation matrix; native implementation and framework selection are not yet authorized. Implemented adapters require common-contract and platform-specific tests alongside compulsory frontend/backend checks.
+
 Implementation must follow the [mandatory coding/testing standards](docs/Coding-Standards.md) and [backend architecture](docs/Architecture.md). SOLID principles and meaningful unit tests for frontend and backend are compulsory. Include tests for new/changed behaviour and regressions, run both unit suites and applicable lint/type/build/integration checks, and record commands/results. Heavy processing belongs in backend worker processes, never the browser or API request handler. The [scaffolding](docs/Development.md) introduces tooling, non-empty suites and CI alongside its code; remote CI and required repository checks need separate verification.
 
 Keep changes within the agreed scope and check links, source references, and personal information before submitting. Documentation-only changes require documentation checks; runtime unit tests are not expected when no implementation code changes. Do not describe a planned or skipped check as passed.
@@ -48,4 +50,6 @@ This document defines the contribution policy. GitHub branch protection or rules
 
 Bench work needs device identity, instruments and calibration status, test loads, output path, settings, methods, uncertainty, and an appropriate safety review. Historical mains-connected circuits are research material, not construction instructions. No body-connected experiments are included in this phase.
 
-The [file-only readiness decision](docs/wiki/Development-Readiness.md#file-only-prototype-decision) permits implementation of the defined editor/backend WAV scope after the applicable specification changes are approved and merged. This does not authorize hardware testing or imply that the prototype passes verification. Start with testable scaffolding/CI and the backend renderer, then the export service and editor, on separate reviewed branches. Run the applicable [verification checks](docs/wiki/Signal-Verification-Plan.md) and report actual outcomes.
+The adopted [file-only readiness decision](docs/wiki/Development-Readiness.md#file-only-prototype-decision) permits the defined editor/backend WAV scope. It does not authorize hardware testing or pass verification. Review and extend the existing scaffolding/renderer and uncommitted service/editor work through separate branches/PRs; do not restart or duplicate them. Run applicable [verification checks](docs/wiki/Signal-Verification-Plan.md) and report actual outcomes.
+
+The maintainer's later desktop-player request authorizes the software extension recorded in [ADR-003](docs/ADR-003-Desktop-Player.md): a browser audio adapter and additional waveforms in the same backend engine. It does not authorize a desktop framework, mobile implementation, physical/human testing or bypass the review/merge policy. See the [desktop verification and changed-file inventory](docs/Desktop-Player.md).
