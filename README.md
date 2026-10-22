@@ -2,7 +2,7 @@
 
 An AppStack open-source research and development initiative exploring mobile signal generation and the engineering behind historical and commercial devices described as Rife frequency generators.
 
-**Status: early application scaffolding and ongoing research. No waveform generator, export service or hardware output has been implemented or validated.**
+**Status: early backend renderer and ongoing research. Synthetic WAV files have passed local digital checks; the export service, editor and hardware-output verification remain outstanding.**
 
 ## What we want to explore
 
@@ -42,7 +42,7 @@ The first prototype uses a TypeScript browser editor, a backend API and separate
 
 ## Contributing
 
-Start with [development setup and checks](docs/Development.md). The scaffolding provides separate frontend/backend unit suites, strict typing, lint/format checks, builds and CI configuration. Run `npm run check` before submitting implementation changes. The preview is not a working generator; the [initial service contract](docs/Service-Contract.md) records the next backend targets.
+Start with [development setup and checks](docs/Development.md). The project provides separate frontend/backend unit suites, strict typing, lint/format checks, builds and CI configuration. Run `npm run check` before submitting implementation changes. The [backend renderer and independent WAV checks](docs/Backend-Renderer.md) are the first signal-generation increment. The browser preview is still incomplete; the [initial service contract](docs/Service-Contract.md) records the next backend targets.
 
 Research contributions are welcome before code. Read [CONTRIBUTING.md](CONTRIBUTING.md), choose an investigation from the [backlog](docs/wiki/Development-Readiness.md), and open an issue or pull request with sources, methods, uncertainties, and completion criteria. Document negative results and contradictory evidence as carefully as positive results.
 

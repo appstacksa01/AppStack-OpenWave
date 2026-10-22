@@ -1,6 +1,6 @@
 # First prototype verification plan
 
-Version 0.3 — 22 October 2026. Applies to the [first prototype specification](Signal-Specification.md), with backend generation and compulsory frontend/backend unit tests. **The numerical, service and browser acceptance checks below remain planned: no renderer/export service exists yet.** Scaffolding tests cover only presentation/lifecycle behaviour. The private MP3 analysis is separate research, not an OpenWave test result.
+Version 0.3 — 22 October 2026. Applies to the [first prototype specification](Signal-Specification.md), with backend generation and compulsory frontend/backend unit tests. Initial backend checks now include 129 backend unit tests and 36 independent synthetic WAV cases; [results and reproduction](https://github.com/appstacksa01/AppStack-OpenWave/blob/main/docs/Backend-Renderer.md) are proposed for review. **Service/browser acceptance, qualified physical measurements and a second human verification review remain outstanding.** The private MP3 analysis is separate research, not an OpenWave test result.
 
 ## Records and independent checks
 

@@ -21,6 +21,7 @@
     "test:frontend": "vitest run --config tooling/vitest.frontend.ts --coverage",
     "test:backend": "vitest run --config tooling/vitest.backend.ts --coverage",
     "test": "npm run test:frontend && npm run test:backend",
+    "verify:signals": "npm run build --workspace @openwave/backend && node tooling/verify-signals.mjs",
     "build": "npm run build --workspace @openwave/frontend && npm run build --workspace @openwave/backend",
     "check:boundaries": "node tooling/check-boundaries.mjs",
     "check": "npm run format:check && npm run lint && npm run typecheck && npm test && npm run build && npm run check:boundaries"
