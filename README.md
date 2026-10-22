@@ -40,6 +40,18 @@ The original proposal was the MEVN stack: MongoDB, Express, Vue, and Node.js. Th
 
 Research contributions are welcome before code. Read [CONTRIBUTING.md](CONTRIBUTING.md), choose an investigation from the [backlog](docs/wiki/Development-Readiness.md), and open an issue or pull request with sources, methods, uncertainties, and completion criteria. Document negative results and contradictory evidence as carefully as positive results.
 
+### How changes reach main
+
+**The `main` branch is the source of truth for accepted project work.** Contributions must go through a pull request and maintainer review before they are merged. Do not push directly to `main`, force-push it, or overwrite its history.
+
+1. For substantial changes, open an issue first to agree on the scope. Small documentation corrections can go straight to a pull request.
+2. Fork the repository, or create a separate working branch if you have write access. Start from the latest `main`.
+3. Commit your changes to that branch and open a pull request targeting `main`.
+4. Explain what changed, why, and how it was checked. Include source references for research contributions.
+5. Address review feedback. A maintainer approves and merges accepted changes into `main`.
+
+The reviewed files in `docs/wiki/` are the source for the public wiki. Propose research updates there through the same pull request process; maintainers publish the accepted version to the wiki after merging. A branch or an open pull request is proposed work, not an accepted project decision.
+
 ## Licensing
 
 The project is intended to be open source. An explicit software, documentation, and hardware licensing decision is still required before implementation contributions are accepted. Public visibility alone does not grant an open-source license. See INV-08.
