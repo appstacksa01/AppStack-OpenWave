@@ -1,6 +1,6 @@
 # First prototype signal specification
 
-Version 0.3 — 22 October 2026. INV-04/07. Proposed for maintainer approval through a repository pull request. Once merged, this is the implementation contract for the first file-export prototype. **No application has been implemented or verified. These are engineering requirements, not measured performance or Electro-Med compatibility specifications.** Supersedes v0.2's browser-rendering architecture; the numeric WAV contract is unchanged.
+Version 0.3 — 22 October 2026. INV-04/07. Adopted through PR #5 as the implementation contract for the first file-export prototype. The initial backend renderer now has [local synthetic-file results](https://github.com/appstacksa01/AppStack-OpenWave/blob/main/docs/Backend-Renderer.md) proposed for review; service/browser acceptance is incomplete. **These are engineering requirements, not electrical performance or Electro-Med compatibility specifications.** Supersedes v0.2's browser-rendering architecture; the numeric WAV contract is unchanged.
 
 ## Purpose and platform
 

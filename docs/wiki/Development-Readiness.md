@@ -2,7 +2,7 @@
 
 The first implementation decision now narrows the software milestone to browser-based WAV export; see the file-only decision below. These are investigation records, not created GitHub Issues. Exterior photographs inform INV-01; local audio analysis informs INV-07. No hardware measurements have been performed, and they still require INV-06 review first.
 
-See [research progress](Research-Progress.md) for evidence by investigation. The reviewed third-party frequency list advances INV-09 without resolving reuse rights or complete signal settings. The v0.3 specification keeps the numeric file contract and moves rendering to backend worker processes, with mandatory SOLID and frontend/backend unit tests. Initial presentation/lifecycle tests are introduced in the scaffolding PR; numerical export and service verification remain planned.
+See [research progress](Research-Progress.md) for evidence by investigation. The reviewed third-party frequency list advances INV-09 without resolving reuse rights or complete signal settings. The v0.3 specification requires backend worker generation, SOLID and frontend/backend unit tests. The initial renderer's [local results](https://github.com/appstacksa01/AppStack-OpenWave/blob/main/docs/Backend-Renderer.md) cover unit behaviour and 36 synthetic WAV cases; service/browser and human release verification remain outstanding.
 
 | ID | Investigation | Deliverable and completion criteria | Dependencies |
 | --- | --- | --- | --- |

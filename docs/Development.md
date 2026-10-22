@@ -1,6 +1,6 @@
 # Development setup
 
-This first implementation increment provides a minimal browser entry/status component, shared lifecycle types and backend lifecycle policy. It does **not** implement the sequence editor, HTTP export API, queue/storage adapters, renderer or worker process. There is no WAV export or production service to run yet.
+The implementation provides a minimal browser entry/status component, shared lifecycle types, backend lifecycle policy and a backend-only WAV renderer with independent checks. It does **not** implement the sequence editor, HTTP export API, queue/storage adapters or managed worker service. There is no user-facing export service to run yet; see the [backend renderer](Backend-Renderer.md) for its programmatic boundary and actual verification results.
 
 ## Install and run
 
@@ -33,8 +33,8 @@ The frontend uses plain TypeScript DOM components and Vite; no UI framework is n
 - `tooling`: separate test/coverage configurations and frontend artifact inspection.
 - `.github/workflows/quality.yml`: both suites and all local checks on pull requests and pushes to `main`, for Node 22.20.0/24. The check names are `Quality (Node 22.20.0)` and `Quality (Node 24)`. Configure repository rules to require them and maintainer review; this PR does not claim those repository settings are enabled.
 
-Tests currently cover accessible export-state messages, available/removed cancellation controls, application mount success/failure and backend valid/invalid lifecycle transitions, including terminal-state protection. They do not exercise an API, numerical renderer, cancellation races against real storage or actual browser downloads; those systems do not exist yet.
+Tests cover accessible export-state messages, cancellation controls, application mount success/failure, lifecycle policy, sequence/JSON validation, exact timing, PCM/header/streaming behaviour and rendering sink failure/cancellation. `npm run verify:signals` adds independent Python/standard-library WAV analysis; see [requirements and results](Backend-Renderer.md). API integration, cancellation races against real job storage and browser downloads remain outstanding.
 
 ## Next increments
 
-Review the [initial service contract](Service-Contract.md), implement the independently verified backend renderer, then queue/repository/artifact adapters and the export API with integration tests. Connect the editor after those contracts are tested. Follow the [coding standards](Coding-Standards.md), [architecture decision](Architecture.md) and [signal contract](wiki/Signal-Specification.md).
+Review the [renderer](Backend-Renderer.md), then implement queue/repository/artifact adapters and the export API against the [service contract](Service-Contract.md), with integration tests. Connect the editor after those contracts are tested. Follow the [coding standards](Coding-Standards.md), [architecture decision](Architecture.md) and [signal contract](wiki/Signal-Specification.md). Cloud CI is currently deferred under the user's no-paid-CI instruction; local checks remain compulsory, and remote checks must not be labelled passed while blocked.
