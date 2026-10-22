@@ -4,11 +4,30 @@ We are gathering evidence and requirements before building an application. Contr
 
 ## Workflow
 
-1. Choose an investigation from [Development Readiness](docs/wiki/Development-Readiness.md), or propose a new question in an issue.
-2. State the question, scope, deliverable, dependencies, and completion criteria. Reference its INV ID.
-3. Submit notebook changes through a pull request using the [research entry template](docs/wiki/Research-Entry-Template.md).
-4. Record sources, methods, uncertainties, conflicting evidence, and the review outcome.
-5. Update the findings and backlog when evidence changes a requirement.
+The `main` branch is the source of truth for accepted project work. Do not push directly to it, force-push it, or replace its history. Submit contributions on a separate branch or fork and obtain maintainer approval through a pull request.
+
+1. Choose an investigation from [Development Readiness](docs/wiki/Development-Readiness.md), or propose a new question in an issue. Agree on scope before substantial work; small documentation corrections do not need a separate issue.
+2. State the question, scope, deliverable, dependencies, and completion criteria. Reference its INV ID where applicable.
+3. Start from the latest `main`. Create a descriptive branch such as `docs/contribution-guide`, `research/source-review`, or `feature/sequence-import`. Contributors without write access should fork the repository and create the branch in their fork.
+4. Make focused commits on that branch. For research, use the [research entry template](docs/wiki/Research-Entry-Template.md) and record sources, methods, uncertainties, and conflicting evidence.
+5. Push the branch to your fork or the repository and open a pull request targeting `main`. Describe the change, rationale, linked issue/investigation, checks performed, and remaining limitations. Mark unfinished work as a draft pull request.
+6. Address feedback with further commits on the same branch. If `main` changes, update your branch and resolve conflicts there; do not overwrite accepted work to bypass a conflict.
+7. A maintainer reviews the scope, evidence, applicable checks, and project readiness requirements, requests changes where necessary, and approves accepted work before merging it into `main`.
+8. After merging, maintainers publish any accepted wiki changes. Update findings and backlog statuses when the merged evidence changes a requirement.
+
+Opening a pull request does not make its contents accepted. Maintainers may request changes, defer a proposal, or close it with an explanation. Research approval records the project's assessed evidence and limitations; it does not establish medical effectiveness.
+
+## Wiki contributions
+
+Edit the Markdown files in `docs/wiki/` in your branch and include them in a repository pull request. Do not publish unreviewed research directly to the GitHub wiki. After approval and merge, a maintainer synchronizes the accepted pages and adjusts links for wiki navigation. The wiki should reflect the accepted repository version.
+
+## Review checks
+
+Keep changes within the agreed scope and check links, source references, and personal information before submitting. For documentation-only changes, describe the review performed; application tests are not expected when no application code changes. For later code contributions, run the applicable checks defined by the project and report the results. Do not describe a planned or skipped check as passed.
+
+## Repository enforcement
+
+This document defines the contribution policy. GitHub branch protection or rulesets must be configured separately by a repository administrator to enforce pull requests, review requirements, and restrictions on direct/force pushes. This documentation update does not configure those settings or claim that they are enabled.
 
 ## Evidence and publication standards
 
