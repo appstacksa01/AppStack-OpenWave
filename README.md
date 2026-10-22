@@ -18,7 +18,7 @@ Generating a digital waveform does not demonstrate the same electrical output as
 
 ## Research notebook
 
-Start at the [GitHub research wiki](https://github.com/appstacksa01/Rife-Frequency-Generator-Mobile-Application/wiki). The [repository copy](docs/wiki/Home.md) preserves the research pages in version control.
+Start at the [GitHub research wiki](https://github.com/appstacksa01/AppStack-OpenWave/wiki). The [repository copy](docs/wiki/Home.md) preserves the research pages in version control.
 
 - [Scope and research questions](docs/wiki/Project-Scope.md)
 - [Historical research](docs/wiki/Historical-Research.md)
