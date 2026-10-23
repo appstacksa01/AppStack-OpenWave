@@ -1,8 +1,16 @@
 # AppStack OpenWave
 
-An AppStack open-source research and development initiative exploring mobile signal generation and the engineering behind historical and commercial devices described as Rife frequency generators.
+An AppStack open-source waveform generation and research platform exploring mobile audio, reproducible signal engineering and the historical/commercial devices described as Rife frequency generators.
 
 **Status: local desktop waveform-player prototype; uncommitted and not a release.** The existing UI now loads WAVs, plays live backend-generated sine/band-limited square/triangle sequences and provides software mute, route feedback and a digital monitor. See the [desktop guide, results and lab plan](docs/Desktop-Player.md) and [desktop architecture decision](docs/ADR-003-Desktop-Player.md). No physical sound-card/DAC/phone output has been measured or validated.
+
+## Architecture review and implementation status
+
+The [enterprise architecture baseline](docs/Enterprise-Architecture.md) and [implementation/readiness audit](docs/Enterprise-Architecture-Audit.md) distinguish the current TypeScript prototype from the proposed central catalogue, independent IAM, mobile/admin clients and cloud-neutral deployment. The complete target is **NOT READY — ARCHITECTURAL GAPS** pending owner decisions; this is not an enterprise release or a commitment to rewrite the backend. ASP.NET Core LTS, PostgreSQL and React/TypeScript/Capacitor remain candidates. Local mobile generation is an explicit [execution-policy decision](docs/ADR-005-Offline-Generation.md), not existing functionality. No application or infrastructure development is authorized by this review.
+
+Readiness is assessed separately for [desktop, catalogue, mobile retained playback, local generation and hardware](docs/Release-Readiness.md). Initial delivery retains backend generation; future body-contact engineering does not block independent software scopes. New local generation remains a separate approval/runtime gate.
+
+Design references: [catalogue/data/API](docs/Catalogue-and-Data-Architecture.md), [identity/security](docs/Identity-and-Security-Architecture.md), [deployment/installation](docs/Deployment-and-Operations.md), [ADR-004](docs/ADR-004-Enterprise-Evolution.md) and the existing [mobile ADR](docs/ADR-002-Mobile-Playback.md). The target Compose quick start is not executable today; use the existing development guide for the prototype.
 
 ## What we want to explore
 

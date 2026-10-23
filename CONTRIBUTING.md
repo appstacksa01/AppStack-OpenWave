@@ -8,6 +8,8 @@ Read [LICENSING.md](LICENSING.md) before contributing. Original software contrib
 
 The `main` branch is the source of truth for accepted project work. Do not push directly to it, force-push it, or replace its history. Submit contributions on a separate branch or fork and obtain maintainer approval through a pull request.
 
+Use descriptive branches such as `docs/enterprise-architecture`, `research/dac-measurements`, `feature/catalogue-search`, `fix/playback-state` or `chore/release-notes`. Do not use tool/agent branding as a branch prefix. Remove fully merged branches and stale tracking references while preserving unmerged work; historical commit and pull-request records are not rewritten.
+
 1. Choose an investigation from [Development Readiness](docs/wiki/Development-Readiness.md), or propose a new question in an issue. Agree on scope before substantial work; small documentation corrections do not need a separate issue.
 2. State the question, scope, deliverable, dependencies, and completion criteria. Reference its INV ID where applicable.
 3. Start from the latest `main`. Create a descriptive branch such as `docs/contribution-guide`, `research/source-review`, or `feature/sequence-import`. Contributors without write access should fork the repository and create the branch in their fork.

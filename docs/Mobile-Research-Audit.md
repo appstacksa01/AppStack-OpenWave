@@ -18,7 +18,7 @@
 | `docs/wiki/Source-Library.md`, `Historical-Research.md`, `Software-and-Supplier-Research.md`, `Frequency-List-Review.md`, `Research-Entry-Template.md` | Source provenance, unresolved history/rights and research-record conventions; mobile research does not close these gaps |
 | Published repository and local wiki mirror | Public repository page inspected. Live wiki fetch failed; existing local mirror Home was readable but its freshness was not established. Repository `docs/wiki/` was used as the maintained source; no live-wiki alignment is claimed |
 
-The local branch is `codex/connected-export-preview`, based on renderer commit `9852bf6`; the local `origin/main` reference is `3e2676b`. No fresh fetch or remote merge-state assertion was needed/performed for this task. Source-tree evidence below must not be described as an accepted `main` release.
+At this historical snapshot, the local preview was based on renderer commit `9852bf6`; the local `origin/main` reference was `3e2676b`. The obsolete branch label is omitted following the maintainer's later descriptive-naming policy; commit provenance is unchanged. No fresh fetch or remote merge-state assertion was needed/performed for this task. Source-tree evidence below must not be described as an accepted `main` release.
 
 ### What the code actually does
 

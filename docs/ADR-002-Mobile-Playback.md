@@ -4,6 +4,8 @@
 
 ## Context and recommendation
 
+**Enterprise target review, 23 October 2026:** [ADR-004](ADR-004-Enterprise-Evolution.md) adds proposed catalogue/profile/OIDC clients; React + TypeScript + Capacitor is the preferred candidate to evaluate, subject to current plain-TypeScript UI reuse. No React migration or framework is selected. The requested local-WAV generation target conflicts with current backend-only execution and is explicitly gated by [ADR-005](ADR-005-Offline-Generation.md); earlier offline-playback scope remains valid until an amendment is approved.
+
 **Later documentation-only hardware investigation:** The [ESP32-S3 comparison](wiki/ESP32-S3-Investigation.md) and [Portable decision register](wiki/Portable-Concept.md#portable-hardware-decision-register) add USB-audio streaming and command-based MCU generation candidates. No board, firmware or transport is selected. Option A can consume existing files; Option B remains subject to an explicit ADR-001 execution amendment and a credible one-engine portability/conformance plan. This review does not authorize local generation or amend this ADR.
 
 **Later desktop implementation:** The maintainer subsequently authorized a desktop player under [ADR-003](ADR-003-Desktop-Player.md). `apps/frontend/src/audio-output.ts` and the browser adapter now exist; live streams reuse the backend engine. The mobile scope/approval gates below remain separate. The earlier “proposed playback boundary” describes the mobile design stage, not absence of the desktop implementation.
@@ -102,6 +104,44 @@ flowchart TD
 ```
 
 “Digitally verified” is not a calibrated physical output. No human-contact path is included. USB-C remains mandatory for the proposed portable hardware path.
+
+## Proposed mobile catalogue and offline flow
+
+23 October 2026, **PROPOSED ARCHITECTURE**. Mobile responsibilities expand to published catalogue search/filter/detail, programme retrieval, saved programmes, offline catalogue caching and optional authenticated profile sync, plus playback/routing/interruption/USB-C duties. Local custom WAV generation is a target, not implemented or authorized by the existing execution policy. A downloaded valid programme/file must play without a continuous API or IdP connection; public cached playback must not require recurring sign-in. Private entitlements/offline expiry need a separate explicit policy and user-visible limits.
+
+```mermaid
+sequenceDiagram
+  participant User
+  participant Mobile as Proposed Mobile
+  participant Cache as Device cache and outbox
+  participant API as Proposed catalogue and profile API
+  participant IdP as Independent OIDC provider
+  participant Audio as Native playback adapter
+  User->>Mobile: Search or retain published programme
+  Mobile->>API: Snapshot-aware catalogue query or sync cursor
+  API-->>Mobile: Immutable revisions, hashes and tombstones
+  Mobile->>Cache: Validate and atomically retain snapshot and files
+  opt Protected profile action while online
+    Mobile->>IdP: System-browser authorization with PKCE
+    IdP-->>Mobile: Authorization result and tokens
+    Mobile->>API: Owner-scoped save with revision precondition
+    API-->>Mobile: New revision or explicit conflict
+  end
+  Note over Mobile,Cache: No network: valid retained content remains available
+  User->>Mobile: Explicit start
+  Mobile->>Cache: Read pinned valid programme and verified WAV
+  Mobile->>Audio: Prepare route and play retained file
+  Audio-->>Mobile: Route, interruption, completion or error
+  Note over Mobile,Audio: New local generation requires ADR-005 decision
+```
+
+Maintain snapshot/version and change cursor, published revision IDs/hashes, last successful sync and schema/contract compatibility. Use ETags to avoid redundant transfers; cursor expiry triggers bounded full re-sync. Apply changes/tombstones atomically, record retractions and retain pinned historical content only under agreed rights/retention policy. Never silently change saved programme settings when a catalogue entry updates. Reject incompatible schemas, unsupported shapes/rates and incomplete programmes visibly.
+
+Separate immutable published cache from user edits and a bounded local outbox. Apply the [identity-bound cache/outbox rules](Identity-and-Security-Architecture.md#identity-bound-cache-and-outbox): bind every private operation to its originating profile/issuer/subject and deployment; stop replay on account mismatch and invalidate old-account asynchronous callbacks. Confirmed logout discards private queued changes only after the explicit unsynced-data warning. Saved-programme edits carry a base revision and operation ID; reconcile with ownership checks and explicit conflict resolution or a fork, not last-write-wins data loss. Favourites can be idempotent set operations with revision/tombstone handling. Offline devices cannot learn of retractions/revocation instantly: display last-sync/evidence/version status. Apply the [dependent withdrawal policy](Catalogue-and-Data-Architecture.md#withdrawal-and-dependent-programme-policy) before reconnect replay or further catalogue-based generation; never silently republish quarantined content. Do not automatically download private source documents.
+
+Use the [programme package contract](Programme-Package-Contract.md) to bind immutable programme settings, supported engine/contract identity, manifest digest and exact WAV bytes. Download to temporary local storage, verify the complete binding, then atomically promote. Test partial download, corruption, eviction, low storage and restart. A cached research entry without complete settings/audio is not an offline-playable programme. See [IAM/security](Identity-and-Security-Architecture.md) for private-cache and deletion requirements. Do not expose the loopback API on a phone/LAN as a deployment shortcut.
+
+Evaluate all four framework choices in the comparison above against these requirements. Direct Capacitor wrapping of the existing UI is the lower-migration comparator; React requires a documented UI benefit. Native playback/background/lock/USB/protected storage needs named-device tests regardless of framework. React Native/native UI requires DOM replacement; a PWA cache cannot establish route/background guarantees or a permitted synthesis runtime. No choice is declared reliable from documentation alone.
 
 ## Risks and adoption gates
 

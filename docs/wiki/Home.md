@@ -6,6 +6,8 @@ Updated: 22 October 2026. Stage: uncommitted desktop waveform-player prototype. 
 
 Latest concept review, 23 October 2026: [Portable hardware concept v0.2](Portable-Concept.md#concept-v02-functional-specification) proposes standard USB Audio Class DAC playback without a controller, optional power hardware and an unspecified future output module. All six engineering questions remain open; size/mass targets are aspirations. This is documentation under review, not a hardware validation.
 
+Architecture target review, 23 October 2026: [enterprise baseline](../Enterprise-Architecture.md), [current implementation/readiness audit](../Enterprise-Architecture-Audit.md), [catalogue/data/API](../Catalogue-and-Data-Architecture.md), [independent identity/security](../Identity-and-Security-Architecture.md) and [installation/deployment profiles](../Deployment-and-Operations.md). These are local proposals for owner review, not implemented services or accepted execution-policy changes. Full-product verdict: **NOT READY — ARCHITECTURAL GAPS**. The public wiki remains the previously merged version until this review is approved and merged.
+
 ## Contents
 
 Start with [research progress and answered questions](Research-Progress.md) for the current status and next steps.
@@ -41,3 +43,5 @@ Implementation references: [coding and testing standards](https://github.com/app
 Use the [research entry template](Research-Entry-Template.md). Reference sources by ID, preserve disagreements, and update requirements when evidence changes.
 
 The files in `docs/wiki/` are the version-controlled source for the [published wiki](https://github.com/appstacksa01/AppStack-OpenWave/wiki). Submit changes through repository pull requests, then synchronize approved pages. The repository copy remains available for review and offline reading.
+
+Review follow-up: [independent release gates](../Release-Readiness.md), [programme-to-WAV package contract](../Programme-Package-Contract.md) and [render worker boundary](../Render-Worker-Contract.md) now address the first architecture review's missing detail. All remain local proposals pending approval/implementation; no new wiki publication or release is implied.

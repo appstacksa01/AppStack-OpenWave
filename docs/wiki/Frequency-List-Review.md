@@ -39,3 +39,7 @@ This is a schema proposal, not an implementation. Resolve ranges, ambiguous unit
 Answered: a real list is accessible, its source link is known, and several parsing problems are identified.
 
 Open: redistribution rights, compiler/version provenance, units for every entry, settings required for execution, and a reviewed import specification. INV-09 remains in progress.
+
+## Central catalogue proposal — 23 October 2026
+
+The [data architecture](../Catalogue-and-Data-Architecture.md) defines proposed source/import/entry/programme ownership. The presentation remains outside the repository; an authorized versioned input and rights decision are required before ingestion. No original records are invented or bundled. Preserve source text, values/ranges/sweeps, ambiguity and evidence status; missing waveform/duration/amplitude/transition settings stay missing. Catalogue publication is not automatic programme completion, renderability or medical validation.

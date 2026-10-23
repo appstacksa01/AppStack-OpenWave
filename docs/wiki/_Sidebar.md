@@ -32,3 +32,15 @@
 - [Portable hardware research review](../Portable-Hardware-Research-Review.md)
 - [Development readiness](Development-Readiness.md)
 - [Research entry template](Research-Entry-Template.md)
+
+- [Enterprise architecture for review](../Enterprise-Architecture.md)
+- [Implementation and readiness audit](../Enterprise-Architecture-Audit.md)
+- [Catalogue, data and API target](../Catalogue-and-Data-Architecture.md)
+- [Independent IAM and security](../Identity-and-Security-Architecture.md)
+- [Deployment and installation target](../Deployment-and-Operations.md)
+- [Enterprise evolution ADR](../ADR-004-Enterprise-Evolution.md)
+- [Offline generation decision gate](../ADR-005-Offline-Generation.md)
+
+- [Independent release gates](../Release-Readiness.md)
+- [Portable programme package](../Programme-Package-Contract.md)
+- [Render worker contract](../Render-Worker-Contract.md)

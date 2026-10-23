@@ -67,3 +67,13 @@ This is now formalized as [OpenWave Analog Output Characterisation](Hardware-and
 4. Re-estimate funding/maintenance separately for backend operation, native adapters, physical testing and eventual distribution. No new budget or hardware purchase is approved here.
 
 Historical reconstruction and an exhaustive player-format matrix need not prevent a generic export prototype if the maintainer records that reduced scope and the applicable readiness criteria are met.
+
+## Enterprise architecture review — 23 October 2026
+
+A [current implementation and readiness audit](../Enterprise-Architecture-Audit.md) now reconciles the existing TypeScript prototype with the proposed catalogue, independent IAM, mobile/admin clients and cloud-neutral operations. [ADR-004](../ADR-004-Enterprise-Evolution.md) records technology/module candidates; [ADR-005](../ADR-005-Offline-Generation.md) exposes the local-generation versus backend-only execution conflict. Full-product verdict: **NOT READY — ARCHITECTURAL GAPS** pending owner decisions, not permission to start development. New E-Q01–E-Q12 supplement existing investigation IDs; no physical/medical question is closed.
+
+The prior approved concept v0.2 pages were published separately from accepted main commit `d9e2d51` to wiki commit `a4b36b6`. Hosted PR #9 quality jobs did not start because GitHub reported account billing lock; local documentation checks were separate. This enterprise review changes documentation only and remains uncommitted/unpushed. Descriptive branch naming is now required; historical Git commits/PR records and numerical evidence are preserved.
+
+## Architecture gap fixes — 23 October 2026
+
+The six review gaps now have explicit proposed rules: separate release gates/backend-first delivery, identity-bound private cache/outbox and logout behaviour, a programme/engine/WAV package binding, a bounded API/Node worker protocol, and source/entry/programme withdrawal propagation. See the [closure register](../Enterprise-Architecture-Audit.md#review-gap-closure--23-october-2026). Local native generation still needs owner/runtime approval for R4; physical measurements and implementation tests remain outstanding. Documentation fixes do not mark any proposed capability implemented. No commits, pushes, migrations, packages or application changes accompany this follow-up.

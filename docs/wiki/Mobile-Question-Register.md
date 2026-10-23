@@ -78,3 +78,11 @@ The maintainer's functional proposal [S56] prioritizes a standard USB Audio Clas
 | M-Q24–M-Q26: ESP32 UAC, command transport and local generation? | FEASIBLE — NOT YET VERIFIED / PARTIALLY ANSWERED / DECISION REQUIRED respectively | Unchanged technical classifications; outside proposed baseline | Controller omitted from v0.2, not disproved; prior evidence/engine-execution gates retained | Reopen product scope only for demonstrated diagnostics, proprietary controls, monitoring or independent playback needs |
 
 Decision trace: P-D02 changes from a feasible candidate to a deferred alternative outside baseline; P-D03 changes from an unselected audio/command choice to a **proposed UAC baseline**, with compatibility still unverified. P-D07 records undecided power/ports and P-D08 aspirational packaging. See the [decision register](Portable-Concept.md#portable-hardware-decision-register). No parent investigation closes, safety acceptance occurs or implementation begins.
+
+## Enterprise follow-up — 23 October 2026
+
+M-Q07 framework, M-Q15 offline operation, M-Q16 live shapes and M-Q26 local generation retain unresolved platform/execution gates. The master task [S57] adds local WAV generation as a target; it does not satisfy those gates or silently amend ADR-001/AGENTS. See [ADR-005](../ADR-005-Offline-Generation.md) and [ADR-002 offline synchronization](../ADR-002-Mobile-Playback.md#proposed-mobile-catalogue-and-offline-flow). New enterprise questions E-Q01–E-Q12 in the [readiness register](../Enterprise-Architecture-Audit.md#l-outstanding-decision-and-investigation-register) supplement existing INV/M-Q/P-D identifiers rather than replacing or closing them. Native playback, IAM/catalogue integration and physical DAC acceptance remain separate evidence requirements.
+
+## Review follow-up: scoped decisions
+
+M-Q15 offline playback is separated from M-Q26 new local generation by [R3 versus R4](../Release-Readiness.md). E-Q01 remains blocked only for local generation; it does not block desktop/catalogue/retained-file scopes. Identity switching, programme/WAV bindings and dependent withdrawals now have [explicit contracts](../Enterprise-Architecture-Audit.md#review-gap-closure--23-october-2026); technical implementation/device/rights evidence remains required. No parent INV or physical acceptance status is closed.

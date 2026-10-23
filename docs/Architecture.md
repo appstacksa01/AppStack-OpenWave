@@ -8,6 +8,8 @@ The maintainer's later desktop-player request authorizes the [ADR-003](ADR-003-D
 
 ## Responsibilities
 
+The enterprise master task expands the long-term product beyond the original export milestone. [Enterprise Architecture](Enterprise-Architecture.md) and proposed [ADR-004](ADR-004-Enterprise-Evolution.md) evaluate a modular API/catalogue/profile/IAM architecture, PostgreSQL and ASP.NET Core candidates without adopting a rewrite. [ADR-005](ADR-005-Offline-Generation.md) records the unresolved local-mobile-generation execution conflict. This ADR still controls current synthesis placement; proposals do not override it.
+
 The [Portable hardware research](wiki/ESP32-S3-Investigation.md) treats ESP32 USB audio and command-based local generation as candidates, not implemented execution paths. USB audio can transport existing samples. Local MCU synthesis would require a reviewed amendment to this ADR and one-engine portability/conformance evidence; it is not a browser or embedded fallback to backend generation.
 
 | Component | Responsibility |

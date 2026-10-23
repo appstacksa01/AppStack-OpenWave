@@ -67,3 +67,11 @@ Use the investigation title and ID above. Include:
 - Completion criteria and reviewer.
 - Sources, findings, limitations, and notebook pages to update.
 - Owner: unassigned. Status: open.
+
+## Enterprise implementation gate — 23 October 2026
+
+The [enterprise audit](../Enterprise-Architecture-Audit.md) classifies the full target **NOT READY — ARCHITECTURAL GAPS**. Existing digital code is not a reason to start an unapproved .NET rewrite, catalogue migration or native engine. Owner decisions E-Q01–E-Q12 cover shared-engine execution, backend/database/IAM, lawful source input, mobile/offline capability, governance and deployment/recovery scope; existing INV/M-Q hardware/history/rights questions remain open. The original reduced prototype decisions above retain their historical scope. Review [ADR-004](../ADR-004-Enterprise-Evolution.md) and [ADR-005](../ADR-005-Offline-Generation.md) before future implementation.
+
+## Scope-specific readiness follow-up
+
+Use [Release Readiness](../Release-Readiness.md) to assess R1 desktop software, R2 catalogue, R3 retained mobile playback and R4 local generation separately. H1 measurements support physical claims; H2 future body-contact engineering is not a gate for those software releases. The full enterprise target still has open decisions, while R1 can be reviewed as a narrowly bounded implementation increment with its own acceptance conditions. This is a documentation correction, not release/development approval.

@@ -1,6 +1,6 @@
 # Source library
 
-Access/review date: 22 October 2026. Review status applies only to the stated portions; it does not mean that a source's claims were verified.
+Initial access/review: 22 October 2026; later reviews are dated in their sections, including 23 October 2026. Review status applies only to the stated portions; it does not mean that a source's claims were verified.
 
 | ID | Source | Type, relevance, and limitations |
 | --- | --- | --- |
@@ -111,6 +111,33 @@ The Apple Accessory Access overview was located during searching but its full do
 | ID | Source | Inspected scope and limitation |
 | --- | --- | --- |
 | S56 | Maintainer-supplied “OPENWAVE PORTABLE: HARDWARE ARCHITECTURE (CONCEPT v0.2)” image, functional specification and six engineering questions, 23 October 2026 | Functional proposal reviewed in this task: standard UAC DAC baseline; no ESP32/AD9833; optional protected LiPo/power subsystem; unspecified future output module; no body-contact bench connection; aspirational 80 x 50 x 20 mm and under 100 g. Not manufacturer evidence, a schematic, bill of materials, selected components, charging design or measured result. Original supplied in chat; the repository records a Mermaid interpretation and requirements in Portable Concept |
+
+## Enterprise architecture review — 23 October 2026
+
+All entries below inform proposed requirements, not installed dependencies or compliance claims. API/runtime/provider references must be frozen and rechecked before implementation. Existing Capacitor/React Native/mobile references S29–S41 remain applicable; no new plugin or native runtime was tested.
+
+| ID | Source | Reviewed scope and limitation |
+| --- | --- | --- |
+| S57 | Maintainer's enterprise architecture/documentation master task, supplied 23 October 2026 | Product requirements, technology preferences, diagrams, review-only boundary and owner approval before development. A target requirement is not proof of implementation or an accepted exception to backend-only synthesis |
+| S58 | Microsoft, [.NET support policy](https://dotnet.microsoft.com/en-us/platform/support/policy), updated 13 October 2026; [ASP.NET Core OpenAPI overview](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/openapi/overview?view=aspnetcore-10.0) | Support table identifies .NET 10 LTS through 14 November 2028; API documentation capabilities inspected. No backend selected/migrated, package installed or service deployed |
+| S59 | OpenID Foundation, [OpenID Connect Core 1.0, errata set 2](https://openid.net/specs/openid-connect-core-1_0.html), 15 December 2023 | Identity/claims, issuer+subject stability, subject types and code-flow concepts; no provider/claim mapping or production authentication implemented |
+| S60 | IETF, [RFC 8252: OAuth 2.0 for Native Apps](https://www.rfc-editor.org/rfc/rfc8252), October 2017 | External user-agent and PKCE native-client guidance; actual redirect/platform integration still needs target-device tests |
+| S61 | IETF, [RFC 9700: Best Current Practice for OAuth 2.0 Security](https://www.rfc-editor.org/rfc/rfc9700.html), January 2025 | Authorization-code, PKCE, redirect, privilege and token protections; no hand-written security stack or blanket compliance claim |
+| S62 | PostgreSQL, [schemas](https://www.postgresql.org/docs/18/ddl-schemas.html) and [backup/restore](https://www.postgresql.org/docs/18/backup.html), version 18 documentation | Schema organization/privileges and backup approach overview. Logical ownership/index/migration design is an OpenWave proposal, not a database created or restored |
+| S63 | Keycloak, [production configuration](https://www.keycloak.org/server/configuration-production), [configuration](https://www.keycloak.org/server/configuration), [containers](https://www.keycloak.org/server/containers), current documentation | Production TLS/hostname/configuration and operations considerations. Candidate compared with external OIDC; no provider/version, environment or deployment selected |
+| S64 | Docker, [Compose overview](https://docs.docker.com/compose/) and [production use](https://docs.docker.com/compose/how-tos/production/), current documentation | Multi-container configuration/operations model. No OpenWave Dockerfile/Compose/sample environment or verified fresh installation exists |
+| S65 | Open Container Initiative, [overview](https://opencontainers.org/about/overview/) | Open image/runtime standards scope; container interoperability alone does not verify OpenWave cloud portability |
+| S66 | OpenTelemetry, [specification principles](https://opentelemetry.io/docs/specs/otel/specification-principles/) and [observability primer](https://opentelemetry.io/docs/concepts/observability-primer/) | Vendor-neutral telemetry principles and traces/metrics/logs concepts; no instrumentation, collector or monitoring deployed |
+| S67 | OpenAPI Initiative, [What is OpenAPI?](https://www.openapis.org/what-is-openapi) | API-description standard overview; no machine-readable OpenWave OpenAPI contract currently present |
+| S68 | South African Department of Justice, [Protection of Personal Information Act 4 of 2013](https://www.justice.gov.za/legislation/acts/2013-004.pdf) | Processing/security, special personal information and transborder sections inspected for privacy-review agenda. Not legal advice, a complete applicability analysis or a claim of POPIA compliance |
+| S69 | Mermaid, [Entity Relationship Diagrams](https://mermaid.js.org/syntax/entityRelationshipDiagram.html), current reference | Basic left/right cardinality and relationship notation checked for the proposed data diagram; no package installation or diagram render executed |
+
+## Programme integrity contract follow-up — 23 October 2026
+
+| ID | Source | Reviewed scope and limitation |
+| --- | --- | --- |
+| S70 | RFC Editor, [RFC 8785: JSON Canonicalization Scheme](https://www.rfc-editor.org/rfc/rfc8785.html), June 2020, Informational | Deterministic canonical UTF-8 JSON, property/array and primitive-value rules for proposed programme/sequence digest contracts. No canonicalizer installed or conformance test executed; not represented as an Internet Standards Track requirement |
+| S71 | NIST, [FIPS 180-4: Secure Hash Standard](https://csrc.nist.gov/pubs/fips/180-4/upd1/final), August 2015 | Digest/integrity purpose and SHA-256 reference; digest comparison alone does not establish publisher authenticity or a digital signature. No new cryptographic implementation created |
 
 ## Adding sources
 
