@@ -43,6 +43,8 @@ Use the [POC acceptance/device matrix](Mobile-POC.md). Record failures and unsup
 
 ## OpenWave Analog Output Characterisation
 
+Concept v0.2 update, 23 October 2026: the proposed baseline is a standard USB Audio Class DAC, with no ESP32/AD9833 and no body-contact output. A battery is optional pending the measured phone/DAC power budget. The optional ESP32 and Electro-Med rows below are later comparisons, not prerequisites. See [functional specification](Portable-Concept.md#concept-v02-functional-specification).
+
 Proposed next research milestone, 22 October 2026; a sub-investigation of existing INV-03/05/06, not a replacement ID. Status: **BLOCKED — MEASUREMENT REQUIRED**. No physical results exist. The purpose is to compare actual analog output with verified digital fixtures and determine whether any additional conditioning or amplification is needed. See [frequency versus amplitude](Frequency-and-Amplitude.md) and the [desktop procedure](../Desktop-Player.md#short-manual-lab-verification-plan).
 
 | Candidate path | Entry condition | Current evidence |
@@ -72,3 +74,17 @@ Proposed next research milestone, 22 October 2026; a sub-investigation of existi
 Publish a reviewable record with timestamp, host/OS/browser/app and worker versions, board/DAC/firmware identity, topology diagram approved by the reviewer, load values/ratings, instruments/calibration, complete settings, checksums, raw captures, analysis version, uncertainty, anomalies and reviewer disposition. Include battery draw/thermal observations where possible; charging/hub topology needs its own assessment. MCU counters or the UI trace are diagnostic data, not independent analog evidence.
 
 Completion is a reproduced laptop/DAC baseline with explicit limits and a measured requirements comparison, or an honest blocked/inconclusive result. It does not require buying an ESP32 or characterizing the Electro-Med first. Qualified safety review remains a prerequisite for that machine's output work. No human-contact suitability, medical effectiveness or reference-machine equivalence follows from this milestone.
+
+## Concept v0.2 power and output review
+
+23 October 2026, maintainer proposal [S56], under review. No selected charger, cell, regulator, output module, PCB or charging schematic. The first decision is whether a selected DAC can run reliably on the target phone's USB power; do not add a battery merely because the concept includes an optional power block.
+
+| Research item | Evidence required before selection |
+| --- | --- |
+| Phone-powered baseline | Exact phone/OS/DAC/cable identities; DAC specifications; measured startup/steady demand, disconnect behaviour, battery/runtime and thermal observations |
+| Optional protected rechargeable LiPo | Total load/capacity/runtime budget, cell/charger protection, temperature supervision, voltage rails, regulation/shutdown and fault review by qualified personnel |
+| Dedicated charging input versus shared USB-C audio/charging | Define host/device data roles and power source/sink roles for each operating mode; review role changes, power path, backfeed, connection order and simultaneous charging/playback. Neither port arrangement is selected or demonstrated |
+| Unspecified future output module | Establish Electro-Med isolation/safety before qualified characterization; independently define intended-use ratings, output regulation, fault detection, isolation and protections. A protected battery or working DAC does not establish these |
+| Packaging | Treat 80 x 50 x 20 mm and under 100 g as aspirations. Include enclosure, connectors, power, protection and any future validated output hardware in fit/mass/thermal review; no dimension or weight is verified |
+
+The bench prototype ends at suitable electronic loads and instruments. No ordinary USB DAC or unvalidated amplifier is connected to electrodes. Dashed diagram paths denote future research dependencies, not electrical wiring or approved connections. Measurements must inform requirements before custom hardware or manufacturing is considered. The [question register](Mobile-Question-Register.md#concept-v02-follow-up--23-october-2026) preserves the unresolved evidence gates.

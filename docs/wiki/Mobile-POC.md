@@ -57,4 +57,6 @@ Keep requested file parameters separate from negotiated output parameters. Recor
 
 ## Hardware sequence
 
+Concept v0.2 (23 October 2026) makes the proposed baseline explicit: standard USB Audio Class DAC, no ESP32/AD9833, and electronic loads only [S56]. Confirm whether the phone can supply the selected DAC before considering optional battery/charging hardware. The [functional block review](Portable-Concept.md#concept-v02-functional-specification) adds no passed acceptance row, firmware requirement or body-contact path; size/mass targets remain aspirational.
+
 Begin with an off-the-shelf active DAC into a qualified test load. Compare an external programmable generator only if the required waveform, clocking, bandwidth or output level cannot be met by audio hardware. Seek documented output modules before considering custom design; no such module is validated by this review. Reference-machine measurements require a separate setup because its output is unknown. Follow the [hardware roadmap](Hardware-and-Electrical-Safety.md#portable-hardware-roadmap).

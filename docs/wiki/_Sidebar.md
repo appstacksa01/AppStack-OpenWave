@@ -15,6 +15,7 @@
 - [Mobile capabilities](Mobile-Capabilities.md)
 - [Desktop player and lab verification](Desktop-Player.md)
 - [OpenWave Portable concept](Portable-Concept.md)
+- [Hardware concept v0.2 under review](Portable-Concept.md#concept-v02-functional-specification)
 - [Mobile questions and evidence](Mobile-Question-Register.md)
 - [Mobile POC and device matrix](Mobile-POC.md)
 - [Shared architecture and open platform decisions](../ADR-002-Mobile-Playback.md)

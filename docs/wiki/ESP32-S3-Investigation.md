@@ -4,6 +4,8 @@ Reviewed: 22 October 2026. INV-04/05/07, with INV-03/06 measurement gates. **Res
 
 ## Documented capability and limits
 
+**23 October 2026 scope update:** [Concept v0.2](Portable-Concept.md#concept-v02-functional-specification) excludes ESP32 and AD9833 from the proposed baseline. This page retains earlier capability research as an alternative only. Reconsider a controller for demonstrated diagnostics, proprietary device controls, monitoring or independent playback needs; no firmware or board selection follows. A commercial class-compliant USB audio DAC is the baseline under review [S56].
+
 | Topic | Evidence and disposition |
 | --- | --- |
 | Native USB device | ESP32-S3 has full-speed USB OTG; Espressif documents device functions and TinyUSB integration [S47/S50]. ANSWERED — DOCUMENTED for chip/SDK capability, not OpenWave interoperability |

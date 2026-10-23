@@ -106,6 +106,12 @@ Primary technical sources below support component/platform capabilities, not tes
 
 The Apple Accessory Access overview was located during searching but its full documentation could not be retrieved; no iPhone USB-command capability is inferred from its name. The Option B gate requires a current supported API/protocol review for the chosen iOS deployment target. No claim that every iPhone command path is impossible is made.
 
+## Concept v0.2 proposal — 23 October 2026
+
+| ID | Source | Inspected scope and limitation |
+| --- | --- | --- |
+| S56 | Maintainer-supplied “OPENWAVE PORTABLE: HARDWARE ARCHITECTURE (CONCEPT v0.2)” image, functional specification and six engineering questions, 23 October 2026 | Functional proposal reviewed in this task: standard UAC DAC baseline; no ESP32/AD9833; optional protected LiPo/power subsystem; unspecified future output module; no body-contact bench connection; aspirational 80 x 50 x 20 mm and under 100 g. Not manufacturer evidence, a schematic, bill of materials, selected components, charging design or measured result. Original supplied in chat; the repository records a Mermaid interpretation and requirements in Portable Concept |
+
 ## Adding sources
 
 Assign a source ID. Record author, title, publication date/version, stable URL/DOI, access date, exact pages or sections, inspected portions, source type, claims, and limitations. Record web update dates where available. Link rather than copying third-party publications. An inaccessible document remains “located” until inspected.
