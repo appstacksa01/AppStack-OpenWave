@@ -76,6 +76,8 @@ The maintainer's direction is one shared OpenWave engine, one principal TypeScri
 
 ## ESP32-S3 and signal-strength investigation
 
+Concept v0.2, 23 October 2026, proposes standard USB Audio Class playback to a compatible DAC without an ESP32/controller [S56]. Verify exact Android/USB-C iPhone pairings, supported/negotiated rates, screen-lock/interruption handling, route detection and unplug/replug; no pairing is accepted by this proposal. Phone power is the first investigation, with a battery optional. See the [functional specification and six open questions](Portable-Concept.md#concept-v02-functional-specification). The earlier ESP32 research below remains outside this baseline.
+
 The [ESP32-S3 research](ESP32-S3-Investigation.md) compares USB audio streaming to an external DAC with command-based local MCU generation. Espressif documents native USB/UAC and I2S capabilities; the S3 does not supply the original ESP32 analog DAC [S47–S50]. Android/iPhone USB audio capability is documented, but no OpenWave phone/ESP32/DAC pairing is verified. Generic USB commands on iPhone need a specific supported accessory/API route [S53/S54]; connector shape alone does not establish it.
 
 Frequency and digital amplitude are independent; [amplification](Frequency-and-Amplitude.md#does-openwave-need-signal-amplification) is not needed to calculate the requested frequency. Load-compatible analog output remains unmeasured. Local MCU generation is only a proposed option: preserve one engine and obtain an explicit ADR-001 amendment before changing synthesis placement. See M-Q22–M-Q27 and the [decision register](Portable-Concept.md#portable-hardware-decision-register); offline retained WAV playback remains distinct from offline new generation.

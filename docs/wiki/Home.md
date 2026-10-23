@@ -4,6 +4,8 @@ AppStack is investigating an open-source mobile frequency generator. This notebo
 
 Updated: 22 October 2026. Stage: uncommitted desktop waveform-player prototype. The [desktop increment](Desktop-Player.md) reuses the engine/UI, adds explicit local/live audio playback and has 64 independent WAV cases plus frontend/backend/process checks. Physical output, mobile adapters and independent release reproduction remain unverified. The [earlier audit](../Mobile-Research-Audit.md) is a planning-stage snapshot, superseded for desktop status by the new guide. Backend-process synthesis remains controlling; the desktop request explicitly extends the original file-only scope.
 
+Latest concept review, 23 October 2026: [Portable hardware concept v0.2](Portable-Concept.md#concept-v02-functional-specification) proposes standard USB Audio Class DAC playback without a controller, optional power hardware and an unspecified future output module. All six engineering questions remain open; size/mass targets are aspirations. This is documentation under review, not a hardware validation.
+
 ## Contents
 
 Start with [research progress and answered questions](Research-Progress.md) for the current status and next steps.
