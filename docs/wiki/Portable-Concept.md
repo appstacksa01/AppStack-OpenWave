@@ -122,3 +122,7 @@ Created 22 October; updated 23 October 2026 for concept v0.2 [S56]. Proposed sco
 | P-D08: Portable form factor | Aspirational 80 x 50 x 20 mm and under 100 g [S56]; no verified fit/mass | Validate the complete enclosure/component/power/protection composition before accepting limits |
 
 The single next hardware evidence milestone is [OpenWave Analog Output Characterisation](Hardware-and-Electrical-Safety.md#openwave-analog-output-characterisation), not immediate ESP32 firmware development.
+
+## Enterprise target reconciliation — 23 October 2026
+
+[Enterprise Architecture](../Enterprise-Architecture.md#portable-software-and-hardware-interface) adds a software/hardware interface view alongside this functional concept. Mobile-generated WAVs remain a product target gated by [ADR-005](../ADR-005-Offline-Generation.md); current synthesis still executes in backend processes. A rechargeable accessory, status indicators and physical stop/power controls require measured power and human-factors requirements; they do not select a battery or establish a hardware interlock. No controller, amplifier or output/electrode interface is added to the bench baseline.

@@ -54,3 +54,7 @@ The first implementation/scaffolding PR must introduce runnable, non-empty front
 CI must run pinned installs, formatting checks, lint, strict type checking, frontend unit tests, backend unit tests and builds. Add API/worker/storage integration tests when these boundaries are introduced and browser end-to-end tests when the editor is usable. Publish the exact commands and results in each PR. Configure GitHub rulesets/branch protection to require the actual check names and maintainer review before merge; documentation alone does not enforce them. Do not claim enforcement until the settings and checks have been verified.
 
 Until runnable code/tooling exists, these are requirements for its introduction, not passing checks. Unimplemented features cannot be marked tested. A PR failing the applicable mandatory checks is not ready to merge.
+
+## Enterprise architecture extension for review
+
+The [proposed baseline](Enterprise-Architecture.md) applies Clean Architecture/DDD boundaries to real catalogue, programme, rendering and profile modules; it does not mandate microservices or framework rewrites. Keep inward domain/application dependencies and contract-first infrastructure/IAM adapters. Existing SOLID, compulsory frontend/backend tests and backend-only synthesis remain controlling. Proposed module extraction and native generation require reviewed decisions, especially [ADR-005](ADR-005-Offline-Generation.md); no new execution exception is adopted by this documentation review.

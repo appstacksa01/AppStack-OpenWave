@@ -49,3 +49,11 @@ The later [desktop player](Desktop-Player.md) adds `POST /api/v1/playback` to pr
 The development cookie is HttpOnly, SameSite=Strict and scoped to `/api/v1`, with a two-hour fixed session expiry; it omits Secure solely for loopback HTTP. Owner secrets use 32 random bytes and hashed server-side storage. Mutations require the exact frontend Origin and JSON content type. Client IP is the direct socket address; there is no trusted-proxy deployment configuration. This launcher is not a production entry point and must not be exposed on a LAN/public interface for mobile testing.
 
 Local adapter tests cover isolation, malformed/expired sessions, limits, cancellation and artifact expiry. Remaining review includes configurable settings, exact error/DTO documentation, session/retention edge cases, real supervisor crash/restart/timeout coverage, automated browser/download workflow, deployment HTTPS/access controls, operational cleanup/storage behaviour and independent release review. These requirements remain distinct from the later [playback-adapter validation](wiki/Mobile-POC.md).
+
+## Proposed enterprise contract extension — 23 October 2026
+
+The [catalogue/API target](Catalogue-and-Data-Architecture.md) proposes published research/programmes, profile/admin/sync resources, pagination, optimistic concurrency, OpenAPI and health contracts. [Independent IAM](Identity-and-Security-Architecture.md) proposes access-token validation and application policies. These are not existing routes or a silent replacement for anonymous owner sessions/error envelopes. [ADR-004](ADR-004-Enterprise-Evolution.md) requires an explicit compatibility/migration decision before a backend/database change. Current local service limits do not establish production capacity or an enterprise SLA.
+
+## Proposed worker and package boundary
+
+The [render worker v1 contract](Render-Worker-Contract.md) defines a possible future migration boundary, separate from current development IPC/SQLite wiring. The Rendering module owns durable jobs; versioned process messages cannot publish a stale/cancelled attempt. The [package contract](Programme-Package-Contract.md) distinguishes canonical programme and actual legacy sequence digests and binds final WAV metadata/bytes. No current HTTP payload, response envelope, worker code or numerical rule changes here.

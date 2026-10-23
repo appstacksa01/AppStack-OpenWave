@@ -1,6 +1,8 @@
 # Development setup
 
-Updated: 22 October 2026. This describes the current working tree, including the uncommitted connected desktop preview. It provides a TypeScript sequence editor, HTTP export API, SQLite job storage, private filesystem artifacts and a separate backend rendering worker. See the [audit](Mobile-Research-Audit.md) for provenance and recorded checks; this is not an accepted release or production service. Mobile/PWA/playback adapters are absent.
+Updated: 23 October 2026. This describes the current working tree, including the uncommitted connected desktop preview. It provides a TypeScript sequence editor, HTTP export API, SQLite job storage, private filesystem artifacts and separate backend rendering processes. Desktop browser playback and its audio adapter exist; Android/iOS adapters, PWA packaging and public deployment remain absent. See the [desktop results](Desktop-Player.md) and [enterprise assessment](Enterprise-Architecture-Audit.md) for provenance and gaps; this is not an accepted application release.
+
+The [three target deployment profiles](Deployment-and-Operations.md) are proposed. No Dockerfile/Compose definition, sample environment, PostgreSQL migration or OIDC setup is supplied; do not treat the target container quick start as executable today.
 
 The architecture keeps one engine, one principal TypeScript UI and platform audio adapters. The [desktop-player increment](Desktop-Player.md) implements the browser playback adapter and live backend streams under [ADR-003](ADR-003-Desktop-Player.md), without a desktop framework/dependency. Android/iOS adapters remain future work. The engine's pure planner/encoder executes only in backend processes.
 

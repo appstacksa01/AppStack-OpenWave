@@ -83,3 +83,7 @@ GPLv3 permits commercial activity, including paid distribution and services. Its
 - [Receiving sponsorships through GitHub Sponsors](https://docs.github.com/en/sponsors/receiving-sponsorships-through-github-sponsors): eligibility and account setup.
 
 References checked 22 October 2026. Funding platform eligibility and terms must be checked again before account setup.
+
+## Enterprise and portable target costs — review required
+
+The [enterprise architecture review](Enterprise-Architecture-Audit.md) expands proposed work beyond the original exporter budget. Re-estimate catalogue/source-rights review, IAM/security/privacy, mobile/native engine feasibility, database/migration/recovery, packaging/self-host support, telemetry, independent verification and ongoing operations before fundraising commitments. None is funded or priced here. Cloud neutrality is not zero operating cost; do not add paid CI, accounts or infrastructure without authorization.
